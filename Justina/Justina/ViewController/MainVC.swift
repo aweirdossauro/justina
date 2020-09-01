@@ -8,8 +8,11 @@
 
 import UIKit
 
-class MainVC: UIViewController {
-
+class MainVC: UIViewController, Storyboarded {
+    // MARK: Coordinator Related Properties
+    static var storyboardName: String = "MainVC"
+    var coordinator: MainCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
