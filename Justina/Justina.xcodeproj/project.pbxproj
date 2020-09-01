@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		AFEC0BA624FE83A70022C25A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BA524FE83A70022C25A /* AppDelegate.swift */; };
 		AFEC0BA824FE83A70022C25A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BA724FE83A70022C25A /* SceneDelegate.swift */; };
-		AFEC0BAA24FE83A70022C25A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BA924FE83A70022C25A /* ViewController.swift */; };
+		AFEC0BAA24FE83A70022C25A /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BA924FE83A70022C25A /* MainVC.swift */; };
 		AFEC0BAD24FE83A70022C25A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEC0BAB24FE83A70022C25A /* Main.storyboard */; };
 		AFEC0BAF24FE83A90022C25A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFEC0BAE24FE83A90022C25A /* Assets.xcassets */; };
 		AFEC0BB224FE83A90022C25A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEC0BB024FE83A90022C25A /* LaunchScreen.storyboard */; };
@@ -38,7 +38,7 @@
 		AFEC0BA224FE83A70022C25A /* Justina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Justina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEC0BA524FE83A70022C25A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFEC0BA724FE83A70022C25A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AFEC0BA924FE83A70022C25A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFEC0BA924FE83A70022C25A /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		AFEC0BAC24FE83A70022C25A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFEC0BAE24FE83A90022C25A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFEC0BB124FE83A90022C25A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,13 +99,12 @@
 		AFEC0BA424FE83A70022C25A /* Justina */ = {
 			isa = PBXGroup;
 			children = (
+				AFEC0BB324FE83A90022C25A /* Info.plist */,
 				AFEC0BA524FE83A70022C25A /* AppDelegate.swift */,
 				AFEC0BA724FE83A70022C25A /* SceneDelegate.swift */,
-				AFEC0BA924FE83A70022C25A /* ViewController.swift */,
-				AFEC0BAB24FE83A70022C25A /* Main.storyboard */,
+				AFEC0BD524FE84660022C25A /* ViewController */,
+				AFEC0BD624FE847F0022C25A /* View */,
 				AFEC0BAE24FE83A90022C25A /* Assets.xcassets */,
-				AFEC0BB024FE83A90022C25A /* LaunchScreen.storyboard */,
-				AFEC0BB324FE83A90022C25A /* Info.plist */,
 			);
 			path = Justina;
 			sourceTree = "<group>";
@@ -126,6 +125,23 @@
 				AFEC0BC924FE83AA0022C25A /* Info.plist */,
 			);
 			path = JustinaUITests;
+			sourceTree = "<group>";
+		};
+		AFEC0BD524FE84660022C25A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AFEC0BA924FE83A70022C25A /* MainVC.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AFEC0BD624FE847F0022C25A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFEC0BB024FE83A90022C25A /* LaunchScreen.storyboard */,
+				AFEC0BAB24FE83A70022C25A /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFEC0BAA24FE83A70022C25A /* ViewController.swift in Sources */,
+				AFEC0BAA24FE83A70022C25A /* MainVC.swift in Sources */,
 				AFEC0BA624FE83A70022C25A /* AppDelegate.swift in Sources */,
 				AFEC0BA824FE83A70022C25A /* SceneDelegate.swift in Sources */,
 			);
