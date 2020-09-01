@@ -1,16 +1,20 @@
 PODS:
+  - IQKeyboardManagerSwift (6.5.5)
   - Pulley (2.8.1)
 
 DEPENDENCIES:
+  - IQKeyboardManagerSwift
   - Pulley
 
 SPEC REPOS:
   trunk:
+    - IQKeyboardManagerSwift
     - Pulley
 
 SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   Pulley: 8caac123d8e2f0887fec7ae0370f5fba0a1df949
 
-PODFILE CHECKSUM: 58bddc2be78e0e048bc4cd442dcc47200364c82d
+PODFILE CHECKSUM: 8b0520fafb50afaf39af07f0cdb4548eaac58673
 
 COCOAPODS: 1.9.3
