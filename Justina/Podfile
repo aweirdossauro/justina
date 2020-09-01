@@ -6,7 +6,8 @@ target 'Justina' do
   use_frameworks!
 
   # Pods for Justina
-  pod 'UBottomSheet'
+  pod 'Pulley'
+
 
   target 'JustinaTests' do
     inherit! :search_paths

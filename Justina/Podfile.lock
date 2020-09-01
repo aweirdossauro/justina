@@ -1,16 +1,16 @@
 PODS:
-  - UBottomSheet (1.0.7)
+  - Pulley (2.8.1)
 
 DEPENDENCIES:
-  - UBottomSheet
+  - Pulley
 
 SPEC REPOS:
   trunk:
-    - UBottomSheet
+    - Pulley
 
 SPEC CHECKSUMS:
-  UBottomSheet: f5b325d5f06e952ae337d2d806307f61fe806a79
+  Pulley: 8caac123d8e2f0887fec7ae0370f5fba0a1df949
 
-PODFILE CHECKSUM: aa7c2868bea3237d9f77ca38e0f9c21699df2312
+PODFILE CHECKSUM: 58bddc2be78e0e048bc4cd442dcc47200364c82d
 
 COCOAPODS: 1.9.3
