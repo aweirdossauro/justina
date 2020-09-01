@@ -7,7 +7,7 @@ target 'Justina' do
 
   # Pods for Justina
   pod 'Pulley'
-
+  pod 'IQKeyboardManagerSwift'
 
   target 'JustinaTests' do
     inherit! :search_paths
