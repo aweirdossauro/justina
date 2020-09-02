@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Pulley
 
 class MainCoordinator: NavigationCoordinator {
     
@@ -33,9 +32,9 @@ class MainCoordinator: NavigationCoordinator {
 
 //            let drawerContentVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DrawerContentViewController")
 
-            let pulleyController = PulleyViewController(contentViewController: mainVC, drawerViewController: mainVC)
+//            let pulleyController = PulleyViewController(contentViewController: mainVC, drawerViewController: mainVC)
             
-            self.navigationController.pushViewController(pulleyController, animated: true)
+            self.navigationController.pushViewController(mainVC, animated: true)
         }
 
     }

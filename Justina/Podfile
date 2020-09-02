@@ -6,7 +6,7 @@ target 'Justina' do
   use_frameworks!
 
   # Pods for Justina
-  pod 'Pulley'
+  pod 'UBottomSheet'
   pod 'IQKeyboardManagerSwift'
 
   target 'JustinaTests' do
