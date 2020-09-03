@@ -24,6 +24,7 @@ class MainVC: UIViewController, Storyboarded {
     static var storyboardName: String = "Main"
     var coordinator: MainCoordinator?
     var sheetCoordinator: UBottomSheetCoordinator!
+    var dataSource: UBottomSheetCoordinatorDataSource?
 
     var backView: PassThroughView?
 
@@ -39,7 +40,13 @@ class MainVC: UIViewController, Storyboarded {
         guard sheetCoordinator == nil else {return}
         sheetCoordinator = UBottomSheetCoordinator(parent: self,
                                                    delegate: self)
-        
+        dataSource = MyDataSource()
+        guard let dataSource = dataSource else {
+            print("deu ruim aqui man")
+            return
+        }
+        sheetCoordinator.dataSource = dataSource
+
         // parentViewController: main view controller that presents the bottom sheet
         // call this within viewWillLayoutSubViews to make sure view frame has measured correctly. see example projects.
         let vc = UIStoryboard(name: "Justina", bundle: nil).instantiateViewController(withIdentifier: "JustinaVC") as! JustinaVC
@@ -52,6 +59,7 @@ class MainVC: UIViewController, Storyboarded {
         container.roundCorners(corners: [.topLeft, .topRight], radius: 11, rect: rect)
         })
         sheetCoordinator.setCornerRadius(11)
+        
     }
 
     private func addBackDimmingBackView(below container: UIView){

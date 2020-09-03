@@ -9,6 +9,18 @@
 import UIKit
 import UBottomSheet
 
+
+class MyDataSource: UBottomSheetCoordinatorDataSource {
+    func sheetPositions(_ availableHeight: CGFloat) -> [CGFloat] {
+        return [0.1, 0.85].map{$0*availableHeight}
+    }
+    
+    func initialPosition(_ availableHeight: CGFloat) -> CGFloat {
+        return availableHeight*0.85
+    }
+}
+
+
 class JustinaVC: UIViewController, Storyboarded, Draggable {
     
     // MARK: Coordinator Related Properties
