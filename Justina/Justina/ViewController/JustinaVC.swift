@@ -61,3 +61,9 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
 //    }
 //
 //}
+
+class HasBottomSheet {
+    openJustina(){
+        
+    }
+}
