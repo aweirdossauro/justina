@@ -8,6 +8,16 @@
 
 import UIKit
 import UBottomSheet
+
+extension UIView{
+    func roundCorners(corners: UIRectCorner, radius: CGFloat, rect: CGRect) {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
+}
+
 class MainVC: UIViewController, Storyboarded {
     
     // MARK: Coordinator Related Properties
@@ -30,13 +40,16 @@ class MainVC: UIViewController, Storyboarded {
         
         // parentViewController: main view controller that presents the bottom sheet
         // call this within viewWillLayoutSubViews to make sure view frame has measured correctly. see example projects.
-        let sheetCoordinator = UBottomSheetCoordinator(parent: self, delegate: self)
-
         let vc = UIStoryboard(name: "Justina", bundle: nil).instantiateViewController(withIdentifier: "JustinaVC") as! JustinaVC
-
+        
         vc.sheetCoordinator = sheetCoordinator
-
-        sheetCoordinator.addSheet(vc, to: self)
+        
+        sheetCoordinator.addSheet(vc, to: self, didContainerCreate: { container in
+        let f = self.view.frame
+        let rect = CGRect(x: f.minX, y: f.minY, width: f.width, height: f.height)
+        container.roundCorners(corners: [.topLeft, .topRight], radius: 10, rect: rect)
+        })
+        sheetCoordinator.setCornerRadius(10)
     }
 
 }
