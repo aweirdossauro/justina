@@ -38,10 +38,10 @@
                                 </view>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qnB-FK-del">
-                                <rect key="frame" x="15" y="802" width="384" height="50"/>
+                                <rect key="frame" x="12" y="802" width="390" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Xz-Xj-9PV">
-                                        <rect key="frame" x="10" y="5" width="364" height="40"/>
+                                        <rect key="frame" x="10" y="5" width="370" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -73,24 +73,26 @@
                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gFH-A8-1MT" firstAttribute="trailing" secondItem="Q1c-SJ-cfp" secondAttribute="trailing" constant="12" id="0Iq-VN-Uag"/>
+                            <constraint firstItem="qnB-FK-del" firstAttribute="centerX" secondItem="Q1c-SJ-cfp" secondAttribute="centerX" id="BSA-rL-qFr"/>
+                            <constraint firstItem="qnB-FK-del" firstAttribute="width" secondItem="Q1c-SJ-cfp" secondAttribute="width" id="KIy-Oi-1BY"/>
                             <constraint firstItem="Los-09-WFb" firstAttribute="top" secondItem="gFH-A8-1MT" secondAttribute="top" constant="5" id="dAm-nA-QhE"/>
                             <constraint firstItem="Q1c-SJ-cfp" firstAttribute="leading" secondItem="gFH-A8-1MT" secondAttribute="leading" constant="12" id="dYw-Gn-tbd"/>
                             <constraint firstItem="gFH-A8-1MT" firstAttribute="bottom" secondItem="qnB-FK-del" secondAttribute="bottom" constant="10" id="etY-Zg-9jk"/>
                             <constraint firstItem="Q1c-SJ-cfp" firstAttribute="top" secondItem="Los-09-WFb" secondAttribute="bottom" constant="5" id="in3-ba-9LC"/>
                             <constraint firstItem="qnB-FK-del" firstAttribute="top" secondItem="Q1c-SJ-cfp" secondAttribute="bottom" id="o1A-y7-cAh"/>
-                            <constraint firstItem="qnB-FK-del" firstAttribute="leading" secondItem="gFH-A8-1MT" secondAttribute="leading" constant="15" id="rLJ-5y-Y8i"/>
-                            <constraint firstItem="gFH-A8-1MT" firstAttribute="trailing" secondItem="qnB-FK-del" secondAttribute="trailing" constant="15" id="x53-VY-yX7"/>
                             <constraint firstItem="Los-09-WFb" firstAttribute="centerX" secondItem="gFH-A8-1MT" secondAttribute="centerX" id="zFA-gf-Zgs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gFH-A8-1MT"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8lA-4x-9Xc"/>
                     <connections>
                         <outlet property="tableView" destination="Q1c-SJ-cfp" id="beg-6f-doT"/>
+                        <outlet property="tableViewHeader" destination="qsa-7D-6Tf" id="3Ub-9l-Q8y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ik-ZR-Jgc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-685.50724637681162" y="170.75892857142856"/>
+            <point key="canvasLocation" x="224.63768115942031" y="170.75892857142856"/>
         </scene>
     </scenes>
 </document>

@@ -28,6 +28,7 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
     var coordinator: MainCoordinator?
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewHeader: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +38,7 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
             automaticallyAdjustsScrollViewInsets = false
         }
         tableView.layer.cornerRadius = 11
-//        tableView.delegate = self
+        tableView.delegate = self
 //        tableView.dataSource = self
     }
     
@@ -55,25 +56,21 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
     }
 
 }
-//
-//extension JustinaVC: UITableViewDelegate, UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//
-//    }
-//
+
+extension JustinaVC: UITableViewDelegate { //, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        10
+    }
+    
 //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
+//        <#code#>
 //    }
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//    }
-//
-//}
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let yPos: CGFloat = -scrollView.contentOffset.y
+        print(yPos)
+    }
+}
 
 class HasBottomSheet {
     func openJustina(){

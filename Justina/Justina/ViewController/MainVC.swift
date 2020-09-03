@@ -52,13 +52,12 @@ class MainVC: UIViewController, Storyboarded {
         let vc = UIStoryboard(name: "Justina", bundle: nil).instantiateViewController(withIdentifier: "JustinaVC") as! JustinaVC
         
         vc.sheetCoordinator = sheetCoordinator
-        
         sheetCoordinator.addSheet(vc, to: self, didContainerCreate: { container in
         let f = self.view.frame
         let rect = CGRect(x: f.minX, y: f.minY, width: f.width, height: f.height)
-        container.roundCorners(corners: [.topLeft, .topRight], radius: 11, rect: rect)
+        container.roundCorners(corners: [.topLeft, .topRight], radius: 15, rect: rect)
         })
-        sheetCoordinator.setCornerRadius(11)
+        sheetCoordinator.setCornerRadius(15)
         
     }
 
