@@ -24,6 +24,7 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
         } else {
             automaticallyAdjustsScrollViewInsets = false
         }
+        tableView.layer.cornerRadius = 11
 //        tableView.delegate = self
 //        tableView.dataSource = self
     }
@@ -63,7 +64,7 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
 //}
 
 class HasBottomSheet {
-    openJustina(){
+    func openJustina(){
         
     }
 }

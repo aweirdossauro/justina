@@ -16,14 +16,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q1c-SJ-cfp">
-                                <rect key="frame" x="10" y="54" width="394" height="738"/>
+                                <rect key="frame" x="10" y="57" width="394" height="745"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="qsa-7D-6Tf">
-                                    <rect key="frame" x="0.0" y="0.0" width="394" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="394" height="82"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fale com a Justina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaT-DR-2rC">
-                                            <rect key="frame" x="10" y="10" width="222" height="24"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fale com a Justina" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaT-DR-2rC">
+                                            <rect key="frame" x="10" y="10" width="222" height="62"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -56,10 +56,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Los-09-WFb">
-                                <rect key="frame" x="187" y="45" width="40" height="6"/>
+                                <rect key="frame" x="187" y="48" width="40" height="5"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="6" id="8Zv-ua-UL9"/>
+                                    <constraint firstAttribute="height" constant="5" id="8Zv-ua-UL9"/>
                                     <constraint firstAttribute="width" constant="40" id="Qz1-UD-qZI"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -73,12 +73,11 @@
                         <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gFH-A8-1MT" firstAttribute="trailing" secondItem="Q1c-SJ-cfp" secondAttribute="trailing" constant="10" id="0Iq-VN-Uag"/>
-                            <constraint firstItem="qnB-FK-del" firstAttribute="top" secondItem="Q1c-SJ-cfp" secondAttribute="bottom" constant="10" id="JE3-ar-pRU"/>
-                            <constraint firstItem="Los-09-WFb" firstAttribute="top" secondItem="gFH-A8-1MT" secondAttribute="top" constant="1" id="dAm-nA-QhE"/>
+                            <constraint firstItem="Los-09-WFb" firstAttribute="top" secondItem="gFH-A8-1MT" secondAttribute="top" constant="4" id="dAm-nA-QhE"/>
                             <constraint firstItem="Q1c-SJ-cfp" firstAttribute="leading" secondItem="gFH-A8-1MT" secondAttribute="leading" constant="10" id="dYw-Gn-tbd"/>
                             <constraint firstItem="gFH-A8-1MT" firstAttribute="bottom" secondItem="qnB-FK-del" secondAttribute="bottom" constant="10" id="etY-Zg-9jk"/>
-                            <constraint firstItem="Q1c-SJ-cfp" firstAttribute="top" secondItem="gFH-A8-1MT" secondAttribute="top" constant="10" id="in3-ba-9LC"/>
-                            <constraint firstItem="qnB-FK-del" firstAttribute="top" secondItem="Q1c-SJ-cfp" secondAttribute="bottom" constant="10" id="o1A-y7-cAh"/>
+                            <constraint firstItem="Q1c-SJ-cfp" firstAttribute="top" secondItem="Los-09-WFb" secondAttribute="bottom" constant="4" id="in3-ba-9LC"/>
+                            <constraint firstItem="qnB-FK-del" firstAttribute="top" secondItem="Q1c-SJ-cfp" secondAttribute="bottom" id="o1A-y7-cAh"/>
                             <constraint firstItem="qnB-FK-del" firstAttribute="leading" secondItem="gFH-A8-1MT" secondAttribute="leading" constant="10" id="rLJ-5y-Y8i"/>
                             <constraint firstItem="gFH-A8-1MT" firstAttribute="trailing" secondItem="qnB-FK-del" secondAttribute="trailing" constant="10" id="x53-VY-yX7"/>
                             <constraint firstItem="Los-09-WFb" firstAttribute="centerX" secondItem="gFH-A8-1MT" secondAttribute="centerX" id="zFA-gf-Zgs"/>
@@ -91,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ik-ZR-Jgc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-685" y="171"/>
+            <point key="canvasLocation" x="-685.50724637681162" y="170.75892857142856"/>
         </scene>
     </scenes>
 </document>
