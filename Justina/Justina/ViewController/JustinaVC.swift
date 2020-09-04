@@ -29,6 +29,9 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeader: UIView!
+    @IBOutlet weak var tableViewCornerView: UIView!
+    
+    @IBOutlet weak var messageTFView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +40,14 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
         } else {
             automaticallyAdjustsScrollViewInsets = false
         }
-        tableView.layer.cornerRadius = 11
+//        tableView.layer.cornerRadius = 11
         tableView.delegate = self
+        messageTFView.layer.cornerRadius = 11
+        let f = self.view.frame
+        let rect = CGRect(x: f.minX, y: f.minY, width: f.width, height: f.height)
+        tableViewCornerView.roundCorners(corners: [.topLeft, .topRight], radius: 15, rect: rect)
+        
+
 //        tableView.dataSource = self
     }
     

@@ -37,6 +37,11 @@ class MainVC: UIViewController, Storyboarded {
     override func viewWillLayoutSubviews() {
         super.viewDidLoad()
 
+        presentSheet()
+        
+    }
+
+    func presentSheet() {
         guard sheetCoordinator == nil else {return}
         sheetCoordinator = UBottomSheetCoordinator(parent: self,
                                                    delegate: self)
@@ -58,9 +63,8 @@ class MainVC: UIViewController, Storyboarded {
         container.roundCorners(corners: [.topLeft, .topRight], radius: 15, rect: rect)
         })
         sheetCoordinator.setCornerRadius(15)
-        
     }
-
+    
     private func addBackDimmingBackView(below container: UIView){
         backView = PassThroughView()
         self.view.insertSubview(backView!, belowSubview: container)
