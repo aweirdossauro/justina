@@ -49,9 +49,7 @@ class MainVC: UIViewController, Storyboarded {
         
         vc.sheetCoordinator = sheetCoordinator
         sheetCoordinator.addSheet(vc, to: self, didContainerCreate: { container in
-        let f = self.view.frame
-        let rect = CGRect(x: f.minX, y: f.minY, width: f.width, height: f.height)
-        container.roundCorners(corners: [.topLeft, .topRight], radius: 15, rect: rect)
+            container.roundCorners(corners: [.topLeft, .topRight], radius: 15, rect: container.rect)
         })
         sheetCoordinator.setCornerRadius(15)
     }

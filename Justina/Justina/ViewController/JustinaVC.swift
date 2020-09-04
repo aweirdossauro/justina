@@ -43,9 +43,7 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
 //        tableView.layer.cornerRadius = 11
         tableView.delegate = self
         messageTFView.layer.cornerRadius = 11
-        let f = self.view.frame
-        let rect = CGRect(x: f.minX, y: f.minY, width: f.width, height: f.height)
-        tableViewCornerView.roundCorners(corners: [.topLeft, .topRight], radius: 15, rect: rect)
+        tableViewCornerView.roundCorners(corners: [.topLeft, .topRight], radius: 15, rect: tableViewCornerView.rect)
         
 
 //        tableView.dataSource = self

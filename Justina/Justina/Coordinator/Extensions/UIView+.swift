@@ -15,4 +15,15 @@ extension UIView{
         mask.path = path.cgPath
         layer.mask = mask
     }
+    
+    var rect : CGRect {
+        get {
+            let f = self.frame
+            let rect = CGRect(x: f.minX, y: f.minY, width: f.width, height: f.height)
+            return rect
+        }
+    }
+    
 }
+
+
