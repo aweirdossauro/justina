@@ -16,7 +16,7 @@ class MyDataSource: UBottomSheetCoordinatorDataSource {
     }
     
     func initialPosition(_ availableHeight: CGFloat) -> CGFloat {
-        return availableHeight*0.85
+        return availableHeight*0.1
     }
 }
 
@@ -32,21 +32,34 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
     @IBOutlet weak var tableViewCornerView: UIView!
     
     @IBOutlet weak var messageTFView: UIView!
-    
+
+    var arrayData = [String]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        if #available(iOS 11.0, *) {
-            tableView.contentInsetAdjustmentBehavior = .never
-        } else {
-            automaticallyAdjustsScrollViewInsets = false
-        }
-//        tableView.layer.cornerRadius = 11
-        tableView.delegate = self
+
         messageTFView.layer.cornerRadius = 11
+        
+        tableView.contentInsetAdjustmentBehavior = .never
         tableViewCornerView.roundCorners(corners: [.topLeft, .topRight], radius: 15, rect: tableViewCornerView.rect)
         
+        // flip tableview
+//        tableView.transform = CGAffineTransform(rotationAngle: -(CGFloat)(Double.pi));
+//
+//        // flip scrolling
+//        tableView.scrollIndicatorInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: tableView.bounds.size.width - 8.0)
+//
+//        tableViewHeader.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi));
+//        tableView.tableHeaderView = tableViewHeader
+//        tableView.tableFooterView = nil
+//        tableView.tableHeaderView = nil
+        
+        
+        tableView.register(UINib(nibName: "MessageSentTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: "MessageSentTableViewCell")
 
-//        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,17 +74,38 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
     func draggableView() -> UIScrollView? {
         return tableView
     }
-
+    
+    var i = 0
+    @IBAction func sendButton(_ sender: Any) {
+//        arrayData.append("eae")
+        i += 1
+        arrayData.append("eae \(i)")
+        tableView.reloadData()
+    }
 }
 
-extension JustinaVC: UITableViewDelegate { //, UITableViewDataSource {
+extension JustinaVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        let data = arrayData.reversed()
+
+        if data.count > 0 {
+            return data.count
+        }
+        
+        return 0
     }
     
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        <#code#>
-//    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MessageSentTableViewCell", for: indexPath) as! MessageSentTableViewCell
+        
+        let reverseIndex = arrayData.count-indexPath.row-1
+
+//        let currCellData = arrayData.object(at: reverseIndex)
+
+        cell.messageText = arrayData.reversed()[reverseIndex]
+        cell.messageLabel.text = arrayData.reversed()[reverseIndex]
+        return cell
+    }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let yPos: CGFloat = -scrollView.contentOffset.y

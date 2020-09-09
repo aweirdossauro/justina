@@ -29,7 +29,6 @@ class MainVC: UIViewController, Storyboarded {
         super.viewDidLoad()
 
         presentSheet()
-        
     }
 
     func presentSheet() {
@@ -52,6 +51,10 @@ class MainVC: UIViewController, Storyboarded {
             container.roundCorners(corners: [.topLeft, .topRight], radius: 15, rect: container.rect)
         })
         sheetCoordinator.setCornerRadius(15)
+
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01){
+            self.sheetCoordinator.setToNearest(self.sheetCoordinator.availableHeight*0.85, animated: true)
+        }
     }
     
     private func addBackDimmingBackView(below container: UIView){
@@ -95,5 +98,3 @@ extension MainVC: UBottomSheetCoordinatorDelegate{
         }
     }
 }
-
-

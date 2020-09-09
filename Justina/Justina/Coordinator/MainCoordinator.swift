@@ -26,14 +26,6 @@ class MainCoordinator: NavigationCoordinator {
         DispatchQueue.main.async {
             let mainVC = MainVC.instantiate()
             mainVC.coordinator = self
-//            self.navigationController.pushViewController(mainVC, animated: true)
-            
-//            let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainVC")
-
-//            let drawerContentVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("DrawerContentViewController")
-
-//            let pulleyController = PulleyViewController(contentViewController: mainVC, drawerViewController: mainVC)
-            
             self.navigationController.pushViewController(mainVC, animated: true)
         }
 
