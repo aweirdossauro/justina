@@ -17,6 +17,7 @@
 		AF390338250280480062E7C2 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF390337250280480062E7C2 /* UIView+.swift */; };
 		AF66083525090670004C185D /* MessageSentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66083325090670004C185D /* MessageSentTableViewCell.swift */; };
 		AF66083625090670004C185D /* MessageSentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF66083425090670004C185D /* MessageSentTableViewCell.xib */; };
+		AFB10D2E250A54E700A1381A /* KeyboardLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB10D2D250A54E700A1381A /* KeyboardLayoutGuide.swift */; };
 		AFB59AF124FFE68300FB9207 /* Justina.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB59AF024FFE68300FB9207 /* Justina.storyboard */; };
 		AFB59AF324FFE6A800FB9207 /* JustinaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB59AF224FFE6A800FB9207 /* JustinaVC.swift */; };
 		AFEC0BA624FE83A70022C25A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BA524FE83A70022C25A /* AppDelegate.swift */; };
@@ -60,6 +61,7 @@
 		AF390337250280480062E7C2 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		AF66083325090670004C185D /* MessageSentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSentTableViewCell.swift; sourceTree = "<group>"; };
 		AF66083425090670004C185D /* MessageSentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageSentTableViewCell.xib; sourceTree = "<group>"; };
+		AFB10D2D250A54E700A1381A /* KeyboardLayoutGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutGuide.swift; sourceTree = "<group>"; };
 		AFB59AF024FFE68300FB9207 /* Justina.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Justina.storyboard; sourceTree = "<group>"; };
 		AFB59AF224FFE6A800FB9207 /* JustinaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustinaVC.swift; sourceTree = "<group>"; };
 		AFEC0BA224FE83A70022C25A /* Justina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Justina.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +178,14 @@
 			path = JustinaVC;
 			sourceTree = "<group>";
 		};
+		AFB10D2F250A54EB00A1381A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AFB10D2D250A54E700A1381A /* KeyboardLayoutGuide.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AFEC0B9924FE83A70022C25A = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +217,7 @@
 				AFEC0BD524FE84660022C25A /* ViewController */,
 				AFEC0BD624FE847F0022C25A /* View */,
 				AFEC0BAE24FE83A90022C25A /* Assets.xcassets */,
+				AFB10D2F250A54EB00A1381A /* Extensions */,
 			);
 			path = Justina;
 			sourceTree = "<group>";
@@ -500,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB10D2E250A54E700A1381A /* KeyboardLayoutGuide.swift in Sources */,
 				AF36954C24FE8B2400591528 /* Coordinator.swift in Sources */,
 				AFB59AF324FFE6A800FB9207 /* JustinaVC.swift in Sources */,
 				AF36955124FE8EF500591528 /* MainCoordinator.swift in Sources */,

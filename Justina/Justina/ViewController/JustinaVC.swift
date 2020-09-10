@@ -8,7 +8,7 @@
 
 import UIKit
 import UBottomSheet
-
+import IQKeyboardManagerSwift
 
 class MyDataSource: UBottomSheetCoordinatorDataSource {
     func sheetPositions(_ availableHeight: CGFloat) -> [CGFloat] {
@@ -32,28 +32,23 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
     @IBOutlet weak var tableViewCornerView: UIView!
     
     @IBOutlet weak var messageTFView: UIView!
+    @IBOutlet weak var messageTextField: UITextField!
 
+//    @IBOutlet weak var bottomAnchor: NSLayoutConstraint!
+    
     var arrayData = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        messageTFView.layer.cornerRadius = 11
         
+        messageTFView.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor).isActive = true
+                
+        messageTFView.layer.cornerRadius = 11
+        messageTextField.delegate = self
+
         tableView.contentInsetAdjustmentBehavior = .never
         tableViewCornerView.roundCorners(corners: [.topLeft, .topRight], radius: 15, rect: tableViewCornerView.rect)
-        
-        // flip tableview
-//        tableView.transform = CGAffineTransform(rotationAngle: -(CGFloat)(Double.pi));
-//
-//        // flip scrolling
-//        tableView.scrollIndicatorInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: tableView.bounds.size.width - 8.0)
-//
-//        tableViewHeader.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi));
-//        tableView.tableHeaderView = tableViewHeader
-//        tableView.tableFooterView = nil
-//        tableView.tableHeaderView = nil
-        
         
         tableView.register(UINib(nibName: "MessageSentTableViewCell", bundle: nil),
                            forCellReuseIdentifier: "MessageSentTableViewCell")
@@ -67,6 +62,7 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
         
         //adds pan gesture recognizer to draggableView()
         sheetCoordinator?.startTracking(item: self)
+
     }
 
     var sheetCoordinator: UBottomSheetCoordinator?
@@ -113,8 +109,9 @@ extension JustinaVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-class HasBottomSheet {
-    func openJustina(){
-        
+extension JustinaVC : UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("começou a editar")
+//        sheetCoordinator?.setPosition(self.sheetCoordinator!.availableHeight * 0.3, animated: true)
     }
 }

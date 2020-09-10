@@ -16,8 +16,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q1c-SJ-cfp">
-                                <rect key="frame" x="0.0" y="59" width="414" height="743"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="59" width="414" height="763"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="qsa-7D-6Tf">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -48,7 +48,7 @@
                                 </view>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qnB-FK-del">
-                                <rect key="frame" x="0.0" y="792" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8Xz-Xj-9PV">
                                         <rect key="frame" x="10" y="5" width="353" height="40"/>
@@ -102,7 +102,7 @@
                             <constraint firstItem="qnB-FK-del" firstAttribute="width" secondItem="Q1c-SJ-cfp" secondAttribute="width" id="KIy-Oi-1BY"/>
                             <constraint firstItem="Los-09-WFb" firstAttribute="top" secondItem="gFH-A8-1MT" secondAttribute="top" constant="5" id="dAm-nA-QhE"/>
                             <constraint firstItem="Q1c-SJ-cfp" firstAttribute="leading" secondItem="gFH-A8-1MT" secondAttribute="leading" id="dYw-Gn-tbd"/>
-                            <constraint firstItem="gFH-A8-1MT" firstAttribute="bottom" secondItem="qnB-FK-del" secondAttribute="bottom" constant="20" id="etY-Zg-9jk"/>
+                            <constraint firstItem="gFH-A8-1MT" firstAttribute="bottom" secondItem="qnB-FK-del" secondAttribute="bottom" placeholder="YES" id="etY-Zg-9jk"/>
                             <constraint firstItem="Q1c-SJ-cfp" firstAttribute="top" secondItem="Los-09-WFb" secondAttribute="bottom" constant="5" id="in3-ba-9LC"/>
                             <constraint firstItem="qnB-FK-del" firstAttribute="top" secondItem="Q1c-SJ-cfp" secondAttribute="bottom" constant="-10" id="o1A-y7-cAh"/>
                             <constraint firstItem="Los-09-WFb" firstAttribute="centerX" secondItem="gFH-A8-1MT" secondAttribute="centerX" id="zFA-gf-Zgs"/>
@@ -112,6 +112,7 @@
                     <navigationItem key="navigationItem" id="8lA-4x-9Xc"/>
                     <connections>
                         <outlet property="messageTFView" destination="qnB-FK-del" id="rep-lF-bvI"/>
+                        <outlet property="messageTextField" destination="8Xz-Xj-9PV" id="1GM-XO-Xhr"/>
                         <outlet property="tableView" destination="Q1c-SJ-cfp" id="beg-6f-doT"/>
                         <outlet property="tableViewCornerView" destination="ztS-aH-BlF" id="tpp-LE-U6b"/>
                         <outlet property="tableViewHeader" destination="qsa-7D-6Tf" id="3Ub-9l-Q8y"/>
