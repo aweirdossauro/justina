@@ -10,7 +10,7 @@ import UIKit
 import UBottomSheet
 import IQKeyboardManagerSwift
 
-class MyDataSource: UBottomSheetCoordinatorDataSource {
+class JustinaDataSource: UBottomSheetCoordinatorDataSource {
     func sheetPositions(_ availableHeight: CGFloat) -> [CGFloat] {
         return [0.1, 0.85].map{$0*availableHeight}
     }
@@ -19,7 +19,6 @@ class MyDataSource: UBottomSheetCoordinatorDataSource {
         return availableHeight*0.1
     }
 }
-
 
 class JustinaVC: UIViewController, Storyboarded, Draggable {
     
@@ -34,8 +33,6 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
     @IBOutlet weak var messageTFView: UIView!
     @IBOutlet weak var messageTextField: UITextField!
 
-//    @IBOutlet weak var bottomAnchor: NSLayoutConstraint!
-    
     var arrayData = [String]()
 
     override func viewDidLoad() {
@@ -78,6 +75,12 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
         i += 1
         arrayData.append("eae \(i)")
         tableView.reloadData()
+//        let a = IndexPath.init(item: arrayData.count, section: 0)
+//
+//        if i > 5 {
+//            tableView.scrollToRow(at: a, at: .bottom, animated: true)
+//        }
+
     }
 }
 
@@ -113,6 +116,6 @@ extension JustinaVC: UITableViewDelegate, UITableViewDataSource {
 extension JustinaVC : UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         print("começou a editar")
-//        sheetCoordinator?.setPosition(self.sheetCoordinator!.availableHeight * 0.3, animated: true)
+        
     }
 }

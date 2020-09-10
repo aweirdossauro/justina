@@ -35,7 +35,7 @@ class MainVC: UIViewController, Storyboarded {
         guard sheetCoordinator == nil else {return}
         sheetCoordinator = UBottomSheetCoordinator(parent: self,
                                                    delegate: self)
-        dataSource = MyDataSource()
+        dataSource = JustinaDataSource()
         guard let dataSource = dataSource else {
             print("deu ruim aqui man")
             return
