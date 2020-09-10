@@ -1,0 +1,20 @@
+PODS:
+  - IQKeyboardManagerSwift (6.5.5)
+  - UBottomSheet (1.0.7)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - UBottomSheet
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+    - UBottomSheet
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
+  UBottomSheet: f5b325d5f06e952ae337d2d806307f61fe806a79
+
+PODFILE CHECKSUM: 28ca47114545307a33cbadba940e4df782698b1a
+
+COCOAPODS: 1.9.3
