@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C4AA0D2250A542A0017DC70 /* PersonalData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C4AA0D1250A542A0017DC70 /* PersonalData.storyboard */; };
 		AFEC0BA624FE83A70022C25A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BA524FE83A70022C25A /* AppDelegate.swift */; };
 		AFEC0BA824FE83A70022C25A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BA724FE83A70022C25A /* SceneDelegate.swift */; };
 		AFEC0BAA24FE83A70022C25A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BA924FE83A70022C25A /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C4AA0D1250A542A0017DC70 /* PersonalData.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonalData.storyboard; sourceTree = "<group>"; };
 		AFEC0BA224FE83A70022C25A /* Justina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Justina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEC0BA524FE83A70022C25A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFEC0BA724FE83A70022C25A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				AFEC0BAE24FE83A90022C25A /* Assets.xcassets */,
 				AFEC0BB024FE83A90022C25A /* LaunchScreen.storyboard */,
 				AFEC0BB324FE83A90022C25A /* Info.plist */,
+				6C4AA0D1250A542A0017DC70 /* PersonalData.storyboard */,
 			);
 			path = Justina;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C4AA0D2250A542A0017DC70 /* PersonalData.storyboard in Resources */,
 				AFEC0BB224FE83A90022C25A /* LaunchScreen.storyboard in Resources */,
 				AFEC0BAF24FE83A90022C25A /* Assets.xcassets in Resources */,
 				AFEC0BAD24FE83A70022C25A /* Main.storyboard in Resources */,
@@ -437,6 +441,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8MNRFXXFD;
 				INFOPLIST_FILE = Justina/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8MNRFXXFD;
 				INFOPLIST_FILE = Justina/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
