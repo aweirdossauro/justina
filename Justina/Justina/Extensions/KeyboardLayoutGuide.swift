@@ -104,7 +104,7 @@ open class KeyboardLayoutGuide: UILayoutGuide {
             if #available(iOS 11.0, *), usesSafeArea, height > 0, let bottom = owningView?.safeAreaInsets.bottom {
                 height -= bottom
             }
-            heightConstraint?.constant = height
+            heightConstraint?.constant = height 
             if duration > 0.0 {
                 animate(note)
             }
@@ -142,7 +142,7 @@ extension Notification {
         }
         // Weirdly enough UIKeyboardFrameEndUserInfoKey doesn't have the same behaviour
         // in ios 10 or iOS 11 so we can't rely on v.cgRectValue.width
-        let screenHeight = UIApplication.shared.keyWindow?.bounds.height ?? UIScreen.main.bounds.height
+        let screenHeight =  UIScreen.main.bounds.height
         return screenHeight - keyboardFrame.cgRectValue.minY
     }
     

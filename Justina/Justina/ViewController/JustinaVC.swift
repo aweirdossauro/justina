@@ -41,6 +41,7 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        IQKeyboardManager.shared.enable = false
         
         messageTFView.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor).isActive = true
                 
