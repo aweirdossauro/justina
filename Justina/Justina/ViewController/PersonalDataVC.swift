@@ -8,10 +8,11 @@
 
 import UIKit
 
+
 class PersonalDataVC: UIViewController, Storyboarded {
     // MARK: Coordinator Related Properties
     static var storyboardName: String = "PersonalData"
-    var coordinator: MainCoordinator?
+    var delegate: PersonalDataVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,4 +21,8 @@ class PersonalDataVC: UIViewController, Storyboarded {
     }
     
 
+}
+
+protocol PersonalDataVCDelegate: AnyObject {
+    func personalDataVCDidFinish()
 }

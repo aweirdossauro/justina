@@ -8,36 +8,56 @@
 
 import UIKit
 
+protocol MainCoordinatorDelegate: AnyObject {
+    func mainCoordinatorDidFinish()
+
+}
 class MainCoordinator: NavigationCoordinator {
     
+//    let childCoordinators: [Coordinator]
     var navigationController: UINavigationController
-    
-    init() {
+
+    weak var delegate: MainCoordinatorDelegate?
+
+    init(navigationController : UINavigationController) {
         // Creates the NavigationController
-        navigationController = UINavigationController()
+        self.navigationController = navigationController
         
         // Sets the Navigation Bar default properties
         setDefaultProperties()
-        
-        start()
     }
     
     func start() {
+        showMainVC()
+    }
+
+    func showMainVC(){
         DispatchQueue.main.async {
             let vc = MainVC.instantiate()
-            vc.coordinator = self
+            vc.delegate = self
             
             self.navigationController.pushViewController(vc, animated: true)
         }
-
     }
-
-    func moveToPersonalData(){
+    
+    func showPersonalData(){
         DispatchQueue.main.async {
             let vc = PersonalDataVC.instantiate()
-            print("tá aqui")
-            vc.coordinator = self
+//            vc.delegate = self
             self.navigationController.pushViewController(vc, animated: true)
         }
+    }
+}
+
+extension MainCoordinator: MainVCDelegate {
+    /**
+     
+     */
+    func mainVCDidFinish() {
+        delegate?.mainCoordinatorDidFinish()
+    }
+
+    func moveToPersonalData() {
+        showPersonalData()
     }
 }

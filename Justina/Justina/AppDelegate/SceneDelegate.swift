@@ -11,7 +11,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    var mainCoordinator = MainCoordinator()
+    var appCoordinator: AppCoordinator?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -23,11 +23,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let appWindow = UIWindow(frame: windowScene.coordinateSpace.bounds)
         appWindow.windowScene = windowScene
         
-        // Gets the root view controller
-        let rootViewController = mainCoordinator.rootViewController
-        
-        // Sets other window properties
-        appWindow.rootViewController = rootViewController
+        appCoordinator = AppCoordinator(window: appWindow)
+        appCoordinator?.start()
+
         appWindow.makeKeyAndVisible()
         
         // Sets the reference to the window

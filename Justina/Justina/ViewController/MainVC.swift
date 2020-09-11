@@ -13,7 +13,7 @@ class MainVC: UIViewController, Storyboarded {
     
     // MARK: Coordinator Related Properties
     static var storyboardName: String = "Main"
-    var coordinator: MainCoordinator?
+    var delegate: MainVCDelegate?
     
     var sheetCoordinator: UBottomSheetCoordinator!
     var dataSource: UBottomSheetCoordinatorDataSource?
@@ -69,11 +69,7 @@ class MainVC: UIViewController, Storyboarded {
     }
     
     @IBAction func testButton(_ sender: Any) {
-        guard let coordinator = coordinator else {
-            print("erro aqui man")
-            return
-        }
-        coordinator.moveToPersonalData()
+        delegate?.mainVCDidFinish()
     }
 }
 
@@ -106,4 +102,10 @@ extension MainVC: UBottomSheetCoordinatorDelegate{
             break
         }
     }
+}
+
+protocol MainVCDelegate : AnyObject{
+    func mainVCDidFinish()
+    
+    func moveToPersonalData()
 }
