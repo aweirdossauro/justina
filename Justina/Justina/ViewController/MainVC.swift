@@ -20,6 +20,8 @@ class MainVC: UIViewController, Storyboarded {
 
     var backView: PassThroughView?
 
+    let notification = UINotificationFeedbackGenerator()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -99,6 +101,7 @@ extension MainVC: UBottomSheetCoordinatorDelegate{
         case .finished(_, let percent):
             self.backView?.backgroundColor = UIColor.black.withAlphaComponent(percent/100 * 0.8)
         default:
+            notification.notificationOccurred(.success)
             break
         }
     }
