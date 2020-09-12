@@ -17,9 +17,12 @@ class MessageSentTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         messageLabel.text = messageText
         messageView.layer.cornerRadius = 11
+        
+        self.contentView.backgroundColor = .primaryBackground
+        
+        self.messageView.backgroundColor = .userMessagesBackground
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

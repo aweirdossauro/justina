@@ -45,9 +45,11 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
         messageTFView.layer.cornerRadius = 11
         messageTextField.delegate = self
 
+        tableViewHeaderCornerView.roundCorners(corners: [.topLeft, .topRight], radius: 15)
+
         tableView.tableFooterView = nil
         tableView.tableHeaderView = tableViewHeader
-        tableViewHeaderCornerView.roundCorners(corners: [.topLeft, .topRight], radius: 15, rect: tableViewHeaderCornerView.rect)
+
         
         tableView.contentInsetAdjustmentBehavior = .never
         tableView.register(UINib(nibName: "MessageSentTableViewCell", bundle: nil),
@@ -55,6 +57,8 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
 
         tableView.delegate = self
         tableView.dataSource = self
+
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
