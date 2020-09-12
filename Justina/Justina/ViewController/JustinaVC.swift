@@ -40,16 +40,10 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
 
         IQKeyboardManager.shared.enable = false
         
-        messageTFView.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor).isActive = true
-                
-        messageTFView.layer.cornerRadius = 11
+        initialUI()
         messageTextField.delegate = self
 
-        tableViewHeaderCornerView.roundCorners(corners: [.topLeft, .topRight], radius: 15)
-
-        tableView.tableFooterView = nil
-        tableView.tableHeaderView = tableViewHeader
-
+        messageTFView.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor).isActive = true
         
         tableView.contentInsetAdjustmentBehavior = .never
         tableView.register(UINib(nibName: "MessageSentTableViewCell", bundle: nil),
@@ -83,6 +77,18 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
         tableView.scrollToRow(at: IndexPath(row: arrayData.count - 1, section: 0) , at: .bottom, animated: true)
 
         
+    }
+    
+    func initialUI(){
+        messageTFView.layer.cornerRadius = 11
+        tableViewHeaderCornerView.roundCorners(corners: [.topLeft, .topRight], radius: 15)
+
+        tableView.tableFooterView = nil
+        tableView.tableHeaderView = tableViewHeader
+        
+        messageTFView.backgroundColor = .secondaryBackground
+        tableViewHeader.backgroundColor = .secondaryBackground
+        tableView.backgroundColor = .primaryBackground
     }
 }
 
