@@ -28,7 +28,7 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeader: UIView!
-    @IBOutlet weak var tableViewCornerView: UIView!
+    @IBOutlet weak var tableViewHeaderCornerView: UIView!
     
     @IBOutlet weak var messageTFView: UIView!
     @IBOutlet weak var messageTextField: UITextField!
@@ -45,9 +45,11 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
         messageTFView.layer.cornerRadius = 11
         messageTextField.delegate = self
 
-        tableView.contentInsetAdjustmentBehavior = .never
-        tableViewCornerView.roundCorners(corners: [.topLeft, .topRight], radius: 15, rect: tableViewCornerView.rect)
+        tableView.tableFooterView = nil
+        tableView.tableHeaderView = tableViewHeader
+        tableViewHeaderCornerView.roundCorners(corners: [.topLeft, .topRight], radius: 15, rect: tableViewHeaderCornerView.rect)
         
+        tableView.contentInsetAdjustmentBehavior = .never
         tableView.register(UINib(nibName: "MessageSentTableViewCell", bundle: nil),
                            forCellReuseIdentifier: "MessageSentTableViewCell")
 
@@ -60,7 +62,6 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
         
         //adds pan gesture recognizer to draggableView()
         sheetCoordinator?.startTracking(item: self)
-
     }
 
     var sheetCoordinator: UBottomSheetCoordinator?
@@ -71,16 +72,13 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
     
     var i = 0
     @IBAction func sendButton(_ sender: Any) {
-//        arrayData.append("eae")
         i += 1
         arrayData.append("eae \(i)")
         tableView.reloadData()
-//        let a = IndexPath.init(item: arrayData.count, section: 0)
-//
-//        if i > 5 {
-//            tableView.scrollToRow(at: a, at: .bottom, animated: true)
-//        }
 
+        tableView.scrollToRow(at: IndexPath(row: arrayData.count - 1, section: 0) , at: .bottom, animated: true)
+
+        
     }
 }
 
@@ -98,9 +96,7 @@ extension JustinaVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MessageSentTableViewCell", for: indexPath) as! MessageSentTableViewCell
         
-        let reverseIndex = arrayData.count-indexPath.row-1
-
-//        let currCellData = arrayData.object(at: reverseIndex)
+        let reverseIndex = arrayData.count - indexPath.row - 1
 
         cell.messageText = arrayData.reversed()[reverseIndex]
         cell.messageLabel.text = arrayData.reversed()[reverseIndex]
