@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzL-wW-HTy">
-                        <rect key="frame" x="254.5" y="15" width="56.5" height="39"/>
+                        <rect key="frame" x="259.5" y="15" width="56.5" height="39"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGz-s2-ZGx">
                                 <rect key="frame" x="10" y="4" width="36.5" height="31"/>
@@ -39,7 +39,7 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="gzL-wW-HTy" secondAttribute="bottom" constant="15" id="4Sf-cv-0u5"/>
                     <constraint firstItem="gzL-wW-HTy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="9T3-OS-Wer"/>
-                    <constraint firstAttribute="trailing" secondItem="gzL-wW-HTy" secondAttribute="trailing" constant="15" id="lb5-Uc-sNU"/>
+                    <constraint firstAttribute="trailing" secondItem="gzL-wW-HTy" secondAttribute="trailing" constant="10" id="lb5-Uc-sNU"/>
                     <constraint firstItem="gzL-wW-HTy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="t7X-bD-uSJ"/>
                 </constraints>
             </tableViewCellContentView>
