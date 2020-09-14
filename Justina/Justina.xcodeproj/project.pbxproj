@@ -37,6 +37,8 @@
 		AFEC0BC824FE83AA0022C25A /* JustinaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BC724FE83AA0022C25A /* JustinaUITests.swift */; };
 		AFF3D6D9250D578400D0DFF9 /* ProcessosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D6D7250D578400D0DFF9 /* ProcessosTableViewCell.swift */; };
 		AFF3D6DA250D578400D0DFF9 /* ProcessosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF3D6D8250D578400D0DFF9 /* ProcessosTableViewCell.xib */; };
+		AFF3D6DE250FA03500D0DFF9 /* AddProcessoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D6DC250FA03500D0DFF9 /* AddProcessoTableViewCell.swift */; };
+		AFF3D6DF250FA03500D0DFF9 /* AddProcessoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF3D6DD250FA03500D0DFF9 /* AddProcessoTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		AFEC0BC924FE83AA0022C25A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFF3D6D7250D578400D0DFF9 /* ProcessosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessosTableViewCell.swift; sourceTree = "<group>"; };
 		AFF3D6D8250D578400D0DFF9 /* ProcessosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProcessosTableViewCell.xib; sourceTree = "<group>"; };
+		AFF3D6DC250FA03500D0DFF9 /* AddProcessoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProcessoTableViewCell.swift; sourceTree = "<group>"; };
+		AFF3D6DD250FA03500D0DFF9 /* AddProcessoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddProcessoTableViewCell.xib; sourceTree = "<group>"; };
 		CF7C505ED4F4C2A0305D2CBD /* Pods_JustinaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustinaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31B333D522594084F8EA627 /* Pods-Justina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Justina.debug.xcconfig"; path = "Target Support Files/Pods-Justina/Pods-Justina.debug.xcconfig"; sourceTree = "<group>"; };
 		F8559FCB6ABD800B3D699792 /* Pods_Justina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Justina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -291,6 +295,8 @@
 			children = (
 				AFF3D6D7250D578400D0DFF9 /* ProcessosTableViewCell.swift */,
 				AFF3D6D8250D578400D0DFF9 /* ProcessosTableViewCell.xib */,
+				AFF3D6DC250FA03500D0DFF9 /* AddProcessoTableViewCell.swift */,
+				AFF3D6DD250FA03500D0DFF9 /* AddProcessoTableViewCell.xib */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -419,6 +425,7 @@
 				AFEC0BB224FE83A90022C25A /* LaunchScreen.storyboard in Resources */,
 				AFEC0BAF24FE83A90022C25A /* Assets.xcassets in Resources */,
 				AFEC0BAD24FE83A70022C25A /* Main.storyboard in Resources */,
+				AFF3D6DF250FA03500D0DFF9 /* AddProcessoTableViewCell.xib in Resources */,
 				AFB59AF124FFE68300FB9207 /* Justina.storyboard in Resources */,
 				AF66083625090670004C185D /* MessageSentTableViewCell.xib in Resources */,
 				AFF3D6DA250D578400D0DFF9 /* ProcessosTableViewCell.xib in Resources */,
@@ -560,6 +567,7 @@
 				AFB10D35250A651C00A1381A /* AppCoordinator.swift in Sources */,
 				AF36954F24FE8E1200591528 /* Storyboarded.swift in Sources */,
 				AFB10D31250A61F700A1381A /* DataCoordinator.swift in Sources */,
+				AFF3D6DE250FA03500D0DFF9 /* AddProcessoTableViewCell.swift in Sources */,
 				AFEC0BA624FE83A70022C25A /* AppDelegate.swift in Sources */,
 				AF390338250280480062E7C2 /* UIView+.swift in Sources */,
 				AF66083525090670004C185D /* MessageSentTableViewCell.swift in Sources */,

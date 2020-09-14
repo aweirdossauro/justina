@@ -17,10 +17,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egy-vF-qrq">
-                        <rect key="frame" x="15" y="5" width="290" height="78"/>
+                        <rect key="frame" x="10" y="5" width="300" height="78"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5Tb-BK-RYf">
-                                <rect key="frame" x="254" y="6.5" width="31" height="28"/>
+                                <rect key="frame" x="264" y="6.5" width="31" height="28"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -29,7 +29,7 @@
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do processo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meY-37-hFV">
-                                <rect key="frame" x="10" y="5" width="234" height="20.5"/>
+                                <rect key="frame" x="10" y="5" width="244" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -41,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alguma info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odf-Qd-aXU">
-                                <rect key="frame" x="10" y="30.5" width="234" height="20.5"/>
+                                <rect key="frame" x="10" y="30.5" width="244" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -64,11 +64,12 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="egy-vF-qrq" secondAttribute="bottom" constant="5" id="btQ-m2-81T"/>
-                    <constraint firstItem="egy-vF-qrq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="i2D-ed-Q3L"/>
+                    <constraint firstItem="egy-vF-qrq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="i2D-ed-Q3L"/>
                     <constraint firstItem="egy-vF-qrq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="rTr-q8-ZeW"/>
-                    <constraint firstAttribute="trailing" secondItem="egy-vF-qrq" secondAttribute="trailing" constant="15" id="v9X-67-nsa"/>
+                    <constraint firstAttribute="trailing" secondItem="egy-vF-qrq" secondAttribute="trailing" constant="10" id="v9X-67-nsa"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
