@@ -195,6 +195,7 @@
 		AF6608372509067C004C185D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				AFF3D6E7250FA4B200D0DFF9 /* CellIdentifiers.swift */,
 				AF66083825090689004C185D /* JustinaVC */,
 				AFF3D6DB250D578800D0DFF9 /* MainVC */,
 			);
@@ -299,7 +300,6 @@
 		AFF3D6DB250D578800D0DFF9 /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
-				AFF3D6E7250FA4B200D0DFF9 /* CellIdentifiers.swift */,
 				AFF3D6E3250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift */,
 				AFF3D6E4250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.xib */,
 				AFF3D6E2250FA24400D0DFF9 /* ProcessoSection */,

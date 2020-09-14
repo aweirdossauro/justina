@@ -26,7 +26,14 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
     static var storyboardName: String = "Justina"
     var coordinator: MainCoordinator?
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.register(UINib(nibName: CellIdentifiers.messageSentTableViewCell, bundle: nil),
+                               forCellReuseIdentifier: CellIdentifiers.messageSentTableViewCell)
+            tableView.register(UINib(nibName: CellIdentifiers.justinaMessageTableViewCell, bundle: nil),
+                               forCellReuseIdentifier: CellIdentifiers.justinaMessageTableViewCell)
+        }
+    }
     @IBOutlet weak var tableViewHeader: UIView!
     @IBOutlet weak var tableViewHeaderCornerView: UIView!
     
@@ -47,15 +54,8 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
         
         tableView.contentInsetAdjustmentBehavior = .never
         
-        tableView.register(UINib(nibName: "MessageSentTableViewCell", bundle: nil),
-                           forCellReuseIdentifier: "MessageSentTableViewCell")
-        tableView.register(UINib(nibName: "JustinaMessageTableViewCell", bundle: nil),
-                           forCellReuseIdentifier: "JustinaMessageTableViewCell")
-        
         tableView.delegate = self
         tableView.dataSource = self
-
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -106,7 +106,7 @@ extension JustinaVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MessageSentTableViewCell", for: indexPath) as! MessageSentTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.messageSentTableViewCell, for: indexPath) as! MessageSentTableViewCell
 
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "JustinaMessageTableViewCell", for: indexPath) as! JustinaMessageTableViewCell
         let reverseIndex = arrayData.count - indexPath.row - 1

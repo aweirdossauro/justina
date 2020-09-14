@@ -17,6 +17,7 @@ class ProcessosTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+
         processoView.layer.cornerRadius = 11
         // Initialization code
     }

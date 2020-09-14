@@ -24,7 +24,10 @@ class MainCoordinator: NavigationCoordinator {
         self.navigationController = navigationController
         
         // Sets the Navigation Bar default properties
-        setDefaultProperties()
+//        setDefaultProperties()
+        navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.title = "Meus Processos"
+        
     }
     
     func start() {
