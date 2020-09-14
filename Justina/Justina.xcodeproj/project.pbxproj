@@ -39,6 +39,9 @@
 		AFF3D6DA250D578400D0DFF9 /* ProcessosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF3D6D8250D578400D0DFF9 /* ProcessosTableViewCell.xib */; };
 		AFF3D6DE250FA03500D0DFF9 /* AddProcessoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D6DC250FA03500D0DFF9 /* AddProcessoTableViewCell.swift */; };
 		AFF3D6DF250FA03500D0DFF9 /* AddProcessoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF3D6DD250FA03500D0DFF9 /* AddProcessoTableViewCell.xib */; };
+		AFF3D6E5250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D6E3250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift */; };
+		AFF3D6E6250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF3D6E4250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.xib */; };
+		AFF3D6E8250FA4B200D0DFF9 /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D6E7250FA4B200D0DFF9 /* CellIdentifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +103,9 @@
 		AFF3D6D8250D578400D0DFF9 /* ProcessosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProcessosTableViewCell.xib; sourceTree = "<group>"; };
 		AFF3D6DC250FA03500D0DFF9 /* AddProcessoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProcessoTableViewCell.swift; sourceTree = "<group>"; };
 		AFF3D6DD250FA03500D0DFF9 /* AddProcessoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddProcessoTableViewCell.xib; sourceTree = "<group>"; };
+		AFF3D6E3250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		AFF3D6E4250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		AFF3D6E7250FA4B200D0DFF9 /* CellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
 		CF7C505ED4F4C2A0305D2CBD /* Pods_JustinaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustinaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31B333D522594084F8EA627 /* Pods-Justina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Justina.debug.xcconfig"; path = "Target Support Files/Pods-Justina/Pods-Justina.debug.xcconfig"; sourceTree = "<group>"; };
 		F8559FCB6ABD800B3D699792 /* Pods_Justina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Justina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,12 +299,23 @@
 		AFF3D6DB250D578800D0DFF9 /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
+				AFF3D6E7250FA4B200D0DFF9 /* CellIdentifiers.swift */,
+				AFF3D6E3250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift */,
+				AFF3D6E4250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.xib */,
+				AFF3D6E2250FA24400D0DFF9 /* ProcessoSection */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		AFF3D6E2250FA24400D0DFF9 /* ProcessoSection */ = {
+			isa = PBXGroup;
+			children = (
 				AFF3D6D7250D578400D0DFF9 /* ProcessosTableViewCell.swift */,
 				AFF3D6D8250D578400D0DFF9 /* ProcessosTableViewCell.xib */,
 				AFF3D6DC250FA03500D0DFF9 /* AddProcessoTableViewCell.swift */,
 				AFF3D6DD250FA03500D0DFF9 /* AddProcessoTableViewCell.xib */,
 			);
-			path = MainVC;
+			path = ProcessoSection;
 			sourceTree = "<group>";
 		};
 		B34A95855BC0E3E8A29A8957 /* Frameworks */ = {
@@ -422,6 +439,7 @@
 			files = (
 				6C4AA0D2250A542A0017DC70 /* PersonalData.storyboard in Resources */,
 				AF1C4737250D4F0F0005059B /* JustinaMessageTableViewCell.xib in Resources */,
+				AFF3D6E6250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.xib in Resources */,
 				AFEC0BB224FE83A90022C25A /* LaunchScreen.storyboard in Resources */,
 				AFEC0BAF24FE83A90022C25A /* Assets.xcassets in Resources */,
 				AFEC0BAD24FE83A70022C25A /* Main.storyboard in Resources */,
@@ -557,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFB10D33250A62B400A1381A /* PersonalDataVC.swift in Sources */,
+				AFF3D6E5250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift in Sources */,
 				AFB10D2E250A54E700A1381A /* KeyboardLayoutGuide.swift in Sources */,
 				AF36954C24FE8B2400591528 /* Coordinator.swift in Sources */,
 				AFB59AF324FFE6A800FB9207 /* JustinaVC.swift in Sources */,
@@ -569,6 +588,7 @@
 				AFB10D31250A61F700A1381A /* DataCoordinator.swift in Sources */,
 				AFF3D6DE250FA03500D0DFF9 /* AddProcessoTableViewCell.swift in Sources */,
 				AFEC0BA624FE83A70022C25A /* AppDelegate.swift in Sources */,
+				AFF3D6E8250FA4B200D0DFF9 /* CellIdentifiers.swift in Sources */,
 				AF390338250280480062E7C2 /* UIView+.swift in Sources */,
 				AF66083525090670004C185D /* MessageSentTableViewCell.swift in Sources */,
 				AFEC0BA824FE83A70022C25A /* SceneDelegate.swift in Sources */,
