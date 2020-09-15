@@ -12,11 +12,11 @@ import IQKeyboardManagerSwift
 
 class JustinaDataSource: UBottomSheetCoordinatorDataSource {
     func sheetPositions(_ availableHeight: CGFloat) -> [CGFloat] {
-        return [0.1, 0.85].map{$0*availableHeight}
+        return [0.175, 0.85].map{$0*availableHeight}
     }
     
     func initialPosition(_ availableHeight: CGFloat) -> CGFloat {
-        return availableHeight*0.1
+        return availableHeight*0.175
     }
 }
 

@@ -36,15 +36,16 @@ class MainVC: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        self.title = "Meus Processos"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        
+        tableView.dataSource = self
+        tableView.delegate = self
     }
 
     override func viewWillLayoutSubviews() {
         super.viewDidLoad()
-        
-        tableView.dataSource = self
-        tableView.delegate = self
-        
+
         presentSheet()
     }
 
