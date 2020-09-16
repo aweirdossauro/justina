@@ -56,9 +56,21 @@ class MainVC: UIViewController, Storyboarded {
 
         tableView.dataSource = self
         tableView.delegate = self
-        setupNavBarButtonUI()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupNavBarButtonUI()
+        showImage(true)
+    }
+    
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        showImage(false)
+    }
+    
+    
     override func viewWillLayoutSubviews() {
         super.viewDidLoad()
 
@@ -102,6 +114,11 @@ class MainVC: UIViewController, Storyboarded {
     }
     
     @IBAction func testButton(_ sender: Any) {
+        delegate?.mainVCDidFinish()
+    }
+    
+    @objc func testButtonPressed(_ sender: Any) {
+        showImage(false)
         delegate?.mainVCDidFinish()
     }
 }
@@ -182,54 +199,67 @@ extension MainVC: UBottomSheetCoordinatorDelegate{
 //MARK:- Nav Bar setup related code
 extension MainVC {
     private func setupNavBarButtonUI() {
-         navigationController?.navigationBar.prefersLargeTitles = true
-
-         title = "Meus Processos"
-
-         imageView.tintColor = .white
-
-         // Initial setup for image for Large NavBar state since the the screen always has Large NavBar once it gets opened
-         guard let navigationBar = self.navigationController?.navigationBar else { return }
-         navigationBar.addSubview(imageView)
-         imageView.layer.cornerRadius = Const.ImageSizeForLargeState / 2
-         imageView.clipsToBounds = true
-         imageView.translatesAutoresizingMaskIntoConstraints = false
-         NSLayoutConstraint.activate([
-             imageView.rightAnchor.constraint(equalTo: navigationBar.rightAnchor, constant: -Const.ImageRightMargin),
-             imageView.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor, constant: -Const.ImageBottomMarginForLargeState),
-             imageView.heightAnchor.constraint(equalToConstant: Const.ImageSizeForLargeState),
-             imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor)
-             ])
-     }
-     
-     private func moveAndResizeImage(for height: CGFloat) {
-         let coeff: CGFloat = {
-             let delta = height - Const.NavBarHeightSmallState
-             let heightDifferenceBetweenStates = (Const.NavBarHeightLargeState - Const.NavBarHeightSmallState)
-             return delta / heightDifferenceBetweenStates
-         }()
-
-         let factor = Const.ImageSizeForSmallState / Const.ImageSizeForLargeState
-
-         let scale: CGFloat = {
-             let sizeAddendumFactor = coeff * (1.0 - factor)
-             return min(1.0, sizeAddendumFactor + factor)
-         }()
-
-         // Value of difference between icons for large and small states
-         let sizeDiff = Const.ImageSizeForLargeState * (1.0 - factor) // 8.0
-         let yTranslation: CGFloat = {
-             /// This value = 14. It equals to difference of 12 and 6 (bottom margin for large and small states). Also it adds 8.0 (size difference when the image gets smaller size)
-             let maxYTranslation = Const.ImageBottomMarginForLargeState - Const.ImageBottomMarginForSmallState + sizeDiff
-             return max(0, min(maxYTranslation, (maxYTranslation - coeff * (Const.ImageBottomMarginForSmallState + sizeDiff))))
-         }()
-
-         let xTranslation = max(0, sizeDiff - coeff * sizeDiff)
-
-         imageView.transform = CGAffineTransform.identity
-             .scaledBy(x: scale, y: scale)
-             .translatedBy(x: xTranslation, y: yTranslation)
-     }
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
+        title = "Meus Processos"
+        
+        imageView.tintColor = .white
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(testButtonPressed(_:)))
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(tapGestureRecognizer)
+            
+            // Initial setup for image for Large NavBar state since the the screen always has Large NavBar once it gets opened
+        guard let navigationBar = self.navigationController?.navigationBar else { return }
+        navigationBar.addSubview(imageView)
+        imageView.layer.cornerRadius = Const.ImageSizeForLargeState / 2
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            imageView.rightAnchor.constraint(equalTo: navigationBar.rightAnchor, constant: -Const.ImageRightMargin),
+            imageView.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor, constant: -Const.ImageBottomMarginForLargeState),
+            imageView.heightAnchor.constraint(equalToConstant: Const.ImageSizeForLargeState),
+            imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor)
+        ])
+    }
+    
+    private func moveAndResizeImage(for height: CGFloat) {
+        let coeff: CGFloat = {
+            let delta = height - Const.NavBarHeightSmallState
+            let heightDifferenceBetweenStates = (Const.NavBarHeightLargeState - Const.NavBarHeightSmallState)
+            return delta / heightDifferenceBetweenStates
+        }()
+        
+        let factor = Const.ImageSizeForSmallState / Const.ImageSizeForLargeState
+        
+        let scale: CGFloat = {
+            let sizeAddendumFactor = coeff * (1.0 - factor)
+            return min(1.0, sizeAddendumFactor + factor)
+        }()
+        
+        // Value of difference between icons for large and small states
+        let sizeDiff = Const.ImageSizeForLargeState * (1.0 - factor) // 8.0
+        let yTranslation: CGFloat = {
+            /// This value = 14. It equals to difference of 12 and 6 (bottom margin for large and small states). Also it adds 8.0 (size difference when the image gets smaller size)
+            let maxYTranslation = Const.ImageBottomMarginForLargeState - Const.ImageBottomMarginForSmallState + sizeDiff
+            return max(0, min(maxYTranslation, (maxYTranslation - coeff * (Const.ImageBottomMarginForSmallState + sizeDiff))))
+        }()
+        
+        let xTranslation = max(0, sizeDiff - coeff * sizeDiff)
+        
+        imageView.transform = CGAffineTransform.identity
+            .scaledBy(x: scale, y: scale)
+            .translatedBy(x: xTranslation, y: yTranslation)
+    }
+    
+    /// Show or hide the image from NavBar while going to next screen or back to initial screen
+    ///
+    /// - Parameter show: show or hide the image from NavBar
+    private func showImage(_ show: Bool) {
+        UIView.animate(withDuration: 0.2) {
+            self.imageView.alpha = show ? 1.0 : 0.0
+        }
+    }
 }
 
 //MARK:- Coordinator Related Code
