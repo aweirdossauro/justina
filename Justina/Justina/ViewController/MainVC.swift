@@ -107,10 +107,10 @@ class MainVC: UIViewController, Storyboarded {
         backView = PassThroughView()
         self.view.insertSubview(backView!, belowSubview: container)
         backView!.translatesAutoresizingMaskIntoConstraints = false
-        backView!.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        backView!.topAnchor.constraint(equalTo: self.view!.topAnchor).isActive = true
         backView!.bottomAnchor.constraint(equalTo: container.topAnchor, constant: 10).isActive = true
-        backView!.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        backView!.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        backView!.leadingAnchor.constraint(equalTo: self.view!.leadingAnchor).isActive = true
+        backView!.trailingAnchor.constraint(equalTo: self.view!.trailingAnchor).isActive = true
     }
     
     @IBAction func testButton(_ sender: Any) {
@@ -160,7 +160,6 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard let height = navigationController?.navigationBar.frame.height else { return }
         moveAndResizeImage(for: height)
-        
     }
 }
 
@@ -187,8 +186,15 @@ extension MainVC: UBottomSheetCoordinatorDelegate{
         switch state {
         case .progressing(_, let percent):
             self.backView?.backgroundColor = UIColor.black.withAlphaComponent(percent/100 * 0.8)
+            
         case .finished(_, let percent):
             self.backView?.backgroundColor = UIColor.black.withAlphaComponent(percent/100 * 0.8)
+            print(percent,"aqui man")
+            if percent > 95.0 {
+                self.showImage(false, true)
+                break
+            }
+            self.showImage(true, true)
         default:
             notification.notificationOccurred(.success)
             break
@@ -255,8 +261,9 @@ extension MainVC {
     /// Show or hide the image from NavBar while going to next screen or back to initial screen
     ///
     /// - Parameter show: show or hide the image from NavBar
-    private func showImage(_ show: Bool) {
-        UIView.animate(withDuration: 0.2) {
+    private func showImage(_ show: Bool, _ fast : Bool = false) {
+        let duration = fast ? 0.1 : 0.2
+        UIView.animate(withDuration: duration) {
             self.imageView.alpha = show ? 1.0 : 0.0
         }
     }
