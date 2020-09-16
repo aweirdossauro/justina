@@ -8,27 +8,45 @@
 
 import UIKit
 
-//class DataCoordinator: NavigationCoordinator {
-//
-//    var navigationController: UINavigationController
-//
-//    init() {
-//        // Creates the NavigationController
-//        navigationController = UINavigationController()
-//
-//        // Sets the Navigation Bar default properties
-//        setDefaultProperties()
-//
-//        start()
-//    }
-//
-//    func start() {
-//        DispatchQueue.main.async {
-//            let vc = PersonalDataVC.instantiate()
-//            vc.coordinator = self
-//            self.navigationController.pushViewController(vc, animated: true)
-//        }
-//
-//    }
-//
-//}
+protocol DataCoordinatorDelegate: AnyObject {
+    func dataCoordinatorDidFinish()
+
+}
+class DataCoordinator: NavigationCoordinator {
+    
+//    let childCoordinators: [Coordinator]
+    var navigationController: UINavigationController
+
+    weak var delegate: DataCoordinatorDelegate?
+
+    init(navigationController : UINavigationController) {
+        // Creates the NavigationController
+        self.navigationController = navigationController
+        
+        // Sets the Navigation Bar default properties
+        setDefaultProperties()
+    }
+    
+    func start() {
+        showPersonalData()
+    }
+
+    func showPersonalData(){
+        DispatchQueue.main.async {
+            let vc = PersonalDataVC.instantiate()
+            vc.delegate = self
+            self.navigationController.pushViewController(vc, animated: true)
+        }
+    }
+
+}
+
+extension DataCoordinator: PersonalDataVCDelegate {
+    /**
+     
+     */
+    func personalDataVCDidFinish() {
+        delegate?.dataCoordinatorDidFinish()
+    }
+
+}

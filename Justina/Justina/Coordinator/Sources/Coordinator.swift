@@ -10,5 +10,10 @@ import UIKit
 
 protocol Coordinator {
     var rootViewController: UIViewController { get }
+    
+    /**
+     Entry point starting the coordinator
+     */
+    func start()
 }
 
