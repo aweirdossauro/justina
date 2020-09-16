@@ -153,6 +153,10 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
 ////        }
 //        return cell
 //    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.moveToProcessosInfo()
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return indexPath.row == 2 ? 60 : 100
     }
@@ -274,4 +278,6 @@ protocol MainVCDelegate : AnyObject{
     func mainVCDidFinish()
     
     func moveToPersonalData()
+
+    func moveToProcessosInfo()
 }
