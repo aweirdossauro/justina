@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		366A338A0318A3D592FFF7F2 /* Pods_Justina_JustinaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642C191E0A3E24B53F429780 /* Pods_Justina_JustinaUITests.framework */; };
 		4635EDC2D1E81363644850EF /* Pods_JustinaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF7C505ED4F4C2A0305D2CBD /* Pods_JustinaTests.framework */; };
+		6C3F1D872513A07A0038B81E /* PeticaoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3F1D862513A07A0038B81E /* PeticaoVC.swift */; };
 		6C4AA0D2250A542A0017DC70 /* PersonalData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C4AA0D1250A542A0017DC70 /* PersonalData.storyboard */; };
 		74C9F1FA31F37C7F10C7009A /* Pods_Justina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8559FCB6ABD800B3D699792 /* Pods_Justina.framework */; };
 		AF36954C24FE8B2400591528 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF36954B24FE8B2400591528 /* Coordinator.swift */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		260A5A8B1FA8FC61CAF584E5 /* Pods-Justina-JustinaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Justina-JustinaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Justina-JustinaUITests/Pods-Justina-JustinaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		642C191E0A3E24B53F429780 /* Pods_Justina_JustinaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Justina_JustinaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C3F1D862513A07A0038B81E /* PeticaoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeticaoVC.swift; sourceTree = "<group>"; };
 		6C4AA0D1250A542A0017DC70 /* PersonalData.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PersonalData.storyboard; sourceTree = "<group>"; };
 		83B7532D8E7CF209D31F4F8E /* Pods-Justina-JustinaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Justina-JustinaUITests.release.xcconfig"; path = "Target Support Files/Pods-Justina-JustinaUITests/Pods-Justina-JustinaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8BED632E1BA769038D9A477F /* Pods-Justina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Justina.release.xcconfig"; path = "Target Support Files/Pods-Justina/Pods-Justina.release.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				AFEC0BA924FE83A70022C25A /* MainVC.swift */,
 				AFB59AF224FFE6A800FB9207 /* JustinaVC.swift */,
 				AFB10D32250A62B400A1381A /* PersonalDataVC.swift */,
+				6C3F1D862513A07A0038B81E /* PeticaoVC.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C3F1D872513A07A0038B81E /* PeticaoVC.swift in Sources */,
 				AFB10D33250A62B400A1381A /* PersonalDataVC.swift in Sources */,
 				AFB10D2E250A54E700A1381A /* KeyboardLayoutGuide.swift in Sources */,
 				AF36954C24FE8B2400591528 /* Coordinator.swift in Sources */,
