@@ -10,9 +10,14 @@ import UIKit
 
 class ProcessosInfoTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var mainView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.contentView.backgroundColor = .primaryBackground
+        self.mainView.backgroundColor = .secondaryBackground
+        self.mainView.layer.cornerRadius = 11
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
