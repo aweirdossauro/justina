@@ -16,4 +16,7 @@ struct CellIdentifiers {
     
     static let messageSentTableViewCell = "MessageSentTableViewCell"
     static let justinaMessageTableViewCell = "JustinaMessageTableViewCell"
+    
+    static let processosInfoTableViewCell = "ProcessosInfoTableViewCell"
+
 }
