@@ -67,7 +67,7 @@ class MainVC: UIViewController, Storyboarded {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        showImage(false)
+        showImage(false, true)
     }
     
     
@@ -133,7 +133,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            if indexPath.row == 2 {
+            if indexPath.row == 0 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.addProcessoTableViewCell) as! AddProcessoTableViewCell
                 return cell
             }
@@ -158,7 +158,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         delegate?.moveToProcessosInfo()
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row == 2 ? 60 : 100
+        return indexPath.row == 0 ? 60 : 100
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
