@@ -11,6 +11,7 @@ import UIKit
 class ProcessosInfoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var mainLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

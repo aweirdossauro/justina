@@ -12,6 +12,13 @@ class ProcessosInfoVC: UIViewController, Storyboarded {
     // MARK: Coordinator Related Properties
     static var storyboardName: String = "Main"
     
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.register(UINib(nibName: CellIdentifiers.processosInfoTableViewCell, bundle: nil),
+                               forCellReuseIdentifier: CellIdentifiers.processosInfoTableViewCell)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemGray6

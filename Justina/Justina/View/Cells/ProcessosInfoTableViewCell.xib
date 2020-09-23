@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="KGk-i7-Jjw" customClass="ProcessosInfoTableViewCell" customModule="Justina" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProcessosInfoTableViewCell" rowHeight="66" id="KGk-i7-Jjw" customClass="ProcessosInfoTableViewCell" customModule="Justina" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -20,7 +20,31 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X63-rT-mXI">
                         <rect key="frame" x="10" y="5" width="300" height="56"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFP-nj-pjy">
+                                <rect key="frame" x="10" y="5" width="250" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bWC-YJ-xi6">
+                                <rect key="frame" x="270" y="17.5" width="25" height="21.5"/>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bWC-YJ-xi6" secondAttribute="height" multiplier="1:1" id="2jb-g7-P87"/>
+                                    <constraint firstAttribute="width" constant="25" id="upH-u0-848"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="xFP-nj-pjy" firstAttribute="leading" secondItem="X63-rT-mXI" secondAttribute="leading" constant="10" id="24L-hD-e3a"/>
+                            <constraint firstItem="bWC-YJ-xi6" firstAttribute="centerY" secondItem="X63-rT-mXI" secondAttribute="centerY" id="30w-v4-eLY"/>
+                            <constraint firstItem="bWC-YJ-xi6" firstAttribute="leading" secondItem="xFP-nj-pjy" secondAttribute="trailing" constant="10" id="O1O-UG-LSo"/>
+                            <constraint firstAttribute="bottom" secondItem="xFP-nj-pjy" secondAttribute="bottom" constant="5" id="dIi-K3-CRx"/>
+                            <constraint firstItem="xFP-nj-pjy" firstAttribute="top" secondItem="X63-rT-mXI" secondAttribute="top" constant="5" id="r6R-BE-6Ge"/>
+                            <constraint firstAttribute="trailing" secondItem="bWC-YJ-xi6" secondAttribute="trailing" constant="5" id="udt-eK-Lgg"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
@@ -32,12 +56,17 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="mainLabel" destination="xFP-nj-pjy" id="AJ6-4z-ZbK"/>
                 <outlet property="mainView" destination="X63-rT-mXI" id="K2U-m3-utM"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="81.026785714285708"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
