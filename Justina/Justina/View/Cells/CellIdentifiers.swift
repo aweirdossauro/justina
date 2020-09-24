@@ -10,6 +10,7 @@ import Foundation
 
 /// identifiers das TableViewCells
 struct CellIdentifiers {
+    //MARK:- Table View Cells
     static let sectionHeaderTableViewCell = "SectionHeaderTableViewCell"
     static let processosTableViewCell = "ProcessosTableViewCell"
     static let addProcessoTableViewCell = "AddProcessoTableViewCell"
@@ -17,6 +18,6 @@ struct CellIdentifiers {
     static let messageSentTableViewCell = "MessageSentTableViewCell"
     static let justinaMessageTableViewCell = "JustinaMessageTableViewCell"
     
-    static let processosInfoTableViewCell = "ProcessosInfoTableViewCell"
-
+//MARK:- Collection View Cells
+    static let processosInfoCollectionViewCell = "ProcessosInfoCollectionViewCell"
 }

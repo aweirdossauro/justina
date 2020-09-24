@@ -22,8 +22,6 @@
 		AF5EAB0525124BAF005CE765 /* ProcessosInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EAB0425124BAE005CE765 /* ProcessosInfoVC.swift */; };
 		AF66083525090670004C185D /* MessageSentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66083325090670004C185D /* MessageSentTableViewCell.swift */; };
 		AF66083625090670004C185D /* MessageSentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF66083425090670004C185D /* MessageSentTableViewCell.xib */; };
-		AF6EF1B9251A3DF2000C4646 /* ProcessosInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6EF1B7251A3DF2000C4646 /* ProcessosInfoTableViewCell.swift */; };
-		AF6EF1BA251A3DF2000C4646 /* ProcessosInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF6EF1B8251A3DF2000C4646 /* ProcessosInfoTableViewCell.xib */; };
 		AFB10D2E250A54E700A1381A /* KeyboardLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB10D2D250A54E700A1381A /* KeyboardLayoutGuide.swift */; };
 		AFB10D31250A61F700A1381A /* DataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB10D30250A61F700A1381A /* DataCoordinator.swift */; };
 		AFB10D33250A62B400A1381A /* PersonalDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB10D32250A62B400A1381A /* PersonalDataVC.swift */; };
@@ -45,6 +43,8 @@
 		AFF3D6E5250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D6E3250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift */; };
 		AFF3D6E6250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF3D6E4250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.xib */; };
 		AFF3D6E8250FA4B200D0DFF9 /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D6E7250FA4B200D0DFF9 /* CellIdentifiers.swift */; };
+		AFFE94CE251CD30A007DA38E /* ProcessosInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE94CC251CD30A007DA38E /* ProcessosInfoCollectionViewCell.swift */; };
+		AFFE94CF251CD30A007DA38E /* ProcessosInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFE94CD251CD30A007DA38E /* ProcessosInfoCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,8 +83,6 @@
 		AF5EAB0425124BAE005CE765 /* ProcessosInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessosInfoVC.swift; sourceTree = "<group>"; };
 		AF66083325090670004C185D /* MessageSentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSentTableViewCell.swift; sourceTree = "<group>"; };
 		AF66083425090670004C185D /* MessageSentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageSentTableViewCell.xib; sourceTree = "<group>"; };
-		AF6EF1B7251A3DF2000C4646 /* ProcessosInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessosInfoTableViewCell.swift; sourceTree = "<group>"; };
-		AF6EF1B8251A3DF2000C4646 /* ProcessosInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProcessosInfoTableViewCell.xib; sourceTree = "<group>"; };
 		AFB10D2D250A54E700A1381A /* KeyboardLayoutGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutGuide.swift; sourceTree = "<group>"; };
 		AFB10D30250A61F700A1381A /* DataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoordinator.swift; sourceTree = "<group>"; };
 		AFB10D32250A62B400A1381A /* PersonalDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataVC.swift; sourceTree = "<group>"; };
@@ -112,6 +110,8 @@
 		AFF3D6E3250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		AFF3D6E4250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		AFF3D6E7250FA4B200D0DFF9 /* CellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
+		AFFE94CC251CD30A007DA38E /* ProcessosInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessosInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		AFFE94CD251CD30A007DA38E /* ProcessosInfoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProcessosInfoCollectionViewCell.xib; sourceTree = "<group>"; };
 		CF7C505ED4F4C2A0305D2CBD /* Pods_JustinaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustinaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31B333D522594084F8EA627 /* Pods-Justina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Justina.debug.xcconfig"; path = "Target Support Files/Pods-Justina/Pods-Justina.debug.xcconfig"; sourceTree = "<group>"; };
 		F8559FCB6ABD800B3D699792 /* Pods_Justina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Justina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,8 +223,8 @@
 		AF6EF1B6251A3DC8000C4646 /* ProcessosInfoVC */ = {
 			isa = PBXGroup;
 			children = (
-				AF6EF1B7251A3DF2000C4646 /* ProcessosInfoTableViewCell.swift */,
-				AF6EF1B8251A3DF2000C4646 /* ProcessosInfoTableViewCell.xib */,
+				AFFE94CC251CD30A007DA38E /* ProcessosInfoCollectionViewCell.swift */,
+				AFFE94CD251CD30A007DA38E /* ProcessosInfoCollectionViewCell.xib */,
 			);
 			name = ProcessosInfoVC;
 			sourceTree = "<group>";
@@ -461,7 +461,7 @@
 				AFEC0BAF24FE83A90022C25A /* Assets.xcassets in Resources */,
 				AFEC0BAD24FE83A70022C25A /* Main.storyboard in Resources */,
 				AFF3D6DF250FA03500D0DFF9 /* AddProcessoTableViewCell.xib in Resources */,
-				AF6EF1BA251A3DF2000C4646 /* ProcessosInfoTableViewCell.xib in Resources */,
+				AFFE94CF251CD30A007DA38E /* ProcessosInfoCollectionViewCell.xib in Resources */,
 				AFB59AF124FFE68300FB9207 /* Justina.storyboard in Resources */,
 				AF66083625090670004C185D /* MessageSentTableViewCell.xib in Resources */,
 				AFF3D6DA250D578400D0DFF9 /* ProcessosTableViewCell.xib in Resources */,
@@ -600,9 +600,9 @@
 				AFB59AF324FFE6A800FB9207 /* JustinaVC.swift in Sources */,
 				AFF3D6D9250D578400D0DFF9 /* ProcessosTableViewCell.swift in Sources */,
 				AF36955124FE8EF500591528 /* MainCoordinator.swift in Sources */,
-				AF6EF1B9251A3DF2000C4646 /* ProcessosInfoTableViewCell.swift in Sources */,
 				AFEC0BAA24FE83A70022C25A /* MainVC.swift in Sources */,
 				AF1C4736250D4F0F0005059B /* JustinaMessageTableViewCell.swift in Sources */,
+				AFFE94CE251CD30A007DA38E /* ProcessosInfoCollectionViewCell.swift in Sources */,
 				AFB10D35250A651C00A1381A /* AppCoordinator.swift in Sources */,
 				AF36954F24FE8E1200591528 /* Storyboarded.swift in Sources */,
 				AFB10D31250A61F700A1381A /* DataCoordinator.swift in Sources */,

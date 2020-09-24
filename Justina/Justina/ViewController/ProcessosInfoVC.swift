@@ -12,10 +12,12 @@ class ProcessosInfoVC: UIViewController, Storyboarded {
     // MARK: Coordinator Related Properties
     static var storyboardName: String = "Main"
     
-    @IBOutlet weak var tableView: UITableView! {
+    @IBOutlet weak var processoNameLabel: UILabel!
+    @IBOutlet weak var blueprintView: UIView!
+    @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
-            tableView.register(UINib(nibName: CellIdentifiers.processosInfoTableViewCell, bundle: nil),
-                               forCellReuseIdentifier: CellIdentifiers.processosInfoTableViewCell)
+            collectionView.register(UINib(nibName: CellIdentifiers.processosInfoCollectionViewCell, bundle: nil),
+                                    forCellWithReuseIdentifier: CellIdentifiers.processosInfoCollectionViewCell)
         }
     }
     
@@ -26,5 +28,4 @@ class ProcessosInfoVC: UIViewController, Storyboarded {
         title = "Painel de Petição"
         navigationController?.navigationBar.backItem?.title = "aa"
     }
-    
 }
