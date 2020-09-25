@@ -40,10 +40,17 @@ class MainCoordinator: NavigationCoordinator {
         }
     }
     
+    func showProcessosInfoVC(){
+        DispatchQueue.main.async {
+            let vc = ProcessosInfoVC.instantiate()
+//            vc.delegate = self
+            self.navigationController.pushViewController(vc, animated: true)
+        }
+    }
+    
     func showPersonalData(){
         DispatchQueue.main.async {
             let vc = PersonalDataVC.instantiate()
-//            vc.delegate = self
             self.navigationController.pushViewController(vc, animated: true)
         }
     }
@@ -59,5 +66,9 @@ extension MainCoordinator: MainVCDelegate {
 
     func moveToPersonalData() {
         showPersonalData()
+    }
+    
+    func moveToProcessosInfo() {
+        showProcessosInfoVC()
     }
 }

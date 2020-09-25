@@ -12,11 +12,11 @@ import IQKeyboardManagerSwift
 
 class JustinaDataSource: UBottomSheetCoordinatorDataSource {
     func sheetPositions(_ availableHeight: CGFloat) -> [CGFloat] {
-        return [0.1, 0.85].map{$0*availableHeight}
+        return [0.175, 0.85].map{$0*availableHeight}
     }
     
     func initialPosition(_ availableHeight: CGFloat) -> CGFloat {
-        return availableHeight*0.1
+        return availableHeight*0.175
     }
 }
 
@@ -26,9 +26,16 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
     static var storyboardName: String = "Justina"
     var coordinator: MainCoordinator?
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.register(UINib(nibName: CellIdentifiers.messageSentTableViewCell, bundle: nil),
+                               forCellReuseIdentifier: CellIdentifiers.messageSentTableViewCell)
+            tableView.register(UINib(nibName: CellIdentifiers.justinaMessageTableViewCell, bundle: nil),
+                               forCellReuseIdentifier: CellIdentifiers.justinaMessageTableViewCell)
+        }
+    }
     @IBOutlet weak var tableViewHeader: UIView!
-    @IBOutlet weak var tableViewCornerView: UIView!
+    @IBOutlet weak var tableViewHeaderCornerView: UIView!
     
     @IBOutlet weak var messageTFView: UIView!
     @IBOutlet weak var messageTextField: UITextField!
@@ -40,17 +47,13 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
 
         IQKeyboardManager.shared.enable = false
         
-        messageTFView.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor).isActive = true
-                
-        messageTFView.layer.cornerRadius = 11
+        initialUI()
         messageTextField.delegate = self
 
-        tableView.contentInsetAdjustmentBehavior = .never
-        tableViewCornerView.roundCorners(corners: [.topLeft, .topRight], radius: 15, rect: tableViewCornerView.rect)
+        messageTFView.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor).isActive = true
         
-        tableView.register(UINib(nibName: "MessageSentTableViewCell", bundle: nil),
-                           forCellReuseIdentifier: "MessageSentTableViewCell")
-
+        tableView.contentInsetAdjustmentBehavior = .never
+        
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -60,7 +63,6 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
         
         //adds pan gesture recognizer to draggableView()
         sheetCoordinator?.startTracking(item: self)
-
     }
 
     var sheetCoordinator: UBottomSheetCoordinator?
@@ -71,16 +73,24 @@ class JustinaVC: UIViewController, Storyboarded, Draggable {
     
     var i = 0
     @IBAction func sendButton(_ sender: Any) {
-//        arrayData.append("eae")
         i += 1
+//        arrayData.append("eaesadljahd;awouhjaldahjd;lawidjaw;oduhjawdljhdoawudjaldhjawldaskdjalwidjasldjawdlijasdadasdifjal;fsdjf;rifjdl;firjgfl;sdfsdsdcvsdcsdvcerververveavvffdvkdfgvkdfv;dkvjeorigvnerogiujl   dflbvkeatnvleafk velarjgv aerlv aerltgv ealrg elrtg eltmbg aertl vbaeltkg lfjtg elgvmj aetr;gonr efweo;i fhjwe r;oeruwhf ;aeorfguh r;ofguh e \(i)")
         arrayData.append("eae \(i)")
         tableView.reloadData()
-//        let a = IndexPath.init(item: arrayData.count, section: 0)
-//
-//        if i > 5 {
-//            tableView.scrollToRow(at: a, at: .bottom, animated: true)
-//        }
+        tableView.scrollToRow(at: IndexPath(row: arrayData.count - 1, section: 0) , at: .bottom, animated: true)
+        
+    }
+    
+    func initialUI(){
+        messageTFView.layer.cornerRadius = 11
+        tableViewHeaderCornerView.roundCorners(corners: [.topLeft, .topRight], radius: 15)
 
+        tableView.tableFooterView = nil
+        tableView.tableHeaderView = tableViewHeader
+        
+        messageTFView.backgroundColor = .secondaryBackground
+        tableViewHeader.backgroundColor = .secondaryBackground
+        tableView.backgroundColor = .primaryBackground
     }
 }
 
@@ -96,11 +106,10 @@ extension JustinaVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MessageSentTableViewCell", for: indexPath) as! MessageSentTableViewCell
-        
-        let reverseIndex = arrayData.count-indexPath.row-1
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.messageSentTableViewCell, for: indexPath) as! MessageSentTableViewCell
 
-//        let currCellData = arrayData.object(at: reverseIndex)
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "JustinaMessageTableViewCell", for: indexPath) as! JustinaMessageTableViewCell
+        let reverseIndex = arrayData.count - indexPath.row - 1
 
         cell.messageText = arrayData.reversed()[reverseIndex]
         cell.messageLabel.text = arrayData.reversed()[reverseIndex]

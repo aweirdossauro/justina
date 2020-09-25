@@ -11,11 +11,15 @@
 		4635EDC2D1E81363644850EF /* Pods_JustinaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF7C505ED4F4C2A0305D2CBD /* Pods_JustinaTests.framework */; };
 		6C4AA0D2250A542A0017DC70 /* PersonalData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C4AA0D1250A542A0017DC70 /* PersonalData.storyboard */; };
 		74C9F1FA31F37C7F10C7009A /* Pods_Justina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8559FCB6ABD800B3D699792 /* Pods_Justina.framework */; };
+		AF1C4733250D4D200005059B /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1C4732250D4D200005059B /* UIColor+.swift */; };
+		AF1C4736250D4F0F0005059B /* JustinaMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1C4734250D4F0F0005059B /* JustinaMessageTableViewCell.swift */; };
+		AF1C4737250D4F0F0005059B /* JustinaMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1C4735250D4F0F0005059B /* JustinaMessageTableViewCell.xib */; };
 		AF36954C24FE8B2400591528 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF36954B24FE8B2400591528 /* Coordinator.swift */; };
 		AF36954F24FE8E1200591528 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF36954E24FE8E1200591528 /* Storyboarded.swift */; };
 		AF36955124FE8EF500591528 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF36955024FE8EF500591528 /* MainCoordinator.swift */; };
 		AF36955324FE901200591528 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF36955224FE901200591528 /* NavigationCoordinator.swift */; };
 		AF390338250280480062E7C2 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF390337250280480062E7C2 /* UIView+.swift */; };
+		AF5EAB0525124BAF005CE765 /* ProcessosInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EAB0425124BAE005CE765 /* ProcessosInfoVC.swift */; };
 		AF66083525090670004C185D /* MessageSentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66083325090670004C185D /* MessageSentTableViewCell.swift */; };
 		AF66083625090670004C185D /* MessageSentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF66083425090670004C185D /* MessageSentTableViewCell.xib */; };
 		AFB10D2E250A54E700A1381A /* KeyboardLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB10D2D250A54E700A1381A /* KeyboardLayoutGuide.swift */; };
@@ -32,6 +36,15 @@
 		AFEC0BB224FE83A90022C25A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEC0BB024FE83A90022C25A /* LaunchScreen.storyboard */; };
 		AFEC0BBD24FE83A90022C25A /* JustinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BBC24FE83A90022C25A /* JustinaTests.swift */; };
 		AFEC0BC824FE83AA0022C25A /* JustinaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BC724FE83AA0022C25A /* JustinaUITests.swift */; };
+		AFF3D6D9250D578400D0DFF9 /* ProcessosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D6D7250D578400D0DFF9 /* ProcessosTableViewCell.swift */; };
+		AFF3D6DA250D578400D0DFF9 /* ProcessosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF3D6D8250D578400D0DFF9 /* ProcessosTableViewCell.xib */; };
+		AFF3D6DE250FA03500D0DFF9 /* AddProcessoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D6DC250FA03500D0DFF9 /* AddProcessoTableViewCell.swift */; };
+		AFF3D6DF250FA03500D0DFF9 /* AddProcessoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF3D6DD250FA03500D0DFF9 /* AddProcessoTableViewCell.xib */; };
+		AFF3D6E5250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D6E3250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift */; };
+		AFF3D6E6250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF3D6E4250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.xib */; };
+		AFF3D6E8250FA4B200D0DFF9 /* CellIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D6E7250FA4B200D0DFF9 /* CellIdentifiers.swift */; };
+		AFFE94CE251CD30A007DA38E /* ProcessosInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE94CC251CD30A007DA38E /* ProcessosInfoCollectionViewCell.swift */; };
+		AFFE94CF251CD30A007DA38E /* ProcessosInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFE94CD251CD30A007DA38E /* ProcessosInfoCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,11 +72,15 @@
 		8BED632E1BA769038D9A477F /* Pods-Justina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Justina.release.xcconfig"; path = "Target Support Files/Pods-Justina/Pods-Justina.release.xcconfig"; sourceTree = "<group>"; };
 		8E4F327231606F0580E11975 /* Pods-JustinaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustinaTests.release.xcconfig"; path = "Target Support Files/Pods-JustinaTests/Pods-JustinaTests.release.xcconfig"; sourceTree = "<group>"; };
 		9A181F707F343CB25112995A /* Pods-JustinaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustinaTests.debug.xcconfig"; path = "Target Support Files/Pods-JustinaTests/Pods-JustinaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF1C4732250D4D200005059B /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		AF1C4734250D4F0F0005059B /* JustinaMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustinaMessageTableViewCell.swift; sourceTree = "<group>"; };
+		AF1C4735250D4F0F0005059B /* JustinaMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JustinaMessageTableViewCell.xib; sourceTree = "<group>"; };
 		AF36954B24FE8B2400591528 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AF36954E24FE8E1200591528 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		AF36955024FE8EF500591528 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		AF36955224FE901200591528 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
 		AF390337250280480062E7C2 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		AF5EAB0425124BAE005CE765 /* ProcessosInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessosInfoVC.swift; sourceTree = "<group>"; };
 		AF66083325090670004C185D /* MessageSentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSentTableViewCell.swift; sourceTree = "<group>"; };
 		AF66083425090670004C185D /* MessageSentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageSentTableViewCell.xib; sourceTree = "<group>"; };
 		AFB10D2D250A54E700A1381A /* KeyboardLayoutGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutGuide.swift; sourceTree = "<group>"; };
@@ -86,6 +103,15 @@
 		AFEC0BC324FE83AA0022C25A /* JustinaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustinaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEC0BC724FE83AA0022C25A /* JustinaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustinaUITests.swift; sourceTree = "<group>"; };
 		AFEC0BC924FE83AA0022C25A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF3D6D7250D578400D0DFF9 /* ProcessosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessosTableViewCell.swift; sourceTree = "<group>"; };
+		AFF3D6D8250D578400D0DFF9 /* ProcessosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProcessosTableViewCell.xib; sourceTree = "<group>"; };
+		AFF3D6DC250FA03500D0DFF9 /* AddProcessoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProcessoTableViewCell.swift; sourceTree = "<group>"; };
+		AFF3D6DD250FA03500D0DFF9 /* AddProcessoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddProcessoTableViewCell.xib; sourceTree = "<group>"; };
+		AFF3D6E3250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		AFF3D6E4250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		AFF3D6E7250FA4B200D0DFF9 /* CellIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifiers.swift; sourceTree = "<group>"; };
+		AFFE94CC251CD30A007DA38E /* ProcessosInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessosInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		AFFE94CD251CD30A007DA38E /* ProcessosInfoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProcessosInfoCollectionViewCell.xib; sourceTree = "<group>"; };
 		CF7C505ED4F4C2A0305D2CBD /* Pods_JustinaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustinaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31B333D522594084F8EA627 /* Pods-Justina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Justina.debug.xcconfig"; path = "Target Support Files/Pods-Justina/Pods-Justina.debug.xcconfig"; sourceTree = "<group>"; };
 		F8559FCB6ABD800B3D699792 /* Pods_Justina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Justina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				AF390337250280480062E7C2 /* UIView+.swift */,
+				AF1C4732250D4D200005059B /* UIColor+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -174,7 +201,10 @@
 		AF6608372509067C004C185D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				AF6EF1B6251A3DC8000C4646 /* ProcessosInfoVC */,
+				AFF3D6E7250FA4B200D0DFF9 /* CellIdentifiers.swift */,
 				AF66083825090689004C185D /* JustinaVC */,
+				AFF3D6DB250D578800D0DFF9 /* MainVC */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -184,8 +214,19 @@
 			children = (
 				AF66083325090670004C185D /* MessageSentTableViewCell.swift */,
 				AF66083425090670004C185D /* MessageSentTableViewCell.xib */,
+				AF1C4734250D4F0F0005059B /* JustinaMessageTableViewCell.swift */,
+				AF1C4735250D4F0F0005059B /* JustinaMessageTableViewCell.xib */,
 			);
 			path = JustinaVC;
+			sourceTree = "<group>";
+		};
+		AF6EF1B6251A3DC8000C4646 /* ProcessosInfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				AFFE94CC251CD30A007DA38E /* ProcessosInfoCollectionViewCell.swift */,
+				AFFE94CD251CD30A007DA38E /* ProcessosInfoCollectionViewCell.xib */,
+			);
+			name = ProcessosInfoVC;
 			sourceTree = "<group>";
 		};
 		AFB10D2F250A54EB00A1381A /* Extensions */ = {
@@ -255,6 +296,7 @@
 			children = (
 				AFEC0BA924FE83A70022C25A /* MainVC.swift */,
 				AFB59AF224FFE6A800FB9207 /* JustinaVC.swift */,
+				AF5EAB0425124BAE005CE765 /* ProcessosInfoVC.swift */,
 				AFB10D32250A62B400A1381A /* PersonalDataVC.swift */,
 			);
 			path = ViewController;
@@ -270,6 +312,27 @@
 				AF6608372509067C004C185D /* Cells */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AFF3D6DB250D578800D0DFF9 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				AFF3D6E3250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift */,
+				AFF3D6E4250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.xib */,
+				AFF3D6E2250FA24400D0DFF9 /* ProcessoSection */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		AFF3D6E2250FA24400D0DFF9 /* ProcessoSection */ = {
+			isa = PBXGroup;
+			children = (
+				AFF3D6D7250D578400D0DFF9 /* ProcessosTableViewCell.swift */,
+				AFF3D6D8250D578400D0DFF9 /* ProcessosTableViewCell.xib */,
+				AFF3D6DC250FA03500D0DFF9 /* AddProcessoTableViewCell.swift */,
+				AFF3D6DD250FA03500D0DFF9 /* AddProcessoTableViewCell.xib */,
+			);
+			path = ProcessoSection;
 			sourceTree = "<group>";
 		};
 		B34A95855BC0E3E8A29A8957 /* Frameworks */ = {
@@ -392,11 +455,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C4AA0D2250A542A0017DC70 /* PersonalData.storyboard in Resources */,
+				AF1C4737250D4F0F0005059B /* JustinaMessageTableViewCell.xib in Resources */,
+				AFF3D6E6250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.xib in Resources */,
 				AFEC0BB224FE83A90022C25A /* LaunchScreen.storyboard in Resources */,
 				AFEC0BAF24FE83A90022C25A /* Assets.xcassets in Resources */,
 				AFEC0BAD24FE83A70022C25A /* Main.storyboard in Resources */,
+				AFF3D6DF250FA03500D0DFF9 /* AddProcessoTableViewCell.xib in Resources */,
+				AFFE94CF251CD30A007DA38E /* ProcessosInfoCollectionViewCell.xib in Resources */,
 				AFB59AF124FFE68300FB9207 /* Justina.storyboard in Resources */,
 				AF66083625090670004C185D /* MessageSentTableViewCell.xib in Resources */,
+				AFF3D6DA250D578400D0DFF9 /* ProcessosTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,19 +593,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFB10D33250A62B400A1381A /* PersonalDataVC.swift in Sources */,
+				AFF3D6E5250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift in Sources */,
 				AFB10D2E250A54E700A1381A /* KeyboardLayoutGuide.swift in Sources */,
+				AF5EAB0525124BAF005CE765 /* ProcessosInfoVC.swift in Sources */,
 				AF36954C24FE8B2400591528 /* Coordinator.swift in Sources */,
 				AFB59AF324FFE6A800FB9207 /* JustinaVC.swift in Sources */,
+				AFF3D6D9250D578400D0DFF9 /* ProcessosTableViewCell.swift in Sources */,
 				AF36955124FE8EF500591528 /* MainCoordinator.swift in Sources */,
 				AFEC0BAA24FE83A70022C25A /* MainVC.swift in Sources */,
+				AF1C4736250D4F0F0005059B /* JustinaMessageTableViewCell.swift in Sources */,
+				AFFE94CE251CD30A007DA38E /* ProcessosInfoCollectionViewCell.swift in Sources */,
 				AFB10D35250A651C00A1381A /* AppCoordinator.swift in Sources */,
 				AF36954F24FE8E1200591528 /* Storyboarded.swift in Sources */,
 				AFB10D31250A61F700A1381A /* DataCoordinator.swift in Sources */,
+				AFF3D6DE250FA03500D0DFF9 /* AddProcessoTableViewCell.swift in Sources */,
 				AFEC0BA624FE83A70022C25A /* AppDelegate.swift in Sources */,
+				AFF3D6E8250FA4B200D0DFF9 /* CellIdentifiers.swift in Sources */,
 				AF390338250280480062E7C2 /* UIView+.swift in Sources */,
 				AF66083525090670004C185D /* MessageSentTableViewCell.swift in Sources */,
 				AFEC0BA824FE83A70022C25A /* SceneDelegate.swift in Sources */,
 				AF36955324FE901200591528 /* NavigationCoordinator.swift in Sources */,
+				AF1C4733250D4D200005059B /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,14 +1,14 @@
 //
-//  MessageSentTableViewCell.swift
+//  JustinaMessageTableViewCell.swift
 //  Justina
 //
-//  Created by Vinicius Augusto Dilay de Paula on 09/09/20.
+//  Created by Vinicius Augusto Dilay de Paula on 12/09/20.
 //  Copyright © 2020 aweirdossauro. All rights reserved.
 //
 
 import UIKit
 
-class MessageSentTableViewCell: UITableViewCell {
+class JustinaMessageTableViewCell: UITableViewCell {
     
     @IBOutlet weak var messageView: UIView!
     @IBOutlet weak var messageLabel: UILabel!
@@ -22,12 +22,12 @@ class MessageSentTableViewCell: UITableViewCell {
         
         self.contentView.backgroundColor = .primaryBackground
         
-        self.messageView.backgroundColor = .userMessagesBackground
+        self.messageView.backgroundColor = .secondaryBackground
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     

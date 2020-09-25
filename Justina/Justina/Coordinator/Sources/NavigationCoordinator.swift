@@ -25,5 +25,11 @@ extension NavigationCoordinator {
         navigationController.navigationBar.shadowImage = UIImage()
         navigationController.navigationBar.isTranslucent = true
     }
+    
+    func setExtendedProperties(){
+        navigationController.navigationBar.setBackgroundImage(nil, for: .default)
+        navigationController.navigationBar.shadowImage = nil
+        navigationController.navigationBar.isTranslucent = false
+    }
 }
 
