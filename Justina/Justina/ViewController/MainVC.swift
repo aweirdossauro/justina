@@ -63,6 +63,7 @@ class MainVC: UIViewController, Storyboarded {
         super.viewDidAppear(animated)
         setupNavBarButtonUI()
 
+        
         showImage(true)
     }
     
