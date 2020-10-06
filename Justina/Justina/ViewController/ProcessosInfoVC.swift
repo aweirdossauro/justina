@@ -24,8 +24,23 @@ class ProcessosInfoVC: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemGray6
-        navigationController?.navigationBar.prefersLargeTitles = false
+        
         title = "Painel de Petição"
-        navigationController?.navigationBar.backItem?.title = "aa"
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.navigationBar.backItem?.title = ""
+        navigationController?.navigationBar.tintColor = .label
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        title = "Painel de Petição"
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.navigationBar.backItem?.title = ""
+        navigationController?.navigationBar.tintColor = .label
+
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 }

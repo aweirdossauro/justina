@@ -62,8 +62,6 @@ class MainVC: UIViewController, Storyboarded {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setupNavBarButtonUI()
-
-        
         showImage(true)
     }
     
@@ -181,7 +179,6 @@ extension MainVC {
         imageView.transform = CGAffineTransform.identity
             .scaledBy(x: scale, y: scale)
             .translatedBy(x: xTranslation, y: yTranslation)
-        imageView.alpha = scale
     }
     
     /// Show or hide the image from NavBar while going to next screen or back to initial screen
