@@ -25,14 +25,7 @@ class MainVC: UIViewController, Storyboarded {
                                forCellReuseIdentifier: CellIdentifiers.addProcessoTableViewCell)
         }
     }
-    
-    var sheetCoordinator: UBottomSheetCoordinator!
-    var dataSource: UBottomSheetCoordinatorDataSource?
-
-    var backView: PassThroughView?
-
-    let notification = UINotificationFeedbackGenerator()
-    
+        
     private let imageView = UIImageView(image: UIImage(systemName: "person.circle.fill"))
     private struct Const {
     /// Image height/width for Large NavBar state
@@ -129,16 +122,16 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
 extension MainVC {
     private func setupNavBarButtonUI() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        
+
         title = "Meus Processos"
-        
-        imageView.tintColor = .white
-        
+
+        imageView.tintColor = .label
+
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(testButtonPressed(_:)))
         imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(tapGestureRecognizer)
-            
-            // Initial setup for image for Large NavBar state since the the screen always has Large NavBar once it gets opened
+
+        // Initial setup for image for Large NavBar state since the the screen always has Large NavBar once it gets opened
         guard let navigationBar = self.navigationController?.navigationBar else { return }
         navigationBar.addSubview(imageView)
         imageView.layer.cornerRadius = Const.ImageSizeForLargeState / 2
@@ -192,7 +185,9 @@ extension MainVC {
         if show {
             guard let height = navigationController?.navigationBar.frame.height else { return }
             moveAndResizeImage(for: height)
+             return
         }
+        
     }
 }
 

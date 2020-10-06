@@ -33,10 +33,6 @@ class ProcessosInfoVC: UIViewController, Storyboarded {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        title = "Painel de Petição"
-        navigationController?.navigationBar.prefersLargeTitles = false
-        navigationController?.navigationBar.backItem?.title = ""
-        navigationController?.navigationBar.tintColor = .label
 
     }
 
