@@ -201,8 +201,8 @@
 		AF6608372509067C004C185D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				AF6EF1B6251A3DC8000C4646 /* ProcessosInfoVC */,
 				AFF3D6E7250FA4B200D0DFF9 /* CellIdentifiers.swift */,
+				AF6EF1B6251A3DC8000C4646 /* ProcessosInfoVC */,
 				AF66083825090689004C185D /* JustinaVC */,
 				AFF3D6DB250D578800D0DFF9 /* MainVC */,
 			);
