@@ -13,13 +13,9 @@ class ProcessosInfoVC: UIViewController, Storyboarded {
     static var storyboardName: String = "Main"
     
     @IBOutlet weak var processoNameLabel: UILabel!
-    @IBOutlet weak var blueprintView: UIView!
-    @IBOutlet weak var collectionView: UICollectionView! {
-        didSet {
-            collectionView.register(UINib(nibName: CellIdentifiers.processosInfoCollectionViewCell, bundle: nil),
-                                    forCellWithReuseIdentifier: CellIdentifiers.processosInfoCollectionViewCell)
-        }
-    }
+
+    @IBOutlet weak var contentSegmentedView: UISegmentedControl!
+    @IBOutlet weak var contentView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

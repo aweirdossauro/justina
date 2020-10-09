@@ -93,6 +93,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentSegmentedView" destination="S3J-y6-xev" id="HcE-Mf-KYY"/>
+                        <outlet property="contentView" destination="rRm-jd-F1a" id="nZ4-ho-pEu"/>
                         <outlet property="processoNameLabel" destination="sGV-wm-W0P" id="AcO-gF-6OX"/>
                     </connections>
                 </viewController>
