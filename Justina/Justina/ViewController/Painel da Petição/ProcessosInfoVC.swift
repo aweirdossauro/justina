@@ -17,6 +17,13 @@ class ProcessosInfoVC: UIViewController, Storyboarded {
     @IBOutlet weak var contentSegmentedView: UISegmentedControl!
     @IBOutlet weak var contentView: UIView!
     
+    // MARK: Subtypes
+    enum SegmentedViewIndex: Int {
+        case visaoGeral = 0
+        case peticao = 1
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemGray6
@@ -29,10 +36,21 @@ class ProcessosInfoVC: UIViewController, Storyboarded {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+    }
+    
+    @IBAction func contentSegmentedViewDidChange(_ sender: Any) {
+        let segmentedValue = contentSegmentedView.selectedSegmentIndex
+        
+        if let segmentedIndex = SegmentedViewIndex(rawValue: segmentedValue) {
+            switch segmentedIndex {
+            case .visaoGeral: break
+            
+            case .peticao: break
+            }
+        }
     }
 }

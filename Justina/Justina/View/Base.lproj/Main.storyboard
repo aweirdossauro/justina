@@ -75,6 +75,9 @@
                                     <segment title="First"/>
                                     <segment title="Second"/>
                                 </segments>
+                                <connections>
+                                    <action selector="contentSegmentedViewDidChange:" destination="0Tj-Ki-mI3" eventType="valueChanged" id="68T-O6-bkM"/>
+                                </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" id="CTB-Wg-iZK">
                                 <rect key="frame" x="0.0" y="105" width="414" height="123"/>
