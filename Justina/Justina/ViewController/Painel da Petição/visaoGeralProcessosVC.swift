@@ -8,8 +8,10 @@
 
 import UIKit
 
-class visaoGeralProcessosVC: UIViewController {
-
+class VisaoGeralProcessosVC: UIViewController, Storyboarded {
+    // MARK: Coordinator Related Properties
+    static var storyboardName: String = "Main"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -47,9 +47,23 @@ class ProcessosInfoVC: UIViewController, Storyboarded {
         
         if let segmentedIndex = SegmentedViewIndex(rawValue: segmentedValue) {
             switch segmentedIndex {
-            case .visaoGeral: break
+            case .visaoGeral:
+                let vc = VisaoGeralProcessosVC.instantiate()
+                self.addChild(vc)
+                vc.view.frame = CGRect(x: 0, y: 0,
+                                       width: self.contentView.frame.size.width,
+                                       height: self.contentView.frame.size.height)
+                self.contentView.addSubview(vc.view)
+                vc.didMove(toParent: self)
             
-            case .peticao: break
+            case .peticao:
+                let vc = PeticaoProcessosVC.instantiate()
+                self.addChild(vc)
+                vc.view.frame = CGRect(x: 0, y: 0,
+                                       width: self.contentView.frame.size.width,
+                                       height: self.contentView.frame.size.height)
+                self.contentView.addSubview(vc.view)
+                vc.didMove(toParent: self)
             }
         }
     }
