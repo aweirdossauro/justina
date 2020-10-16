@@ -155,10 +155,13 @@
                             <constraint firstItem="KOx-lC-Lx9" firstAttribute="leading" secondItem="BUx-nh-Yf2" secondAttribute="leading" id="scV-kn-z5I"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="KOx-lC-Lx9" id="1QO-CW-bGo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ba-58-gH4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2469.5652173913045" y="117.85714285714285"/>
+            <point key="canvasLocation" x="-11619" y="242"/>
         </scene>
         <!--Visao Geral ProcessosVC-->
         <scene sceneID="fx2-Ra-FNV">
