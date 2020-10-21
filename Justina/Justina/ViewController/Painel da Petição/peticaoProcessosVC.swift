@@ -26,11 +26,24 @@ class PeticaoProcessosVC: UIViewController, Storyboarded {
 
 extension PeticaoProcessosVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        PeticaoProcessosModel.tableViewCellTitle.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let row = PeticaoProcessosModel.tableViewDataSource.init(rawValue: indexPath.row)
+        
+        switch row {
+        case .dadosPessoais:
+            break
+        case .dadosDaEmpresa:
+            break
+        case .textoDaPeticao:
+            break
+        case .reuniaoDeProvas:
+            break
+        default:
+            break
+        }
     }
     
     
