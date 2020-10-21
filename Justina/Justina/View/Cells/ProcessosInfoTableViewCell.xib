@@ -22,7 +22,7 @@
                         <rect key="frame" x="15" y="5" width="290" height="70"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vc-Gs-k5C">
-                                <rect key="frame" x="5" y="10" width="235" height="50"/>
+                                <rect key="frame" x="10" y="10" width="230" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -40,7 +40,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="vK9-bT-t5I" secondAttribute="trailing" constant="10" id="4e4-5C-MRZ"/>
                             <constraint firstItem="vK9-bT-t5I" firstAttribute="centerY" secondItem="ewf-V3-VP7" secondAttribute="centerY" id="AtN-N3-gGm"/>
-                            <constraint firstItem="2Vc-Gs-k5C" firstAttribute="leading" secondItem="ewf-V3-VP7" secondAttribute="leading" constant="5" id="UD3-gf-wfC"/>
+                            <constraint firstItem="2Vc-Gs-k5C" firstAttribute="leading" secondItem="ewf-V3-VP7" secondAttribute="leading" constant="10" id="UD3-gf-wfC"/>
                             <constraint firstItem="2Vc-Gs-k5C" firstAttribute="top" secondItem="ewf-V3-VP7" secondAttribute="top" constant="10" id="f92-OT-uWR"/>
                             <constraint firstItem="vK9-bT-t5I" firstAttribute="leading" secondItem="2Vc-Gs-k5C" secondAttribute="trailing" constant="10" id="nA1-HL-kYl"/>
                             <constraint firstAttribute="bottom" secondItem="2Vc-Gs-k5C" secondAttribute="bottom" constant="10" id="oM0-sU-Iu9"/>

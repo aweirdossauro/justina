@@ -15,13 +15,15 @@ class ProcessosInfoTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        mainView.layer.cornerRadius = 10
+//        self.mainView.installShadow()
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+//        super.setSelected(selected, animated: animated)
         
-        self.mainView.installShadow()
         // Configure the view for the selected state
     }
     

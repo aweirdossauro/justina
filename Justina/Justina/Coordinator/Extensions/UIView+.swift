@@ -55,13 +55,13 @@ extension UIView{
     }
     
     func installShadow() {
-        layer.cornerRadius = 2
+        layer.cornerRadius = 10
         layer.masksToBounds = false
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 1)
         layer.shadowOpacity = 0.45
         layer.shadowPath = UIBezierPath(rect: bounds).cgPath
-        layer.shadowRadius = 1.0
+        layer.shadowRadius = 10.0
     }
     
 }

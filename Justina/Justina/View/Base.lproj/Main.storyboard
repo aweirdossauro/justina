@@ -141,8 +141,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KOx-lC-Lx9">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KOx-lC-Lx9">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -150,7 +150,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BUx-nh-Yf2" firstAttribute="bottom" secondItem="KOx-lC-Lx9" secondAttribute="bottom" id="1c9-Zq-ZD6"/>
-                            <constraint firstItem="KOx-lC-Lx9" firstAttribute="top" secondItem="BUx-nh-Yf2" secondAttribute="top" id="GW7-da-QJV"/>
+                            <constraint firstItem="KOx-lC-Lx9" firstAttribute="top" secondItem="BUx-nh-Yf2" secondAttribute="top" constant="50" id="GW7-da-QJV"/>
                             <constraint firstItem="BUx-nh-Yf2" firstAttribute="trailing" secondItem="KOx-lC-Lx9" secondAttribute="trailing" id="aLn-v9-RGC"/>
                             <constraint firstItem="KOx-lC-Lx9" firstAttribute="leading" secondItem="BUx-nh-Yf2" secondAttribute="leading" id="scV-kn-z5I"/>
                         </constraints>
@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ba-58-gH4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-11619" y="242"/>
+            <point key="canvasLocation" x="2463.768115942029" y="117.85714285714285"/>
         </scene>
         <!--Visao Geral ProcessosVC-->
         <scene sceneID="fx2-Ra-FNV">
