@@ -1,9 +1,9 @@
 //
 //  OnboardingVC.swift
-//  FlappyAR
+//  Justina
 //
-//  Created by Vinicius Augusto Dilay de Paula on 13/08/20.
-//  Copyright © 2020 YUR. All rights reserved.
+//  Created by Vinicius Augusto Dilay de Paula on 22/10/20.
+//  Copyright © 2020 aweirdossauro. All rights reserved.
 //
 
 import UIKit
@@ -36,7 +36,7 @@ class OnboardingVC: UIViewController, OnboardingPageVCDelegate, Storyboarded {
                 
             case 1:
                 //                UserDefaultsManager.save(value: true, forKey: .hasViewedOnboarding)
-                coordinator?.dismiss(true)
+                delegate?.onboardingVCDidFinish()
                 
             default: break
             }

@@ -10,7 +10,6 @@ import UIKit
 
 protocol MainCoordinatorDelegate: AnyObject {
     func mainCoordinatorDidFinish()
-
 }
 
 class MainCoordinator: NavigationCoordinator {
@@ -60,15 +59,13 @@ class MainCoordinator: NavigationCoordinator {
         DispatchQueue.main.async {
             let vc = OnboardingVC.instantiate()
             vc.delegate = self
-            self.navigationController.pushViewController(vc, animated: true)
+            self.navigationController.present(vc, animated: true)
         }
     }
 }
 
 extension MainCoordinator: MainVCDelegate {
-    /**
-     
-     */
+    
     func mainVCDidFinish() {
         delegate?.mainCoordinatorDidFinish()
     }
@@ -82,6 +79,12 @@ extension MainCoordinator: MainVCDelegate {
     }
     
     func moveToOnboarding() {
-        showOnboarding()()
+        showOnboarding()
+    }
+}
+
+extension MainCoordinator: OnboardingVCDelegate {
+    func onboardingVCDidFinish() {
+        self.navigationController.dismiss(animated: true, completion: nil)
     }
 }

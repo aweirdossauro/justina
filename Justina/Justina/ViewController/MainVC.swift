@@ -49,7 +49,6 @@ class MainVC: UIViewController, Storyboarded {
 
         tableView.dataSource = self
         tableView.delegate = self
-        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -63,14 +62,14 @@ class MainVC: UIViewController, Storyboarded {
         showImage(false)
     }
     
-    
     @IBAction func testButton(_ sender: Any) {
         delegate?.mainVCDidFinish()
     }
     
     @objc func testButtonPressed(_ sender: Any) {
-        showImage(false)
-        delegate?.mainVCDidFinish()
+//        showImage(false)
+//        delegate?.mainVCDidFinish()
+        delegate?.moveToOnboarding()
     }
 }
 
@@ -199,4 +198,6 @@ protocol MainVCDelegate : AnyObject{
     func moveToPersonalData()
 
     func moveToProcessosInfo()
+    
+    func moveToOnboarding()
 }
