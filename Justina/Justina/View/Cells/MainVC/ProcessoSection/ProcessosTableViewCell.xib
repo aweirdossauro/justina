@@ -39,14 +39,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0L9-N7-c8i" customClass="ProgressView" customModule="Justina" customModuleProvider="target">
+                                <rect key="frame" x="10" y="5" width="322" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="Odf-Qd-aXU" firstAttribute="top" secondItem="meY-37-hFV" secondAttribute="bottom" constant="5" id="4j0-Is-s7I"/>
+                            <constraint firstItem="0L9-N7-c8i" firstAttribute="leading" secondItem="egy-vF-qrq" secondAttribute="leading" constant="10" id="Byn-yi-JKo"/>
                             <constraint firstAttribute="bottom" secondItem="zzE-nJ-9VV" secondAttribute="bottom" constant="5" id="FxC-Gx-9vX"/>
                             <constraint firstItem="zzE-nJ-9VV" firstAttribute="leading" secondItem="egy-vF-qrq" secondAttribute="leading" constant="10" id="HA0-YW-qDy"/>
                             <constraint firstItem="Odf-Qd-aXU" firstAttribute="leading" secondItem="egy-vF-qrq" secondAttribute="leading" constant="10" id="arc-bo-GcO"/>
+                            <constraint firstAttribute="trailing" secondItem="0L9-N7-c8i" secondAttribute="trailing" constant="10" id="ekd-ty-r5y"/>
                             <constraint firstItem="zzE-nJ-9VV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Odf-Qd-aXU" secondAttribute="bottom" constant="5" id="kL3-DU-lIf"/>
+                            <constraint firstItem="0L9-N7-c8i" firstAttribute="top" secondItem="egy-vF-qrq" secondAttribute="top" constant="5" id="ptQ-NG-iwu"/>
+                            <constraint firstItem="meY-37-hFV" firstAttribute="top" secondItem="0L9-N7-c8i" secondAttribute="bottom" constant="5" id="tS8-kZ-vbI"/>
                             <constraint firstItem="meY-37-hFV" firstAttribute="top" secondItem="egy-vF-qrq" secondAttribute="top" constant="50" id="uMi-1Q-Fkh"/>
                             <constraint firstItem="meY-37-hFV" firstAttribute="leading" secondItem="egy-vF-qrq" secondAttribute="leading" constant="10" id="uj0-Fp-N6B"/>
                         </constraints>
@@ -67,10 +75,13 @@
                 <outlet property="nomeLabel" destination="meY-37-hFV" id="h7U-VO-052"/>
                 <outlet property="processoView" destination="egy-vF-qrq" id="bE4-Ad-IRN"/>
             </connections>
-            <point key="canvasLocation" x="106" y="119"/>
+            <point key="canvasLocation" x="105.79710144927537" y="118.52678571428571"/>
         </tableViewCell>
     </objects>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
