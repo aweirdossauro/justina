@@ -28,6 +28,10 @@
 		AF7AFD1925309C1E007DC2D0 /* VisaoGeralProcessosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7AFD1825309C1E007DC2D0 /* VisaoGeralProcessosVC.swift */; };
 		AF7AFD1E25309CCD007DC2D0 /* PeticaoProcessosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7AFD1D25309CCD007DC2D0 /* PeticaoProcessosVC.swift */; };
 		AF7F10022539CC0200314EE8 /* PeticaoProcessosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F10012539CC0200314EE8 /* PeticaoProcessosModel.swift */; };
+		AF8A00652541C21A00231746 /* OnboardingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A00622541C21900231746 /* OnboardingPageVC.swift */; };
+		AF8A00662541C21A00231746 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A00632541C21900231746 /* OnboardingVC.swift */; };
+		AF8A00672541C21A00231746 /* OnboardingContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8A00642541C21900231746 /* OnboardingContentVC.swift */; };
+		AF8A006C2541C23200231746 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8A006B2541C23100231746 /* Onboarding.storyboard */; };
 		AFB10D2E250A54E700A1381A /* KeyboardLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB10D2D250A54E700A1381A /* KeyboardLayoutGuide.swift */; };
 		AFB10D31250A61F700A1381A /* DataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB10D30250A61F700A1381A /* DataCoordinator.swift */; };
 		AFB10D33250A62B400A1381A /* PersonalDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB10D32250A62B400A1381A /* PersonalDataVC.swift */; };
@@ -93,6 +97,10 @@
 		AF7AFD1825309C1E007DC2D0 /* VisaoGeralProcessosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaoGeralProcessosVC.swift; sourceTree = "<group>"; };
 		AF7AFD1D25309CCD007DC2D0 /* PeticaoProcessosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeticaoProcessosVC.swift; sourceTree = "<group>"; };
 		AF7F10012539CC0200314EE8 /* PeticaoProcessosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeticaoProcessosModel.swift; sourceTree = "<group>"; };
+		AF8A00622541C21900231746 /* OnboardingPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingPageVC.swift; sourceTree = "<group>"; };
+		AF8A00632541C21900231746 /* OnboardingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		AF8A00642541C21900231746 /* OnboardingContentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingContentVC.swift; sourceTree = "<group>"; };
+		AF8A006B2541C23100231746 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		AFB10D2D250A54E700A1381A /* KeyboardLayoutGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutGuide.swift; sourceTree = "<group>"; };
 		AFB10D30250A61F700A1381A /* DataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoordinator.swift; sourceTree = "<group>"; };
 		AFB10D32250A62B400A1381A /* PersonalDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDataVC.swift; sourceTree = "<group>"; };
@@ -256,6 +264,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		AF8A00612541C21900231746 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				AF8A00622541C21900231746 /* OnboardingPageVC.swift */,
+				AF8A00632541C21900231746 /* OnboardingVC.swift */,
+				AF8A00642541C21900231746 /* OnboardingContentVC.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		AFB10D2F250A54EB00A1381A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +340,7 @@
 		AFEC0BD524FE84660022C25A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				AF8A00612541C21900231746 /* Onboarding */,
 				AFEC0BA924FE83A70022C25A /* MainVC.swift */,
 				AF7AFD1425309BBE007DC2D0 /* Painel da Petição */,
 				AFB10D32250A62B400A1381A /* PersonalDataVC.swift */,
@@ -333,6 +352,7 @@
 		AFEC0BD624FE847F0022C25A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF8A006B2541C23100231746 /* Onboarding.storyboard */,
 				AFEC0BB024FE83A90022C25A /* LaunchScreen.storyboard */,
 				AFEC0BAB24FE83A70022C25A /* Main.storyboard */,
 				AFB59AF024FFE68300FB9207 /* Justina.storyboard */,
@@ -486,6 +506,7 @@
 				6C4AA0D2250A542A0017DC70 /* PersonalData.storyboard in Resources */,
 				AF1C4737250D4F0F0005059B /* JustinaMessageTableViewCell.xib in Resources */,
 				AFF3D6E6250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.xib in Resources */,
+				AF8A006C2541C23200231746 /* Onboarding.storyboard in Resources */,
 				AFEC0BB224FE83A90022C25A /* LaunchScreen.storyboard in Resources */,
 				AFEC0BAF24FE83A90022C25A /* Assets.xcassets in Resources */,
 				AFEC0BAD24FE83A70022C25A /* Main.storyboard in Resources */,
@@ -624,6 +645,7 @@
 				AFB10D33250A62B400A1381A /* PersonalDataVC.swift in Sources */,
 				AFF3D6E5250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift in Sources */,
 				AF7AFD1E25309CCD007DC2D0 /* PeticaoProcessosVC.swift in Sources */,
+				AF8A00652541C21A00231746 /* OnboardingPageVC.swift in Sources */,
 				AFB10D2E250A54E700A1381A /* KeyboardLayoutGuide.swift in Sources */,
 				AF5EAB0525124BAF005CE765 /* ProcessosInfoVC.swift in Sources */,
 				AF7F10022539CC0200314EE8 /* PeticaoProcessosModel.swift in Sources */,
@@ -633,6 +655,7 @@
 				AF36955124FE8EF500591528 /* MainCoordinator.swift in Sources */,
 				AF7AFCD0252F48CB007DC2D0 /* ProcessosInfoTableViewCell.swift in Sources */,
 				AFEC0BAA24FE83A70022C25A /* MainVC.swift in Sources */,
+				AF8A00662541C21A00231746 /* OnboardingVC.swift in Sources */,
 				AF1C4736250D4F0F0005059B /* JustinaMessageTableViewCell.swift in Sources */,
 				AFB10D35250A651C00A1381A /* AppCoordinator.swift in Sources */,
 				AF36954F24FE8E1200591528 /* Storyboarded.swift in Sources */,
@@ -645,6 +668,7 @@
 				AFEC0BA824FE83A70022C25A /* SceneDelegate.swift in Sources */,
 				AF7AFD1925309C1E007DC2D0 /* VisaoGeralProcessosVC.swift in Sources */,
 				AF36955324FE901200591528 /* NavigationCoordinator.swift in Sources */,
+				AF8A00672541C21A00231746 /* OnboardingContentVC.swift in Sources */,
 				AF1C4733250D4D200005059B /* UIColor+.swift in Sources */,
 				AF58632725407C5200BBB4D4 /* ProgressView.swift in Sources */,
 			);

@@ -12,6 +12,7 @@ protocol MainCoordinatorDelegate: AnyObject {
     func mainCoordinatorDidFinish()
 
 }
+
 class MainCoordinator: NavigationCoordinator {
     
 //    let childCoordinators: [Coordinator]
@@ -54,6 +55,14 @@ class MainCoordinator: NavigationCoordinator {
             self.navigationController.pushViewController(vc, animated: true)
         }
     }
+    
+    func showOnboarding(){
+        DispatchQueue.main.async {
+            let vc = OnboardingVC.instantiate()
+            vc.delegate = self
+            self.navigationController.pushViewController(vc, animated: true)
+        }
+    }
 }
 
 extension MainCoordinator: MainVCDelegate {
@@ -70,5 +79,9 @@ extension MainCoordinator: MainVCDelegate {
     
     func moveToProcessosInfo() {
         showProcessosInfoVC()
+    }
+    
+    func moveToOnboarding() {
+        showOnboarding()()
     }
 }
