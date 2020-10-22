@@ -13,15 +13,30 @@ class OnboardingPageVC: UIPageViewController, UIPageViewControllerDataSource, UI
    // MARK: - Properties
    
    weak var onboardingDelegate: OnboardingPageVCDelegate?
-   
-    var pageHeadings = ["""
-                        Place your phone on the ground facing you
-
-                        Move 3 steps back
-                        """,
-                       "Squat to move the bee"]
     
-   var pageImages = ["onboarding1", "onboarding2-1"]
+    var pageBody = ["""
+                        Você está começando uma nova petição. Este processo possui quatro etapas:
+                        """,
+                        """
+                        Na primeira você irá redigir uma petição contando sua versão e o motivo de se sentir lesado. Não se preocupe, nós vamos te ajudar com isso.
+                        """,
+                        """
+                        Você deverá se encaminhar até o JEC mais próximo a sua casa para marcar a data da sua audiência.
+                        Vamos te ajudar a encontrá-los!
+                        """,
+                        """
+                        Basta comparecer na data e hora marcada da audiência para fazer valer seus direitos. Você pode definir um lembrete para que a Justina te lembre e dê dicas!
+                        """,
+                        """
+                        A parte que a gente mais gosta: quando tudo está resolvido. Se você achar que seu acordo foi justo, tudo termina aqui.
+                        """]
+    var pageHeadings = ["",
+                        "1-Redigir a petição:",
+                        "2-Marcar a audiência:",
+                        "3-Comparecer a audiência:",
+                        "4-Conciliação:"]
+
+   var pageImages = ["onboarding1", "onboarding2", "onboarding3", "onboarding4", "onboarding5"]
    
    var currentIndex = 0
 

@@ -16,14 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUw-YG-MMF">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="UEQ-c9-yPh">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pyJ-Xl-klS">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="657.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,11 +64,7 @@
                         <viewLayoutGuide key="safeArea" id="8iv-SL-JoA"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8iv-SL-JoA" firstAttribute="trailing" secondItem="uUw-YG-MMF" secondAttribute="trailing" id="2uW-OH-Ojw"/>
                             <constraint firstItem="gx7-nc-1zj" firstAttribute="leading" secondItem="8iv-SL-JoA" secondAttribute="leading" id="558-rS-bio"/>
-                            <constraint firstAttribute="bottom" secondItem="uUw-YG-MMF" secondAttribute="bottom" id="U9Y-RQ-ReQ"/>
-                            <constraint firstItem="uUw-YG-MMF" firstAttribute="leading" secondItem="8iv-SL-JoA" secondAttribute="leading" id="aeA-pK-lsq"/>
-                            <constraint firstItem="uUw-YG-MMF" firstAttribute="top" secondItem="8iv-SL-JoA" secondAttribute="top" id="gHY-JQ-fhF"/>
                             <constraint firstItem="pyJ-Xl-klS" firstAttribute="leading" secondItem="8iv-SL-JoA" secondAttribute="leading" id="h8d-FX-Sia"/>
                             <constraint firstItem="gx7-nc-1zj" firstAttribute="bottom" secondItem="8iv-SL-JoA" secondAttribute="bottom" id="lxW-vJ-qXH"/>
                             <constraint firstItem="pyJ-Xl-klS" firstAttribute="top" secondItem="ei8-FQ-WWs" secondAttribute="top" id="oUh-9e-BCs"/>

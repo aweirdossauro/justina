@@ -31,10 +31,10 @@ class OnboardingVC: UIViewController, OnboardingPageVCDelegate, Storyboarded {
     @IBAction func nextButtonTapped(sender: UIButton) {
         if let index = onboardingPageVC?.currentIndex {
             switch index {
-            case 0:
+            case 0...3:
                 onboardingPageVC?.forwardPage()
                 
-            case 1:
+            case 4:
                 //                UserDefaultsManager.save(value: true, forKey: .hasViewedOnboarding)
                 delegate?.onboardingVCDidFinish()
                 
@@ -48,10 +48,10 @@ class OnboardingVC: UIViewController, OnboardingPageVCDelegate, Storyboarded {
     func updateUI() {
         if let index = onboardingPageVC?.currentIndex {
             switch index {
-            case 0:
+            case 0...3:
                 nextButton.setTitle("Próximo", for: .normal)
                 
-            case 1:
+            case 4:
                 nextButton.setTitle("Próximo", for: .normal)
                 
             default: break
