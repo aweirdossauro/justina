@@ -18,12 +18,18 @@ class OnboardingContentVC: UIViewController {
         }
     }
     
+    @IBOutlet weak var bodyLabel: UILabel! {
+        didSet {
+            bodyLabel.numberOfLines = 0
+        }
+    }
     @IBOutlet var contentImageView: UIImageView!
     
     // MARK: - Properties
     
     var index = 0
     var heading = ""
+    var body = ""
     var imageFile = ""
 
     override func viewDidLoad() {
@@ -31,5 +37,6 @@ class OnboardingContentVC: UIViewController {
         
         contentImageView.image = UIImage(named: imageFile)
         headingLabel.text = heading
+        bodyLabel.text = body
     }
 }
