@@ -20,7 +20,11 @@ class OnboardingVC: UIViewController, OnboardingPageVCDelegate, Storyboarded {
         }
     }
     
-    @IBOutlet weak var backButtonImageView: UIImageView!
+    @IBOutlet weak var backButton: UIButton! {
+        didSet {
+            backButton.imageView?.tintColor = .secondaryLabel
+        }
+    }
     
     // MARK: - Properties
     static var storyboardName: String = "Onboarding"
@@ -31,6 +35,7 @@ class OnboardingVC: UIViewController, OnboardingPageVCDelegate, Storyboarded {
     // MARK: - Actions
     
     @IBAction func nextButtonTapped(sender: UIButton) {
+        
         if let index = onboardingPageVC?.currentIndex {
             switch index {
             case 0...3:
@@ -61,10 +66,17 @@ class OnboardingVC: UIViewController, OnboardingPageVCDelegate, Storyboarded {
             
             pageControl.currentPage = index
         }
+        
+        if onboardingPageVC?.currentIndex == 0 {
+            backButton.imageView?.image = UIImage(systemName: "xmark.circle.fill")
+            return
+        }
+        backButton.imageView?.image = UIImage(systemName: "chevron.down.circle.fill")
     }
     
     func didUpdatePageIndex(currentIndex: Int) {
         updateUI()
+        
     }
     
     // MARK: - View controller life cycle
@@ -72,7 +84,6 @@ class OnboardingVC: UIViewController, OnboardingPageVCDelegate, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
     }
     
     
@@ -88,6 +99,9 @@ class OnboardingVC: UIViewController, OnboardingPageVCDelegate, Storyboarded {
         }
     }
     
+    @IBAction func backButtonAction(_ sender: Any) {
+        delegate?.onboardingVCDidFinish()
+    }
     
 }
 
