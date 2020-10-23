@@ -28,18 +28,8 @@ class OnboardingContentVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        configAnimation()
+        
+        contentImageView.image = UIImage(named: imageFile)
         headingLabel.text = heading
-    }
-    
-    
-    func configAnimation(){
-        let animationIndex = index + 1
-        let animationImages = (1...2).compactMap({ UIImage(named: "onboarding\(animationIndex)-\($0)") })
-
-         contentImageView.animationImages = animationImages
-         contentImageView.animationDuration = 1
-         contentImageView.startAnimating()
     }
 }

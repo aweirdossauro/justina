@@ -59,5 +59,10 @@ extension UIColor {
     @objc class var userMessagesBackground: UIColor {
         return UIColor(red: 0.0 / 255.0, green: 149.0 / 255.0, blue: 195.0 / 255.0, alpha: 1.0)
     }
-
+    
+    /// background padrão dos buttons #5E82E4
+    @objc class var buttonBackground: UIColor {
+        return UIColor(hexString: "#5E82E4")
+    }
+    
 }
