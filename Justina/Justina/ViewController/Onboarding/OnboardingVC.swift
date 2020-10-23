@@ -15,10 +15,12 @@ class OnboardingVC: UIViewController, OnboardingPageVCDelegate, Storyboarded {
     
     @IBOutlet var nextButton: UIButton! {
         didSet {
-            nextButton.layer.cornerRadius = 15
+            nextButton.layer.cornerRadius = nextButton.frame.height / 2
             nextButton.layer.masksToBounds = true
         }
     }
+    
+    @IBOutlet weak var backButtonImageView: UIImageView!
     
     // MARK: - Properties
     static var storyboardName: String = "Onboarding"
@@ -41,7 +43,7 @@ class OnboardingVC: UIViewController, OnboardingPageVCDelegate, Storyboarded {
             default: break
             }
         }
-        
+
         updateUI()
     }
     
