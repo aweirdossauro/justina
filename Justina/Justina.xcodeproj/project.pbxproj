@@ -22,6 +22,8 @@
 		AF5EAB0525124BAF005CE765 /* ProcessosInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EAB0425124BAE005CE765 /* ProcessosInfoVC.swift */; };
 		AF66083525090670004C185D /* MessageSentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66083325090670004C185D /* MessageSentTableViewCell.swift */; };
 		AF66083625090670004C185D /* MessageSentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF66083425090670004C185D /* MessageSentTableViewCell.xib */; };
+		AF68C7802544BCD900BD401D /* ContactInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF68C77F2544BCD900BD401D /* ContactInfoVC.swift */; };
+		AF68C7852544C3F600BD401D /* CompanyDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF68C7842544C3F600BD401D /* CompanyDataVC.swift */; };
 		AF7AFCD0252F48CB007DC2D0 /* ProcessosInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7AFCCE252F48CB007DC2D0 /* ProcessosInfoTableViewCell.swift */; };
 		AF7AFCD1252F48CB007DC2D0 /* ProcessosInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7AFCCF252F48CB007DC2D0 /* ProcessosInfoTableViewCell.xib */; };
 		AF7AFD1925309C1E007DC2D0 /* VisaoGeralProcessosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7AFD1825309C1E007DC2D0 /* VisaoGeralProcessosVC.swift */; };
@@ -90,6 +92,8 @@
 		AF5EAB0425124BAE005CE765 /* ProcessosInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessosInfoVC.swift; sourceTree = "<group>"; };
 		AF66083325090670004C185D /* MessageSentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSentTableViewCell.swift; sourceTree = "<group>"; };
 		AF66083425090670004C185D /* MessageSentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageSentTableViewCell.xib; sourceTree = "<group>"; };
+		AF68C77F2544BCD900BD401D /* ContactInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoVC.swift; sourceTree = "<group>"; };
+		AF68C7842544C3F600BD401D /* CompanyDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDataVC.swift; sourceTree = "<group>"; };
 		AF7AFCCE252F48CB007DC2D0 /* ProcessosInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessosInfoTableViewCell.swift; sourceTree = "<group>"; };
 		AF7AFCCF252F48CB007DC2D0 /* ProcessosInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProcessosInfoTableViewCell.xib; sourceTree = "<group>"; };
 		AF7AFD1825309C1E007DC2D0 /* VisaoGeralProcessosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisaoGeralProcessosVC.swift; sourceTree = "<group>"; };
@@ -234,6 +238,16 @@
 			path = JustinaVC;
 			sourceTree = "<group>";
 		};
+		AF68C7892544C40C00BD401D /* Cria Peticao */ = {
+			isa = PBXGroup;
+			children = (
+				AFB10D32250A62B400A1381A /* PersonalDataVC.swift */,
+				AF68C77F2544BCD900BD401D /* ContactInfoVC.swift */,
+				AF68C7842544C3F600BD401D /* CompanyDataVC.swift */,
+			);
+			path = "Cria Peticao";
+			sourceTree = "<group>";
+		};
 		AF6EF1B6251A3DC8000C4646 /* ProcessosInfoVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,8 +355,8 @@
 				AF8A00612541C21900231746 /* Onboarding */,
 				AFEC0BA924FE83A70022C25A /* MainVC.swift */,
 				AF7AFD1425309BBE007DC2D0 /* Painel da Petição */,
-				AFB10D32250A62B400A1381A /* PersonalDataVC.swift */,
 				AFB59AF224FFE6A800FB9207 /* JustinaVC.swift */,
+				AF68C7892544C40C00BD401D /* Cria Peticao */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -642,6 +656,7 @@
 				AFB10D33250A62B400A1381A /* PersonalDataVC.swift in Sources */,
 				AFF3D6E5250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift in Sources */,
 				AF7AFD1E25309CCD007DC2D0 /* PeticaoProcessosVC.swift in Sources */,
+				AF68C7802544BCD900BD401D /* ContactInfoVC.swift in Sources */,
 				AF8A00652541C21A00231746 /* OnboardingPageVC.swift in Sources */,
 				AFB10D2E250A54E700A1381A /* KeyboardLayoutGuide.swift in Sources */,
 				AF5EAB0525124BAF005CE765 /* ProcessosInfoVC.swift in Sources */,
@@ -666,6 +681,7 @@
 				AF7AFD1925309C1E007DC2D0 /* VisaoGeralProcessosVC.swift in Sources */,
 				AF36955324FE901200591528 /* NavigationCoordinator.swift in Sources */,
 				AF8A00672541C21A00231746 /* OnboardingContentVC.swift in Sources */,
+				AF68C7852544C3F600BD401D /* CompanyDataVC.swift in Sources */,
 				AF1C4733250D4D200005059B /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

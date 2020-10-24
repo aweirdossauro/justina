@@ -10,6 +10,7 @@ import UIKit
 
 
 class PersonalDataVC: UIViewController, Storyboarded {
+  
     // MARK: Coordinator Related Properties
     static var storyboardName: String = "PersonalData"
     var delegate: PersonalDataVCDelegate?
