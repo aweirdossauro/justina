@@ -11,6 +11,7 @@ import UIKit
 class PeticaoProcessosVC: UIViewController, Storyboarded {
     // MARK: Coordinator Related Properties
     static var storyboardName: String = "Main"
+    var delegate: PeticaoProcessosVCDelegate?
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -34,28 +35,40 @@ extension PeticaoProcessosVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = PeticaoProcessosModel.tableViewDataSource.init(rawValue: indexPath.row)
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.processosInfoTableViewCell) as! ProcessosInfoTableViewCell
         cell.mainLabel.text = PeticaoProcessosModel.tableViewCellTitle[indexPath.row]
-//        switch row {
-//        case .dadosPessoais:
-//            cell.mainLabel =
-//        case .dadosDaEmpresa:
-//            break
-//        case .textoDaPeticao:
-//            break
-//        case .reuniaoDeProvas:
-//            break
-//        default:
-//            break
-//        }
-    
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = PeticaoProcessosModel.tableViewDataSource.init(rawValue: indexPath.row)
+                switch row {
+                case .dadosPessoais:
+                    delegate?.
+                case .dadosDaEmpresa:
+                    break
+                case .textoDaPeticao:
+                    break
+                case .reuniaoDeProvas:
+                    break
+                default:
+                    break
+                }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
     
+}
+
+protocol PeticaoProcessosVCDelegate: AnyObject {
+    func peticaoProcessosVCDidFinish()
+    
+    func moveToPersonalData()
+    
+    func moveToProcessosInfo()
+    
+    func moveToOnboarding()
 }

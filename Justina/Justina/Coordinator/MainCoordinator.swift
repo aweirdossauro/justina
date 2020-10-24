@@ -65,6 +65,20 @@ extension MainCoordinator {
             self.navigationController.pushViewController(vc, animated: true)
         }
     }
+    
+    func showContactInfo(){
+        DispatchQueue.main.async {
+            let vc = ContactInfoVC.instantiate()
+            self.navigationController.pushViewController(vc, animated: true)
+        }
+    }
+    
+    func showCompanyData(){
+        DispatchQueue.main.async {
+            let vc = CompanyDataVC.instantiate()
+            self.navigationController.pushViewController(vc, animated: true)
+        }
+    }
 }
 
 extension MainCoordinator: MainVCDelegate {
