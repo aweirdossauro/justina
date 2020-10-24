@@ -19,7 +19,6 @@
 		AF36955124FE8EF500591528 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF36955024FE8EF500591528 /* MainCoordinator.swift */; };
 		AF36955324FE901200591528 /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF36955224FE901200591528 /* NavigationCoordinator.swift */; };
 		AF390338250280480062E7C2 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF390337250280480062E7C2 /* UIView+.swift */; };
-		AF58632725407C5200BBB4D4 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58632625407C5200BBB4D4 /* ProgressView.swift */; };
 		AF5EAB0525124BAF005CE765 /* ProcessosInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5EAB0425124BAE005CE765 /* ProcessosInfoVC.swift */; };
 		AF66083525090670004C185D /* MessageSentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF66083325090670004C185D /* MessageSentTableViewCell.swift */; };
 		AF66083625090670004C185D /* MessageSentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF66083425090670004C185D /* MessageSentTableViewCell.xib */; };
@@ -88,7 +87,6 @@
 		AF36955024FE8EF500591528 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		AF36955224FE901200591528 /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
 		AF390337250280480062E7C2 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
-		AF58632625407C5200BBB4D4 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		AF5EAB0425124BAE005CE765 /* ProcessosInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessosInfoVC.swift; sourceTree = "<group>"; };
 		AF66083325090670004C185D /* MessageSentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSentTableViewCell.swift; sourceTree = "<group>"; };
 		AF66083425090670004C185D /* MessageSentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageSentTableViewCell.xib; sourceTree = "<group>"; };
@@ -358,7 +356,6 @@
 				AFB59AF024FFE68300FB9207 /* Justina.storyboard */,
 				6C4AA0D1250A542A0017DC70 /* PersonalData.storyboard */,
 				AF6608372509067C004C185D /* Cells */,
-				AF58632625407C5200BBB4D4 /* ProgressView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -670,7 +667,6 @@
 				AF36955324FE901200591528 /* NavigationCoordinator.swift in Sources */,
 				AF8A00672541C21A00231746 /* OnboardingContentVC.swift in Sources */,
 				AF1C4733250D4D200005059B /* UIColor+.swift in Sources */,
-				AF58632725407C5200BBB4D4 /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

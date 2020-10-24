@@ -136,7 +136,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="VJ0-VF-fgR" secondAttribute="trailing" constant="10" id="E0t-LE-HvE"/>
                                     <constraint firstAttribute="bottom" secondItem="VJ0-VF-fgR" secondAttribute="bottom" constant="5" id="V13-CB-hk9"/>

@@ -43,23 +43,26 @@ class MainCoordinator: NavigationCoordinator {
     func showProcessosInfoVC(){
         DispatchQueue.main.async {
             let vc = ProcessosInfoVC.instantiate()
-//            vc.delegate = self
             self.navigationController.pushViewController(vc, animated: true)
         }
     }
     
-    func showPersonalData(){
-        DispatchQueue.main.async {
-            let vc = PersonalDataVC.instantiate()
-            self.navigationController.pushViewController(vc, animated: true)
-        }
-    }
     
     func showOnboarding(){
         DispatchQueue.main.async {
             let vc = OnboardingVC.instantiate()
             vc.delegate = self
             self.navigationController.present(vc, animated: true)
+        }
+    }
+}
+
+//Telas relacionadas ao flow de petição
+extension MainCoordinator {
+    func showPersonalData(){
+        DispatchQueue.main.async {
+            let vc = PersonalDataVC.instantiate()
+            self.navigationController.pushViewController(vc, animated: true)
         }
     }
 }

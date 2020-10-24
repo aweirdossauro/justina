@@ -42,7 +42,6 @@ class OnboardingVC: UIViewController, OnboardingPageVCDelegate, Storyboarded {
                 onboardingPageVC?.forwardPage()
                 
             case 4:
-                //                UserDefaultsManager.save(value: true, forKey: .hasViewedOnboarding)
                 delegate?.onboardingVCDidFinish()
                 
             default: break
