@@ -109,7 +109,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row == 0 ? 60 : 100
+        return indexPath.row == 0 ? 60 : 130
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

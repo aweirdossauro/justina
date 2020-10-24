@@ -11,14 +11,16 @@ import UIKit
 class ProcessosTableViewCell: UITableViewCell {
 
     @IBOutlet weak var processoView: UIView!
-    @IBOutlet weak var progressView: UIView!
+    @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var nomeLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var dataLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-                
+        progressView.progressTintColor = .buttonBackground
+        progressView.trackTintColor = .systemGray
+        progressView.layer.cornerRadius = progressView.frame.height / 2
         processoView.layer.cornerRadius = 11
         // Initialization code
     }
