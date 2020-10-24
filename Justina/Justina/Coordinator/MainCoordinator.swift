@@ -105,3 +105,9 @@ extension MainCoordinator: OnboardingVCDelegate {
         self.navigationController.dismiss(animated: true, completion: nil)
     }
 }
+
+extension MainCoordinator: PeticaoProcessosVCDelegate {
+    func peticaoProcessosVCDidFinish() {
+        self.navigationController.dismiss(animated: true, completion: nil)
+    }
+}

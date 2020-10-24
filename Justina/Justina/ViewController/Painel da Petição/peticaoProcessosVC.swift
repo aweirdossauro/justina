@@ -45,9 +45,11 @@ extension PeticaoProcessosVC: UITableViewDelegate, UITableViewDataSource {
         let row = PeticaoProcessosModel.tableViewDataSource.init(rawValue: indexPath.row)
                 switch row {
                 case .dadosPessoais:
-                    delegate?.
+                    delegate?.showPersonalData()
+                case .infoDeContato:
+                    delegate?.showContactInfo()
                 case .dadosDaEmpresa:
-                    break
+                    delegate?.showCompanyData()
                 case .textoDaPeticao:
                     break
                 case .reuniaoDeProvas:
@@ -66,9 +68,9 @@ extension PeticaoProcessosVC: UITableViewDelegate, UITableViewDataSource {
 protocol PeticaoProcessosVCDelegate: AnyObject {
     func peticaoProcessosVCDidFinish()
     
-    func moveToPersonalData()
+    func showPersonalData()
     
-    func moveToProcessosInfo()
+    func showContactInfo()
     
-    func moveToOnboarding()
+    func showCompanyData()
 }

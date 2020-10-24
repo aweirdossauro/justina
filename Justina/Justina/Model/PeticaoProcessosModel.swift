@@ -10,12 +10,14 @@ import Foundation
 
 class PeticaoProcessosModel {
     static let tableViewCellTitle : [String] = ["Dados Pessoais",
+                                                "Informações de Contato",
                                          "Dados da Empresa",
                                          "Texto da Petição",
                                          "Reunião de Provas"]
 
     enum tableViewDataSource: Int {
         case dadosPessoais = 0,
+             infoDeContato,
              dadosDaEmpresa,
              textoDaPeticao,
              reuniaoDeProvas
