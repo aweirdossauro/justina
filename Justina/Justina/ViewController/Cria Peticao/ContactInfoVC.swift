@@ -12,7 +12,7 @@ class ContactInfoVC: UIViewController, Storyboarded {
     
     // MARK: Coordinator Related Properties
     static var storyboardName: String = "PersonalData"
-    var delegate: PersonalDataVCDelegate?
+    var delegate: ContactInfoVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,4 +31,10 @@ class ContactInfoVC: UIViewController, Storyboarded {
     }
     */
 
+}
+
+protocol ContactInfoVCDelegate: AnyObject {
+    func contactInfoVCVCDidFinish()
+    
+    func contactInfoVCNextStep()
 }

@@ -12,7 +12,7 @@ class CompanyDataVC: UIViewController , Storyboarded {
 
     // MARK: Coordinator Related Properties
     static var storyboardName: String = "PersonalData"
-    var delegate: PersonalDataVCDelegate?
+    var delegate: CompanyDataVCDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,3 +32,10 @@ class CompanyDataVC: UIViewController , Storyboarded {
     */
 
 }
+
+protocol CompanyDataVCDelegate: AnyObject {
+    func companyDataVCDidFinish()
+    
+    func companyDataVCNextStep()
+}
+

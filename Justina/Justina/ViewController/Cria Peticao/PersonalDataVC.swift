@@ -26,4 +26,7 @@ class PersonalDataVC: UIViewController, Storyboarded {
 
 protocol PersonalDataVCDelegate: AnyObject {
     func personalDataVCDidFinish()
+    
+    func personalDataVCNextStep()
+
 }

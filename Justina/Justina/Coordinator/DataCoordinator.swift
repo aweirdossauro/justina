@@ -10,7 +10,7 @@ import UIKit
 
 protocol DataCoordinatorDelegate: AnyObject {
     func dataCoordinatorDidFinish()
-
+    
 }
 class DataCoordinator: NavigationCoordinator {
     
@@ -38,15 +38,54 @@ class DataCoordinator: NavigationCoordinator {
             self.navigationController.pushViewController(vc, animated: true)
         }
     }
+    
+    func showContactInfo(){
+        DispatchQueue.main.async {
+            let vc = ContactInfoVC.instantiate()
+            vc.delegate = self
+            self.navigationController.pushViewController(vc, animated: true)
+        }
+    }
+    
+    func showCompanyData(){
+        DispatchQueue.main.async {
+            let vc = CompanyDataVC.instantiate()
+            vc.delegate = self
+            self.navigationController.pushViewController(vc, animated: true)
+        }
+    }
 
 }
 
 extension DataCoordinator: PersonalDataVCDelegate {
-    /**
-     
-     */
+    
     func personalDataVCDidFinish() {
         delegate?.dataCoordinatorDidFinish()
     }
-
+    
+    func personalDataVCNextStep() {
+        showContactInfo()
+    }
 }
+
+extension DataCoordinator: ContactInfoVCDelegate {
+    func contactInfoVCVCDidFinish() {
+        delegate?.dataCoordinatorDidFinish()
+    }
+    
+    func contactInfoVCNextStep() {
+        showCompanyData()
+    }
+}
+
+extension DataCoordinator: CompanyDataVCDelegate {
+    func companyDataVCDidFinish() {
+        delegate?.dataCoordinatorDidFinish()
+    }
+    
+    func companyDataVCNextStep() {
+        
+    }
+}
+
+
