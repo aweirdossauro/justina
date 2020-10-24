@@ -11,7 +11,9 @@ import UIKit
 class ProcessosInfoVC: UIViewController, Storyboarded {
     // MARK: Coordinator Related Properties
     static var storyboardName: String = "Main"
-    
+
+    var delegate : PeticaoProcessosVCDelegate?
+
     @IBOutlet weak var processoNameLabel: UILabel!
 
     @IBOutlet weak var contentSegmentedView: UISegmentedControl!
@@ -58,6 +60,7 @@ class ProcessosInfoVC: UIViewController, Storyboarded {
             
             case .peticao:
                 let vc = PeticaoProcessosVC.instantiate()
+                vc.delegate = self.delegate
                 self.addChild(vc)
                 vc.view.frame = CGRect(x: 0, y: 0,
                                        width: self.contentView.frame.size.width,

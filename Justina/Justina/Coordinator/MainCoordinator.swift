@@ -43,6 +43,8 @@ class MainCoordinator: NavigationCoordinator {
     func showProcessosInfoVC(){
         DispatchQueue.main.async {
             let vc = ProcessosInfoVC.instantiate()
+            vc.delegate = self
+            
             self.navigationController.pushViewController(vc, animated: true)
         }
     }

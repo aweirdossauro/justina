@@ -206,7 +206,7 @@
         <!--Contact InfoVC-->
         <scene sceneID="ezl-xn-x4y">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Deh-6Y-eZS" customClass="ContactInfoVC" customModule="Justina" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactInfoVC" modalPresentationStyle="fullScreen" id="Deh-6Y-eZS" customClass="ContactInfoVC" customModule="Justina" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LLn-xR-DIb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -380,7 +380,7 @@
         <!--Company DataVC-->
         <scene sceneID="FyJ-gq-ZQQ">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="oi8-bP-sOb" customClass="CompanyDataVC" customModule="Justina" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompanyDataVC" modalPresentationStyle="fullScreen" id="oi8-bP-sOb" customClass="CompanyDataVC" customModule="Justina" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tmY-oh-cnT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
