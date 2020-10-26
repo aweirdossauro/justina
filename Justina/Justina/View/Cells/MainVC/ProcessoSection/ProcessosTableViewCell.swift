@@ -22,7 +22,6 @@ class ProcessosTableViewCell: UITableViewCell {
         progressView.trackTintColor = .systemGray
         progressView.addButtonCornerRadius()
         processoView.layer.cornerRadius = 11
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

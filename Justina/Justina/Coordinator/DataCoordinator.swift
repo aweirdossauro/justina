@@ -35,6 +35,7 @@ class DataCoordinator: NavigationCoordinator {
         DispatchQueue.main.async {
             let vc = PersonalDataVC.instantiate()
             vc.delegate = self
+
             self.navigationController.pushViewController(vc, animated: true)
         }
     }

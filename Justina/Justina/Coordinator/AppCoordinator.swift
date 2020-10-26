@@ -48,6 +48,7 @@ class AppCoordinator: NavigationCoordinator {
     private func showMain() {
         let mainCoordinator = MainCoordinator(navigationController: navigationController)
         childCoordinators[.main] = mainCoordinator
+        
         mainCoordinator.delegate = self
         mainCoordinator.start()
     }

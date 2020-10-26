@@ -83,7 +83,7 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            if indexPath.row == 0 {
+            if indexPath.row == indexPath.count {             //adiciona processo
                 let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.addProcessoTableViewCell) as! AddProcessoTableViewCell
                 return cell
             }
@@ -105,11 +105,15 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
 //    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == indexPath.last {
+            delegate?.mainVCDidFinish()
+            return
+        }
         delegate?.moveToProcessosInfo()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row == 0 ? 60 : 130
+        return indexPath.row == indexPath.count ? 60 : 130
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
