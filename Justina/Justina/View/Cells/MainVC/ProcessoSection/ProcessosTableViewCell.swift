@@ -20,7 +20,7 @@ class ProcessosTableViewCell: UITableViewCell {
         super.awakeFromNib()
         progressView.progressTintColor = .buttonBackground
         progressView.trackTintColor = .systemGray
-        progressView.layer.cornerRadius = progressView.frame.height / 2
+        progressView.addButtonCornerRadius()
         processoView.layer.cornerRadius = 11
         // Initialization code
     }

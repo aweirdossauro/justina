@@ -64,6 +64,10 @@ extension UIView{
         layer.shadowRadius = 10.0
     }
     
+    func addButtonCornerRadius() {
+        layer.cornerRadius = frame.height / 2
+        layer.masksToBounds = true
+    }
 }
 
 

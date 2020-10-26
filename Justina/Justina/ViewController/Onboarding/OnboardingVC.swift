@@ -15,8 +15,7 @@ class OnboardingVC: UIViewController, OnboardingPageVCDelegate, Storyboarded {
     
     @IBOutlet var nextButton: UIButton! {
         didSet {
-            nextButton.layer.cornerRadius = nextButton.frame.height / 2
-            nextButton.layer.masksToBounds = true
+            nextButton.addButtonCornerRadius()
         }
     }
     

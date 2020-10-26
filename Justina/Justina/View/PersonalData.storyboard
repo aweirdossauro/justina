@@ -164,9 +164,6 @@
                                                         <rect key="frame" x="181" y="868" width="46" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
-                                                        <connections>
-                                                            <segue destination="Deh-6Y-eZS" kind="show" id="Che-Nh-8Vg"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -198,6 +195,9 @@
                             <constraint firstItem="5kb-TP-ZMN" firstAttribute="trailing" secondItem="qhy-ww-7LB" secondAttribute="trailing" id="uI4-gi-yAX"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="9rc-2T-Ks9" id="Q0k-LX-Nrd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NCF-3Q-Nsq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -338,9 +338,6 @@
                                                         <rect key="frame" x="177" y="783" width="46" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
-                                                        <connections>
-                                                            <segue destination="oi8-bP-sOb" kind="show" id="1cV-58-fyP"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -492,9 +489,6 @@
                                                         <rect key="frame" x="184" y="743" width="46" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
-                                                        <connections>
-                                                            <segue destination="uf1-yG-gEa" kind="show" id="0ND-nQ-fWc"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>

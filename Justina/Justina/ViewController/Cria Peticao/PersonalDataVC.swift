@@ -14,11 +14,14 @@ class PersonalDataVC: UIViewController, Storyboarded {
     // MARK: Coordinator Related Properties
     static var storyboardName: String = "PersonalData"
     var delegate: PersonalDataVCDelegate?
-    
+
+    @IBOutlet weak var nextButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        nextButton.backgroundColor = .buttonBackground
+        nextButton.addButtonCornerRadius()
     }
     
 
