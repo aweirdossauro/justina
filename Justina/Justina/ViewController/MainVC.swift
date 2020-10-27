@@ -197,7 +197,7 @@ extension MainVC {
 
 //MARK:- Coordinator Related Code
 protocol MainVCDelegate : AnyObject{
-    func mainVCDidFinish()
+    func  mainVCDidFinish()
     
     func moveToPersonalData()
 

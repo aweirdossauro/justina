@@ -86,7 +86,8 @@ extension MainCoordinator {
 extension MainCoordinator: MainVCDelegate {
     
     func mainVCDidFinish() {
-        delegate?.mainCoordinatorDidFinish()
+//        delegate?.mainCoordinatorDidFinish()
+        presentNewPetitionFlow()
     }
 
     func moveToPersonalData() {
@@ -99,6 +100,15 @@ extension MainCoordinator: MainVCDelegate {
     
     func moveToOnboarding() {
         showOnboarding()
+    }
+    
+    func presentNewPetitionFlow(){
+        let navigationController = UINavigationController()
+        navigationController.navigationBar.isHidden = true
+        navigationController.isModalInPresentation = true
+        
+        let dataCoordinator = DataCoordinator(navigationController: navigationController)
+        self.navigationController.present(dataCoordinator.navigationController, animated: true, completion: nil)
     }
 }
 
