@@ -183,7 +183,6 @@
 				AF36955024FE8EF500591528 /* MainCoordinator.swift */,
 				AFB10D30250A61F700A1381A /* DataCoordinator.swift */,
 				AF36955424FE908A00591528 /* Sources */,
-				AF390339250280540062E7C2 /* Extensions */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -213,7 +212,8 @@
 				AF390337250280480062E7C2 /* UIView+.swift */,
 				AF1C4732250D4D200005059B /* UIColor+.swift */,
 			);
-			path = Extensions;
+			name = Extensions;
+			path = Coordinator/Extensions;
 			sourceTree = "<group>";
 		};
 		AF6608372509067C004C185D /* Cells */ = {
@@ -320,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				AFEC0BB324FE83A90022C25A /* Info.plist */,
+				AF390339250280540062E7C2 /* Extensions */,
 				AF36954D24FE8B2B00591528 /* Coordinator */,
 				AF390336250280330062E7C2 /* AppDelegate */,
 				AFEC0BD524FE84660022C25A /* ViewController */,

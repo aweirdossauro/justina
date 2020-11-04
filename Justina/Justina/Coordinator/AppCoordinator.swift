@@ -36,12 +36,12 @@ class AppCoordinator: NavigationCoordinator {
     }
     
     func start() {
-        let isLoggedIn = true
+        let isOnboardingAppeared = true
         
-        if isLoggedIn {
-            showMain()
+        if isOnboardingAppeared {
+            showData()
         } else {
-            showLogin()
+            showMain()
         }
     }
     
@@ -50,18 +50,23 @@ class AppCoordinator: NavigationCoordinator {
         childCoordinators[.main] = mainCoordinator
         
         mainCoordinator.delegate = self
+
+        window?.rootViewController = mainCoordinator.navigationController
+        window?.makeKeyAndVisible()
+        
         mainCoordinator.start()
     }
     
-    private func showLogin() {
-        
-    }
- 
     private func showData() {
         let dataCoordinator = DataCoordinator(navigationController: navigationController)
         childCoordinators[.data] = dataCoordinator
         dataCoordinator.delegate = self
+        
+        window?.rootViewController = dataCoordinator.navigationController
+        window?.makeKeyAndVisible()
         dataCoordinator.start()
+        
+
     }
 }
 

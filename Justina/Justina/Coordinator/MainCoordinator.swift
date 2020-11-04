@@ -86,8 +86,8 @@ extension MainCoordinator {
 extension MainCoordinator: MainVCDelegate {
     
     func mainVCDidFinish() {
-//        delegate?.mainCoordinatorDidFinish()
-        presentNewPetitionFlow()
+        delegate?.mainCoordinatorDidFinish()
+//        presentNewPetitionFlow()
     }
 
     func moveToPersonalData() {
