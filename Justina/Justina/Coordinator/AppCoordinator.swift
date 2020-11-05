@@ -16,13 +16,13 @@ enum AppChildCoordinator {
 }
 
 class AppCoordinator: NavigationCoordinator {
+    
     var navigationController: UINavigationController
     
     private var childCoordinators = [AppChildCoordinator: Coordinator]()
 
 
     weak var window: UIWindow?
-    
     
     init(window: UIWindow?) {
         self.window = window
@@ -35,8 +35,8 @@ class AppCoordinator: NavigationCoordinator {
         self.window?.rootViewController = navigationController
     }
     
-    func start() {
-        let isOnboardingAppeared = true
+    func start(_ isRoot = true) {
+        let isOnboardingAppeared = false
         
         if isOnboardingAppeared {
             showData()
@@ -46,27 +46,20 @@ class AppCoordinator: NavigationCoordinator {
     }
     
     private func showMain() {
-        let mainCoordinator = MainCoordinator(navigationController: navigationController)
+        let mainCoordinator = MainCoordinator(navigationController: navigationController, window: window)
         childCoordinators[.main] = mainCoordinator
         
         mainCoordinator.delegate = self
-
-        window?.rootViewController = mainCoordinator.navigationController
-        window?.makeKeyAndVisible()
         
         mainCoordinator.start()
     }
     
     private func showData() {
-        let dataCoordinator = DataCoordinator(navigationController: navigationController)
+        let dataCoordinator = DataCoordinator(navigationController: navigationController, window: window)
         childCoordinators[.data] = dataCoordinator
         dataCoordinator.delegate = self
-        
-        window?.rootViewController = dataCoordinator.navigationController
-        window?.makeKeyAndVisible()
-        dataCoordinator.start()
-        
 
+        dataCoordinator.start()
     }
 }
 

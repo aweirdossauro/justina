@@ -14,6 +14,6 @@ protocol Coordinator {
     /**
      Entry point starting the coordinator
      */
-    func start()
+    func start(_ isRoot : Bool)
 }
 

@@ -18,23 +18,31 @@ class MainCoordinator: NavigationCoordinator {
     var navigationController: UINavigationController
 
     weak var delegate: MainCoordinatorDelegate?
+    weak var window: UIWindow?
 
-    init(navigationController : UINavigationController) {
+    init(navigationController : UINavigationController, window: UIWindow?) {
+
         // Creates the NavigationController
         self.navigationController = navigationController
-        
+        self.window = window
         // Sets the Navigation Bar default properties
         setDefaultProperties()
     }
     
-    func start() {
-        showMainVC()
+    func start(_ isRoot : Bool = false) {
+        showMainVC(isRoot)
     }
 
-    func showMainVC(){
+    func showMainVC(_ isRoot : Bool = false){
         DispatchQueue.main.async {
             let vc = MainVC.instantiate()
             vc.delegate = self
+            
+            if isRoot {
+                self.window?.rootViewController = vc
+                self.window?.makeKeyAndVisible()
+                return
+            }
             
             self.navigationController.pushViewController(vc, animated: true)
         }
@@ -107,7 +115,7 @@ extension MainCoordinator: MainVCDelegate {
         navigationController.navigationBar.isHidden = true
         navigationController.isModalInPresentation = true
         
-        let dataCoordinator = DataCoordinator(navigationController: navigationController)
+        let dataCoordinator = DataCoordinator(navigationController: navigationController, window: window)
         self.navigationController.present(dataCoordinator.navigationController, animated: true, completion: nil)
     }
 }

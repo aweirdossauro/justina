@@ -18,24 +18,32 @@ class DataCoordinator: NavigationCoordinator {
     var navigationController: UINavigationController
 
     weak var delegate: DataCoordinatorDelegate?
+    weak var window: UIWindow?
 
-    init(navigationController : UINavigationController) {
+    init(navigationController : UINavigationController, window: UIWindow?
+) {
         // Creates the NavigationController
         self.navigationController = navigationController
-        
+        self.window = window
         // Sets the Navigation Bar default properties
         setDefaultProperties()
     }
     
-    func start() {
-        showPersonalData()
+    func start(_ isRoot : Bool = false) {
+        showPersonalData(isRoot)
     }
-
-    func showPersonalData(){
+    
+    func showPersonalData(_ isRoot : Bool = false){
         DispatchQueue.main.async {
             let vc = PersonalDataVC.instantiate()
             vc.delegate = self
-
+            
+            if isRoot {
+                self.window?.rootViewController = vc
+                self.window?.makeKeyAndVisible()
+                return
+            }
+            
             self.navigationController.pushViewController(vc, animated: true)
         }
     }
