@@ -181,10 +181,28 @@
         <!--Onboarding EndVC-->
         <scene sceneID="Ivt-Y5-sri">
             <objects>
-                <viewController id="oJ9-kw-Wcp" customClass="OnboardingEndVC" customModule="Justina" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardingEndVC" id="oJ9-kw-Wcp" customClass="OnboardingEndVC" customModule="Justina" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Og5-O8-coQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMV-BT-w0w">
+                                <rect key="frame" x="185" y="279" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="quero "/>
+                                <connections>
+                                    <action selector="peticaoAction:" destination="oJ9-kw-Wcp" eventType="touchUpInside" id="wIZ-FZ-nQj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arx-pe-jVF">
+                                <rect key="frame" x="170" y="489" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="num quero"/>
+                                <connections>
+                                    <action selector="menuInicialAction:" destination="oJ9-kw-Wcp" eventType="touchUpInside" id="uyW-e3-Dlb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mCe-D2-zIF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>

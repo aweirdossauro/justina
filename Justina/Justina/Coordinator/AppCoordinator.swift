@@ -39,9 +39,9 @@ class AppCoordinator: NavigationCoordinator {
         let isOnboardingAppeared = false
         
         if isOnboardingAppeared {
-            showData()
-        } else {
             showMain()
+        } else {
+            showNewUserFlow()
         }
     }
     
@@ -61,6 +61,11 @@ class AppCoordinator: NavigationCoordinator {
 
         dataCoordinator.start()
     }
+    
+    private func showNewUserFlow() {
+        // apresentar tela de opção e dps já o onboarding
+    }
+
 }
 
 

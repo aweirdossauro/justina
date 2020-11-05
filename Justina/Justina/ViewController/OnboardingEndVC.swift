@@ -8,7 +8,12 @@
 
 import UIKit
 
-class OnboardingEndVC: UIViewController {
+class OnboardingEndVC: UIViewController, Storyboarded {
+    
+    // MARK: Coordinator Related Properties
+    static var storyboardName: String = "Onboarding"
+    var delegate: MainVCDelegate?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,14 +22,10 @@ class OnboardingEndVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func peticaoAction(_ sender: Any) {
+        
     }
-    */
-
+    
+    @IBAction func menuInicialAction(_ sender: Any) {
+    }
 }
