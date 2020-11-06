@@ -12,7 +12,7 @@ class OnboardingEndVC: UIViewController, Storyboarded {
     
     // MARK: Coordinator Related Properties
     static var storyboardName: String = "Onboarding"
-    var delegate: MainVCDelegate?
+    weak var delegate: OnboardingEndVCDelegate?
     
 
     override func viewDidLoad() {
@@ -23,9 +23,18 @@ class OnboardingEndVC: UIViewController, Storyboarded {
     
 
     @IBAction func peticaoAction(_ sender: Any) {
-        
+        delegate?.showData()
     }
     
     @IBAction func menuInicialAction(_ sender: Any) {
+        delegate?.showMain()
     }
 }
+
+//MARK:- Coordinator Related Code
+protocol OnboardingEndVCDelegate : AnyObject{
+    func showData()
+    
+    func showMain()
+}
+

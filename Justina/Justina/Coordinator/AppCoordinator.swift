@@ -35,7 +35,7 @@ class AppCoordinator: NavigationCoordinator {
         self.window?.rootViewController = navigationController
     }
     
-    func start(_ isRoot = true) {
+    func start(_ isRoot : Bool = true) {
         let isOnboardingAppeared = false
         
         if isOnboardingAppeared {
@@ -45,24 +45,29 @@ class AppCoordinator: NavigationCoordinator {
         }
     }
     
-    private func showMain() {
+    internal func showMain() {
         let mainCoordinator = MainCoordinator(navigationController: navigationController, window: window)
         childCoordinators[.main] = mainCoordinator
         
         mainCoordinator.delegate = self
         
-        mainCoordinator.start()
+        mainCoordinator.start(true)
     }
     
-    private func showData() {
+    internal func showData() {
         let dataCoordinator = DataCoordinator(navigationController: navigationController, window: window)
         childCoordinators[.data] = dataCoordinator
         dataCoordinator.delegate = self
 
-        dataCoordinator.start()
+        dataCoordinator.start(true)
     }
     
-    private func showNewUserFlow() {
+    internal func showNewUserFlow() {
+        let vc = OnboardingEndVC.instantiate()
+        vc.delegate = self
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+        
         // apresentar tela de opção e dps já o onboarding
     }
 
@@ -84,4 +89,8 @@ extension AppCoordinator: DataCoordinatorDelegate {
         childCoordinators[.data] = nil
         showMain()
     }
+}
+
+extension AppCoordinator: OnboardingEndVCDelegate {
+    
 }
