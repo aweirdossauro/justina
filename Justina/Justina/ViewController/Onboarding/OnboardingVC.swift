@@ -82,6 +82,7 @@ class OnboardingVC: UIViewController, OnboardingPageVCDelegate, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = .primaryBackground
     }
     
     

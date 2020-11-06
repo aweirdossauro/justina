@@ -19,8 +19,19 @@ class OnboardingEndVC: UIViewController, Storyboarded {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.showOnboarding()
+        }
     }
     
+    func showOnboarding(){
+        DispatchQueue.main.async {
+            let vc = OnboardingVC.instantiate()
+            vc.delegate = self
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }
+    }
 
     @IBAction func peticaoAction(_ sender: Any) {
         delegate?.showData()
@@ -32,6 +43,13 @@ class OnboardingEndVC: UIViewController, Storyboarded {
 }
 
 //MARK:- Coordinator Related Code
+extension OnboardingEndVC : OnboardingVCDelegate {
+    func onboardingVCDidFinish() {
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
+
 protocol OnboardingEndVCDelegate : AnyObject{
     func showData()
     
