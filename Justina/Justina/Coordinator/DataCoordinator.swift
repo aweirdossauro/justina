@@ -39,9 +39,8 @@ class DataCoordinator: NavigationCoordinator {
             vc.delegate = self
             
             if isRoot {
-                self.window?.rootViewController = vc
+                self.window?.rootViewController = self.navigationController
                 self.window?.makeKeyAndVisible()
-                return
             }
             
             self.navigationController.pushViewController(vc, animated: true)
