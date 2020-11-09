@@ -252,8 +252,8 @@
 		AF68C7892544C40C00BD401D /* Nova Peticao */ = {
 			isa = PBXGroup;
 			children = (
-				AFB10D32250A62B400A1381A /* PersonalDataVC.swift */,
 				AFF2552C255975AC00EC07FF /* NovaPeticaoVC.swift */,
+				AFB10D32250A62B400A1381A /* PersonalDataVC.swift */,
 				AF68C77F2544BCD900BD401D /* ContactInfoVC.swift */,
 				AF68C7842544C3F600BD401D /* CompanyDataVC.swift */,
 			);

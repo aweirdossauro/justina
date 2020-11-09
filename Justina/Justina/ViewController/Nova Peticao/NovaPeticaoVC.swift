@@ -20,6 +20,7 @@ class NovaPeticaoVC: UIViewController, Storyboarded {
                                forCellReuseIdentifier: CellIdentifiers.novaPeticaoTableViewCell)
         }
     }
+    @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,9 @@ class NovaPeticaoVC: UIViewController, Storyboarded {
         tableView.dataSource = self
     }
     
+    @IBAction func backAction(_ sender: Any) {
+        delegate?.novaPeticaoVCDidFinish()
+    }
 }
 
 extension NovaPeticaoVC: UITableViewDelegate, UITableViewDataSource {
