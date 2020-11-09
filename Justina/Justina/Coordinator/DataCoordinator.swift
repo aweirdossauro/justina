@@ -30,12 +30,12 @@ class DataCoordinator: NavigationCoordinator {
     }
     
     func start(_ isRoot : Bool = false) {
-        showPersonalData(isRoot)
+        showNovaPeticao(isRoot)
     }
     
-    func showPersonalData(_ isRoot : Bool = false){
+    func showNovaPeticao(_ isRoot : Bool = false){
         DispatchQueue.main.async {
-            let vc = PersonalDataVC.instantiate()
+            let vc = NovaPeticaoVC.instantiate()
             vc.delegate = self
             
             if isRoot {
@@ -43,6 +43,14 @@ class DataCoordinator: NavigationCoordinator {
                 self.window?.makeKeyAndVisible()
             }
             
+            self.navigationController.pushViewController(vc, animated: true)
+        }
+    }
+    
+    func showPersonalData(){
+        DispatchQueue.main.async {
+            let vc = PersonalDataVC.instantiate()
+            vc.delegate = self
             self.navigationController.pushViewController(vc, animated: true)
         }
     }
@@ -97,3 +105,8 @@ extension DataCoordinator: CompanyDataVCDelegate {
 }
 
 
+extension DataCoordinator: NovaPeticaoVCDelegate {
+    func novaPeticaoVCDidFinish() {
+        delegate?.dataCoordinatorDidFinish()
+    }
+}

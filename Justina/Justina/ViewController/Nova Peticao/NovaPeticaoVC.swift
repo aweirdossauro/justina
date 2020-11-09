@@ -68,7 +68,7 @@ extension NovaPeticaoVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 protocol NovaPeticaoVCDelegate: AnyObject {
-    func peticaoProcessosVCDidFinish()
+    func novaPeticaoVCDidFinish()
     
     func showPersonalData()
     
