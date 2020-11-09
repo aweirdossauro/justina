@@ -9,6 +9,7 @@
 import Foundation
 
 class PeticaoProcessosModel {
+    ///Titulo das Celulas
     static let tableViewCellTitle : [String] = ["Dados Pessoais",
                                                 "Informações de Contato",
                                          "Dados da Empresa",

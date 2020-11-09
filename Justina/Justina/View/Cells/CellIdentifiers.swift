@@ -20,6 +20,8 @@ struct CellIdentifiers {
     
     static let processosInfoTableViewCell = "ProcessosInfoTableViewCell"
 
+    static let novaPeticaoTableViewCell = "NovaPeticaoTableViewCell"
+    
 //MARK:- Collection View Cells
 
 }
