@@ -20,23 +20,23 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qAB-gY-4ri">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <view key="tableFooterView" contentMode="scaleToFill" id="eUJ-ke-4UN">
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="lSC-Et-DKG">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="107"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esse aqui é o header, dá pra enfiar o texto que precisar aqui" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjg-ph-qTT">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Esse aqui é o header, dá pra enfiar o texto que precisar aqui" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjd-ho-laC">
                                             <rect key="frame" x="15" y="15" width="384" height="77"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="backgroundColor" systemColor="systemBlueColor"/>
                                     <constraints>
-                                        <constraint firstItem="sjg-ph-qTT" firstAttribute="top" secondItem="eUJ-ke-4UN" secondAttribute="top" constant="15" id="16q-Ym-d9l"/>
-                                        <constraint firstItem="sjg-ph-qTT" firstAttribute="leading" secondItem="eUJ-ke-4UN" secondAttribute="leading" constant="15" id="CYT-Vm-lYt"/>
-                                        <constraint firstAttribute="trailing" secondItem="sjg-ph-qTT" secondAttribute="trailing" constant="15" id="QPP-nR-t6i"/>
-                                        <constraint firstAttribute="bottom" secondItem="sjg-ph-qTT" secondAttribute="bottom" constant="15" id="iPk-w7-9sl"/>
+                                        <constraint firstItem="vjd-ho-laC" firstAttribute="top" secondItem="lSC-Et-DKG" secondAttribute="top" constant="15" id="Abf-RE-Q9F"/>
+                                        <constraint firstItem="vjd-ho-laC" firstAttribute="leading" secondItem="lSC-Et-DKG" secondAttribute="leading" constant="15" id="DZi-Vb-pqr"/>
+                                        <constraint firstAttribute="bottom" secondItem="vjd-ho-laC" secondAttribute="bottom" constant="15" id="WZ3-Sv-gxI"/>
+                                        <constraint firstAttribute="trailing" secondItem="vjd-ho-laC" secondAttribute="trailing" constant="15" id="n8l-Nn-I4W"/>
                                     </constraints>
                                 </view>
                             </tableView>
@@ -769,6 +769,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

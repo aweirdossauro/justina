@@ -233,8 +233,7 @@
 				AF6EF1B6251A3DC8000C4646 /* ProcessosInfoVC */,
 				AF66083825090689004C185D /* JustinaVC */,
 				AFF3D6DB250D578800D0DFF9 /* MainVC */,
-				AFF255392559796700EC07FF /* NovaPeticaoTableViewCell.swift */,
-				AFF2553A2559796700EC07FF /* NovaPeticaoTableViewCell.xib */,
+				AFF255452559820D00EC07FF /* NovaPeticaoVC */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -388,6 +387,15 @@
 				AF6608372509067C004C185D /* Cells */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AFF255452559820D00EC07FF /* NovaPeticaoVC */ = {
+			isa = PBXGroup;
+			children = (
+				AFF255392559796700EC07FF /* NovaPeticaoTableViewCell.swift */,
+				AFF2553A2559796700EC07FF /* NovaPeticaoTableViewCell.xib */,
+			);
+			path = NovaPeticaoVC;
 			sourceTree = "<group>";
 		};
 		AFF3D6DB250D578800D0DFF9 /* MainVC */ = {
