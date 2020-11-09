@@ -48,6 +48,7 @@
 		AFEC0BB224FE83A90022C25A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEC0BB024FE83A90022C25A /* LaunchScreen.storyboard */; };
 		AFEC0BBD24FE83A90022C25A /* JustinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BBC24FE83A90022C25A /* JustinaTests.swift */; };
 		AFEC0BC824FE83AA0022C25A /* JustinaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BC724FE83AA0022C25A /* JustinaUITests.swift */; };
+		AFF2552D255975AC00EC07FF /* NovaPeticaoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2552C255975AC00EC07FF /* NovaPeticaoVC.swift */; };
 		AFF3D6D9250D578400D0DFF9 /* ProcessosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D6D7250D578400D0DFF9 /* ProcessosTableViewCell.swift */; };
 		AFF3D6DA250D578400D0DFF9 /* ProcessosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF3D6D8250D578400D0DFF9 /* ProcessosTableViewCell.xib */; };
 		AFF3D6DE250FA03500D0DFF9 /* AddProcessoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D6DC250FA03500D0DFF9 /* AddProcessoTableViewCell.swift */; };
@@ -125,6 +126,7 @@
 		AFEC0BC324FE83AA0022C25A /* JustinaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustinaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEC0BC724FE83AA0022C25A /* JustinaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustinaUITests.swift; sourceTree = "<group>"; };
 		AFEC0BC924FE83AA0022C25A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF2552C255975AC00EC07FF /* NovaPeticaoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaPeticaoVC.swift; sourceTree = "<group>"; };
 		AFF3D6D7250D578400D0DFF9 /* ProcessosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessosTableViewCell.swift; sourceTree = "<group>"; };
 		AFF3D6D8250D578400D0DFF9 /* ProcessosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProcessosTableViewCell.xib; sourceTree = "<group>"; };
 		AFF3D6DC250FA03500D0DFF9 /* AddProcessoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProcessoTableViewCell.swift; sourceTree = "<group>"; };
@@ -240,14 +242,15 @@
 			path = JustinaVC;
 			sourceTree = "<group>";
 		};
-		AF68C7892544C40C00BD401D /* Cria Peticao */ = {
+		AF68C7892544C40C00BD401D /* Nova Peticao */ = {
 			isa = PBXGroup;
 			children = (
 				AFB10D32250A62B400A1381A /* PersonalDataVC.swift */,
+				AFF2552C255975AC00EC07FF /* NovaPeticaoVC.swift */,
 				AF68C77F2544BCD900BD401D /* ContactInfoVC.swift */,
 				AF68C7842544C3F600BD401D /* CompanyDataVC.swift */,
 			);
-			path = "Cria Peticao";
+			path = "Nova Peticao";
 			sourceTree = "<group>";
 		};
 		AF6EF1B6251A3DC8000C4646 /* ProcessosInfoVC */ = {
@@ -281,6 +284,7 @@
 		AF8A00612541C21900231746 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				AFD757AA25543F82008F2907 /* OnboardingEndVC.swift */,
 				AF8A00622541C21900231746 /* OnboardingPageVC.swift */,
 				AF8A00632541C21900231746 /* OnboardingVC.swift */,
 				AF8A00642541C21900231746 /* OnboardingContentVC.swift */,
@@ -357,10 +361,9 @@
 			children = (
 				AF8A00612541C21900231746 /* Onboarding */,
 				AFEC0BA924FE83A70022C25A /* MainVC.swift */,
-				AFD757AA25543F82008F2907 /* OnboardingEndVC.swift */,
 				AF7AFD1425309BBE007DC2D0 /* Painel da Petição */,
+				AF68C7892544C40C00BD401D /* Nova Peticao */,
 				AFB59AF224FFE6A800FB9207 /* JustinaVC.swift */,
-				AF68C7892544C40C00BD401D /* Cria Peticao */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -657,6 +660,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF2552D255975AC00EC07FF /* NovaPeticaoVC.swift in Sources */,
 				AFB10D33250A62B400A1381A /* PersonalDataVC.swift in Sources */,
 				AFF3D6E5250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift in Sources */,
 				AF7AFD1E25309CCD007DC2D0 /* PeticaoProcessosVC.swift in Sources */,
