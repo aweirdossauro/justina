@@ -51,6 +51,7 @@
 		AFF2552D255975AC00EC07FF /* NovaPeticaoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2552C255975AC00EC07FF /* NovaPeticaoVC.swift */; };
 		AFF2553B2559796700EC07FF /* NovaPeticaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF255392559796700EC07FF /* NovaPeticaoTableViewCell.swift */; };
 		AFF2553C2559796700EC07FF /* NovaPeticaoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF2553A2559796700EC07FF /* NovaPeticaoTableViewCell.xib */; };
+		AFF2554125597B5B00EC07FF /* NovaPeticaoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2554025597B5B00EC07FF /* NovaPeticaoModel.swift */; };
 		AFF3D6D9250D578400D0DFF9 /* ProcessosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D6D7250D578400D0DFF9 /* ProcessosTableViewCell.swift */; };
 		AFF3D6DA250D578400D0DFF9 /* ProcessosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF3D6D8250D578400D0DFF9 /* ProcessosTableViewCell.xib */; };
 		AFF3D6DE250FA03500D0DFF9 /* AddProcessoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D6DC250FA03500D0DFF9 /* AddProcessoTableViewCell.swift */; };
@@ -131,6 +132,7 @@
 		AFF2552C255975AC00EC07FF /* NovaPeticaoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaPeticaoVC.swift; sourceTree = "<group>"; };
 		AFF255392559796700EC07FF /* NovaPeticaoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaPeticaoTableViewCell.swift; sourceTree = "<group>"; };
 		AFF2553A2559796700EC07FF /* NovaPeticaoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NovaPeticaoTableViewCell.xib; sourceTree = "<group>"; };
+		AFF2554025597B5B00EC07FF /* NovaPeticaoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaPeticaoModel.swift; sourceTree = "<group>"; };
 		AFF3D6D7250D578400D0DFF9 /* ProcessosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessosTableViewCell.swift; sourceTree = "<group>"; };
 		AFF3D6D8250D578400D0DFF9 /* ProcessosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProcessosTableViewCell.xib; sourceTree = "<group>"; };
 		AFF3D6DC250FA03500D0DFF9 /* AddProcessoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProcessoTableViewCell.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				AF7F10012539CC0200314EE8 /* PeticaoProcessosModel.swift */,
+				AFF2554025597B5B00EC07FF /* NovaPeticaoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -688,6 +691,7 @@
 				AFB10D35250A651C00A1381A /* AppCoordinator.swift in Sources */,
 				AF36954F24FE8E1200591528 /* Storyboarded.swift in Sources */,
 				AFB10D31250A61F700A1381A /* DataCoordinator.swift in Sources */,
+				AFF2554125597B5B00EC07FF /* NovaPeticaoModel.swift in Sources */,
 				AFF3D6DE250FA03500D0DFF9 /* AddProcessoTableViewCell.swift in Sources */,
 				AFEC0BA624FE83A70022C25A /* AppDelegate.swift in Sources */,
 				AFF3D6E8250FA4B200D0DFF9 /* CellIdentifiers.swift in Sources */,
