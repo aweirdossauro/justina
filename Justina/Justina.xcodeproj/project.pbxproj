@@ -49,6 +49,8 @@
 		AFEC0BBD24FE83A90022C25A /* JustinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BBC24FE83A90022C25A /* JustinaTests.swift */; };
 		AFEC0BC824FE83AA0022C25A /* JustinaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BC724FE83AA0022C25A /* JustinaUITests.swift */; };
 		AFF2552D255975AC00EC07FF /* NovaPeticaoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2552C255975AC00EC07FF /* NovaPeticaoVC.swift */; };
+		AFF2553B2559796700EC07FF /* NovaPeticaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF255392559796700EC07FF /* NovaPeticaoTableViewCell.swift */; };
+		AFF2553C2559796700EC07FF /* NovaPeticaoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF2553A2559796700EC07FF /* NovaPeticaoTableViewCell.xib */; };
 		AFF3D6D9250D578400D0DFF9 /* ProcessosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D6D7250D578400D0DFF9 /* ProcessosTableViewCell.swift */; };
 		AFF3D6DA250D578400D0DFF9 /* ProcessosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF3D6D8250D578400D0DFF9 /* ProcessosTableViewCell.xib */; };
 		AFF3D6DE250FA03500D0DFF9 /* AddProcessoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF3D6DC250FA03500D0DFF9 /* AddProcessoTableViewCell.swift */; };
@@ -127,6 +129,8 @@
 		AFEC0BC724FE83AA0022C25A /* JustinaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustinaUITests.swift; sourceTree = "<group>"; };
 		AFEC0BC924FE83AA0022C25A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFF2552C255975AC00EC07FF /* NovaPeticaoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaPeticaoVC.swift; sourceTree = "<group>"; };
+		AFF255392559796700EC07FF /* NovaPeticaoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaPeticaoTableViewCell.swift; sourceTree = "<group>"; };
+		AFF2553A2559796700EC07FF /* NovaPeticaoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NovaPeticaoTableViewCell.xib; sourceTree = "<group>"; };
 		AFF3D6D7250D578400D0DFF9 /* ProcessosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessosTableViewCell.swift; sourceTree = "<group>"; };
 		AFF3D6D8250D578400D0DFF9 /* ProcessosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProcessosTableViewCell.xib; sourceTree = "<group>"; };
 		AFF3D6DC250FA03500D0DFF9 /* AddProcessoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProcessoTableViewCell.swift; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 				AF6EF1B6251A3DC8000C4646 /* ProcessosInfoVC */,
 				AF66083825090689004C185D /* JustinaVC */,
 				AFF3D6DB250D578800D0DFF9 /* MainVC */,
+				AFF255392559796700EC07FF /* NovaPeticaoTableViewCell.swift */,
+				AFF2553A2559796700EC07FF /* NovaPeticaoTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -527,6 +533,7 @@
 				AF8A006C2541C23200231746 /* Onboarding.storyboard in Resources */,
 				AFEC0BB224FE83A90022C25A /* LaunchScreen.storyboard in Resources */,
 				AFEC0BAF24FE83A90022C25A /* Assets.xcassets in Resources */,
+				AFF2553C2559796700EC07FF /* NovaPeticaoTableViewCell.xib in Resources */,
 				AFEC0BAD24FE83A70022C25A /* Main.storyboard in Resources */,
 				AFF3D6DF250FA03500D0DFF9 /* AddProcessoTableViewCell.xib in Resources */,
 				AF7AFCD1252F48CB007DC2D0 /* ProcessosInfoTableViewCell.xib in Resources */,
@@ -665,6 +672,7 @@
 				AFF3D6E5250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift in Sources */,
 				AF7AFD1E25309CCD007DC2D0 /* PeticaoProcessosVC.swift in Sources */,
 				AF68C7802544BCD900BD401D /* ContactInfoVC.swift in Sources */,
+				AFF2553B2559796700EC07FF /* NovaPeticaoTableViewCell.swift in Sources */,
 				AF8A00652541C21A00231746 /* OnboardingPageVC.swift in Sources */,
 				AFB10D2E250A54E700A1381A /* KeyboardLayoutGuide.swift in Sources */,
 				AF5EAB0525124BAF005CE765 /* ProcessosInfoVC.swift in Sources */,
