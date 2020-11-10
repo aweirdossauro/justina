@@ -40,14 +40,6 @@
                                     </constraints>
                                 </view>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5t9-SL-u8e">
-                                <rect key="frame" x="0.0" y="426" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="butao de back"/>
-                                <connections>
-                                    <action selector="backAction:" destination="nZm-9q-Efw" eventType="touchUpInside" id="dbx-zR-PPV"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zgt-2R-cgX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -59,7 +51,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="5t9-SL-u8e" id="MNF-OU-FDL"/>
                         <outlet property="tableView" destination="qAB-gY-4ri" id="Uns-C9-JBN"/>
                     </connections>
                 </viewController>
