@@ -51,7 +51,7 @@ class AppCoordinator: NavigationCoordinator {
         
         mainCoordinator.delegate = self
         
-        mainCoordinator.start(true)
+        mainCoordinator.start(isRoot)
     }
     
     internal func showData(_ isRoot : Bool = true) {
@@ -65,10 +65,12 @@ class AppCoordinator: NavigationCoordinator {
     internal func showNewUserFlow() {
         let vc = OnboardingEndVC.instantiate()
         vc.delegate = self
-        self.window?.rootViewController = vc
+//        self.window?.rootViewController = vc
+ //        self.window?.makeKeyAndVisible()
+        self.window?.rootViewController = self.navigationController
         self.window?.makeKeyAndVisible()
         
-        // apresentar tela de opção e dps já o onboarding
+        self.navigationController.pushViewController(vc, animated: true)
     }
 
 }

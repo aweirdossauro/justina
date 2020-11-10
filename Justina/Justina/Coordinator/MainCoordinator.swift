@@ -23,7 +23,7 @@ class MainCoordinator: NavigationCoordinator {
     init(navigationController : UINavigationController, window: UIWindow?) {
 
         // Creates the NavigationController
-        self.navigationController = navigationController
+        self.navigationController = UINavigationController() 
         self.window = window
         // Sets the Navigation Bar default properties
         setDefaultProperties()

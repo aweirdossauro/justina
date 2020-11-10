@@ -14,7 +14,6 @@ protocol DataCoordinatorDelegate: AnyObject {
 }
 class DataCoordinator: NavigationCoordinator {
     
-//    let childCoordinators: [Coordinator]
     var navigationController: UINavigationController
 
     weak var delegate: DataCoordinatorDelegate?
