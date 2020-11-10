@@ -34,11 +34,11 @@ class OnboardingEndVC: UIViewController, Storyboarded {
     }
 
     @IBAction func peticaoAction(_ sender: Any) {
-        delegate?.showData()
+        delegate?.showDataFromOnboarding()
     }
     
     @IBAction func menuInicialAction(_ sender: Any) {
-        delegate?.showMain()
+        delegate?.showMainFromOnboarding()
     }
 }
 
@@ -51,8 +51,8 @@ extension OnboardingEndVC : OnboardingVCDelegate {
 
 
 protocol OnboardingEndVCDelegate : AnyObject{
-    func showData()
+    func showDataFromOnboarding()
     
-    func showMain()
+    func showMainFromOnboarding()
 }
 

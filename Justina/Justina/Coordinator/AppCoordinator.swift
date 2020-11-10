@@ -45,7 +45,7 @@ class AppCoordinator: NavigationCoordinator {
         }
     }
     
-    internal func showMain() {
+    internal func showMain(_ isRoot : Bool = true) {
         let mainCoordinator = MainCoordinator(navigationController: navigationController, window: window)
         childCoordinators[.main] = mainCoordinator
         
@@ -54,12 +54,12 @@ class AppCoordinator: NavigationCoordinator {
         mainCoordinator.start(true)
     }
     
-    internal func showData() {
+    internal func showData(_ isRoot : Bool = true) {
         let dataCoordinator = DataCoordinator(navigationController: navigationController, window: window)
         childCoordinators[.data] = dataCoordinator
         dataCoordinator.delegate = self
 
-        dataCoordinator.start(true)
+        dataCoordinator.start(isRoot)
     }
     
     internal func showNewUserFlow() {
@@ -92,5 +92,11 @@ extension AppCoordinator: DataCoordinatorDelegate {
 }
 
 extension AppCoordinator: OnboardingEndVCDelegate {
+    func showDataFromOnboarding() {
+        showData(false)
+    }
     
+    func showMainFromOnboarding() {
+        showMain(true)
+    }
 }
