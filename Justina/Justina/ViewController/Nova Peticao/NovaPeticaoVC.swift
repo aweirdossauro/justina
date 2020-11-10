@@ -27,6 +27,10 @@ class NovaPeticaoVC: UIViewController, Storyboarded {
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        navigationController?.navigationBar.prefersLargeTitles = false
+        title = "Nova Petição"
+        navigationController?.
     }
     
     @IBAction func backAction(_ sender: Any) {
