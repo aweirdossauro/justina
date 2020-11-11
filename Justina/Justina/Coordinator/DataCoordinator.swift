@@ -19,10 +19,13 @@ class DataCoordinator: NavigationCoordinator {
     weak var delegate: DataCoordinatorDelegate?
     weak var window: UIWindow?
 
-    init(navigationController : UINavigationController, window: UIWindow?
-) {
+    init(navigationController : UINavigationController, window: UIWindow?, _ isRoot : Bool = false) {
         // Creates the NavigationController
-        self.navigationController = navigationController
+        if isRoot {
+            self.navigationController = UINavigationController()
+        } else {
+            self.navigationController = navigationController
+        }
         self.window = window
         // Sets the Navigation Bar default properties
         setDefaultProperties()
