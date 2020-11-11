@@ -62,10 +62,6 @@ class MainVC: UIViewController, Storyboarded {
         showImage(false)
     }
     
-    @IBAction func testButton(_ sender: Any) {
-        delegate?.mainVCDidFinish()
-    }
-    
     @objc func testButtonPressed(_ sender: Any) {
 //        showImage(false)
 //        delegate?.mainVCDidFinish()
@@ -105,10 +101,12 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
 //    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == indexPath.last {
-            delegate?.mainVCDidFinish()
+        if indexPath.row == indexPath.count {
+            print("entro aqui")
+            delegate?.mainVCDidFinish(currentNavController: self.navigationController)
             return
         }
+        print("passo aqui")
         delegate?.moveToProcessosInfo()
     }
     
@@ -197,7 +195,7 @@ extension MainVC {
 
 //MARK:- Coordinator Related Code
 protocol MainVCDelegate : AnyObject{
-    func  mainVCDidFinish()
+    func  mainVCDidFinish(currentNavController : UINavigationController?)
     
     func moveToPersonalData()
 

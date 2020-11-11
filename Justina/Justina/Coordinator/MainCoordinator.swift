@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MainCoordinatorDelegate: AnyObject {
-    func mainCoordinatorDidFinish()
+    func mainCoordinatorDidFinish(currentNavController : UINavigationController?)
 }
 
 class MainCoordinator: NavigationCoordinator {
@@ -92,8 +92,8 @@ extension MainCoordinator {
 
 extension MainCoordinator: MainVCDelegate {
     
-    func mainVCDidFinish() {
-        delegate?.mainCoordinatorDidFinish()
+    func mainVCDidFinish(currentNavController : UINavigationController?) {
+        delegate?.mainCoordinatorDidFinish(currentNavController : currentNavController)
 //        presentNewPetitionFlow()
     }
 

@@ -54,8 +54,12 @@ class AppCoordinator: NavigationCoordinator {
         mainCoordinator.start(isRoot)
     }
     
-    internal func showData(_ isRoot : Bool = true) {
-        let dataCoordinator = DataCoordinator(navigationController: navigationController, window: window)
+    internal func showData(_ isRoot : Bool = true, navController : UINavigationController?) {
+        var navigation = navigationController
+        if let navController = navController {
+            navigation = navController
+        }
+        let dataCoordinator = DataCoordinator(navigationController: navigation, window: window, isRoot)
         childCoordinators[.data] = dataCoordinator
         dataCoordinator.delegate = self
 
@@ -65,8 +69,7 @@ class AppCoordinator: NavigationCoordinator {
     internal func showNewUserFlow() {
         let vc = OnboardingEndVC.instantiate()
         vc.delegate = self
-//        self.window?.rootViewController = vc
- //        self.window?.makeKeyAndVisible()
+        
         self.window?.rootViewController = self.navigationController
         self.window?.makeKeyAndVisible()
         
@@ -79,9 +82,9 @@ class AppCoordinator: NavigationCoordinator {
 // MARK: - Delegate
 
 extension AppCoordinator: MainCoordinatorDelegate {
-    func mainCoordinatorDidFinish() {
+    func mainCoordinatorDidFinish(currentNavController : UINavigationController?) {
         childCoordinators[.main] = nil
-        showData()
+        showData(false, navController: currentNavController)
     }
 
 }
@@ -95,7 +98,7 @@ extension AppCoordinator: DataCoordinatorDelegate {
 
 extension AppCoordinator: OnboardingEndVCDelegate {
     func showDataFromOnboarding() {
-        showData(false)
+        showData(false, navController: nil)
     }
     
     func showMainFromOnboarding() {
