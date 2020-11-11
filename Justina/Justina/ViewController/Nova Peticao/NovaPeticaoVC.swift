@@ -41,11 +41,14 @@ extension NovaPeticaoVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         NovaPeticaoModel.tableViewCellTitle.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.novaPeticaoTableViewCell) as! NovaPeticaoTableViewCell
         cell.mainLabel.text = NovaPeticaoModel.tableViewCellTitle[indexPath.row]
+        cell.backgroundColor = UIColor(red: 0.90, green: 0.90, blue: 0.90, alpha: 1.00)
+        cell.roundCorners(radius: 10.0)
+        
         return cell
     }
     
