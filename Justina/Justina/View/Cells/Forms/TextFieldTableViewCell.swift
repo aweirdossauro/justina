@@ -24,6 +24,13 @@ class TextFieldTableViewCell: UITableViewCell {
         self.contentView.backgroundColor = .primaryBackground
         // Configure the view for the selected state
     }
-    
+ 
+    // Inside UITableViewCell subclass
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0))
+    }
 }
 
