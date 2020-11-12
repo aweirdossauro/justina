@@ -15,13 +15,10 @@ class PersonalDataVC: UIViewController, Storyboarded {
     static var storyboardName: String = "PersonalData"
     var delegate: PersonalDataVCDelegate?
 
-    @IBOutlet weak var nextButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        nextButton.backgroundColor = .buttonBackground
-        nextButton.addButtonCornerRadius()
     }
     
 

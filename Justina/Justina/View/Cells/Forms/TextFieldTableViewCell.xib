@@ -29,13 +29,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome completo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LKc-54-THN">
-                        <rect key="frame" x="19.5" y="45.5" width="290.5" height="18.5"/>
+                        <rect key="frame" x="19.5" y="39.5" width="290.5" height="19"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="LKc-54-THN" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" constant="-5" id="47j-85-acg"/>
+                    <constraint firstItem="LKc-54-THN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="5" id="47j-85-acg"/>
                     <constraint firstItem="LKc-54-THN" firstAttribute="leading" secondItem="o5A-c6-v2o" secondAttribute="trailing" constant="10" id="9fB-N7-Tos"/>
                     <constraint firstItem="FNF-mN-jHa" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-5" id="FqA-C0-ckq"/>
                     <constraint firstItem="o5A-c6-v2o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="O8u-y2-f53"/>
