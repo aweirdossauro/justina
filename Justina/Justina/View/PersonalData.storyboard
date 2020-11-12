@@ -109,6 +109,9 @@
                             <constraint firstItem="qhy-ww-7LB" firstAttribute="trailing" secondItem="iuW-T7-JtN" secondAttribute="trailing" id="o1N-Nj-5kf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="iuW-T7-JtN" id="qeC-j5-23S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NCF-3Q-Nsq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
