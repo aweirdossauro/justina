@@ -14,6 +14,8 @@
 		AF1C4733250D4D200005059B /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1C4732250D4D200005059B /* UIColor+.swift */; };
 		AF1C4736250D4F0F0005059B /* JustinaMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1C4734250D4F0F0005059B /* JustinaMessageTableViewCell.swift */; };
 		AF1C4737250D4F0F0005059B /* JustinaMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1C4735250D4F0F0005059B /* JustinaMessageTableViewCell.xib */; };
+		AF2B0E0D255D681C0006E084 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2B0E0B255D681C0006E084 /* TextFieldTableViewCell.swift */; };
+		AF2B0E0E255D681C0006E084 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2B0E0C255D681C0006E084 /* TextFieldTableViewCell.xib */; };
 		AF36954C24FE8B2400591528 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF36954B24FE8B2400591528 /* Coordinator.swift */; };
 		AF36954F24FE8E1200591528 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF36954E24FE8E1200591528 /* Storyboarded.swift */; };
 		AF36955124FE8EF500591528 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF36955024FE8EF500591528 /* MainCoordinator.swift */; };
@@ -89,6 +91,8 @@
 		AF1C4732250D4D200005059B /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		AF1C4734250D4F0F0005059B /* JustinaMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustinaMessageTableViewCell.swift; sourceTree = "<group>"; };
 		AF1C4735250D4F0F0005059B /* JustinaMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JustinaMessageTableViewCell.xib; sourceTree = "<group>"; };
+		AF2B0E0B255D681C0006E084 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		AF2B0E0C255D681C0006E084 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		AF36954B24FE8B2400591528 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AF36954E24FE8E1200591528 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		AF36955024FE8EF500591528 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
@@ -186,6 +190,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AF2B0E12255D68220006E084 /* Forms */ = {
+			isa = PBXGroup;
+			children = (
+				AF2B0E0B255D681C0006E084 /* TextFieldTableViewCell.swift */,
+				AF2B0E0C255D681C0006E084 /* TextFieldTableViewCell.xib */,
+			);
+			path = Forms;
+			sourceTree = "<group>";
+		};
 		AF36954D24FE8B2B00591528 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +247,7 @@
 				AF66083825090689004C185D /* JustinaVC */,
 				AFF3D6DB250D578800D0DFF9 /* MainVC */,
 				AFF255452559820D00EC07FF /* NovaPeticaoVC */,
+				AF2B0E12255D68220006E084 /* Forms */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -549,6 +563,7 @@
 				AFF3D6DF250FA03500D0DFF9 /* AddProcessoTableViewCell.xib in Resources */,
 				AF7AFCD1252F48CB007DC2D0 /* ProcessosInfoTableViewCell.xib in Resources */,
 				AFB59AF124FFE68300FB9207 /* Justina.storyboard in Resources */,
+				AF2B0E0E255D681C0006E084 /* TextFieldTableViewCell.xib in Resources */,
 				AF66083625090670004C185D /* MessageSentTableViewCell.xib in Resources */,
 				AFF3D6DA250D578400D0DFF9 /* ProcessosTableViewCell.xib in Resources */,
 			);
@@ -687,6 +702,7 @@
 				AF8A00652541C21A00231746 /* OnboardingPageVC.swift in Sources */,
 				AFB10D2E250A54E700A1381A /* KeyboardLayoutGuide.swift in Sources */,
 				AF5EAB0525124BAF005CE765 /* ProcessosInfoVC.swift in Sources */,
+				AF2B0E0D255D681C0006E084 /* TextFieldTableViewCell.swift in Sources */,
 				AF7F10022539CC0200314EE8 /* PeticaoProcessosModel.swift in Sources */,
 				AF36954C24FE8B2400591528 /* Coordinator.swift in Sources */,
 				AFB59AF324FFE6A800FB9207 /* JustinaVC.swift in Sources */,
