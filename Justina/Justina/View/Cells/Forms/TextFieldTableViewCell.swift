@@ -13,24 +13,43 @@ class TextFieldTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     
+    
     override func awakeFromNib() {
+        let textButton = UIButton()
+        textButton.translatesAutoresizingMaskIntoConstraints = false
+        textButton.addTarget(self, action: #selector(startKeyboard), for: .touchUpInside)
+        textButton.frame = contentView.frame
+        textButton.layer.masksToBounds = true
+        contentView.addSubview(textButton)
+
+
+        NSLayoutConstraint.activate([
+            textButton.centerYAnchor.constraint(equalTo:contentView.centerYAnchor),
+            textButton.centerXAnchor.constraint(equalTo:contentView.centerXAnchor),
+            textButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
+            textButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
+            textButton.topAnchor.constraint(equalTo: contentView.topAnchor),
+            textButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            
+        ])
+        
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         self.contentView.backgroundColor = .primaryBackground
-        // Configure the view for the selected state
     }
  
-    // Inside UITableViewCell subclass
-
     override func layoutSubviews() {
         super.layoutSubviews()
 
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0))
+    }
+    
+    @objc func startKeyboard() {
+        textField.becomeFirstResponder()
     }
 }
 

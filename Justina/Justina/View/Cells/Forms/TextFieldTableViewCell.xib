@@ -19,17 +19,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o5A-c6-v2o">
-                        <rect key="frame" x="0.0" y="0.0" width="9.5" height="69"/>
+                        <rect key="frame" x="0.0" y="0.0" width="6.5" height="69"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNF-mN-jHa">
-                        <rect key="frame" x="19.5" y="8.5" width="290.5" height="21"/>
+                        <rect key="frame" x="16.5" y="8.5" width="293.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nome completo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LKc-54-THN">
-                        <rect key="frame" x="19.5" y="39.5" width="290.5" height="19"/>
+                        <rect key="frame" x="16.5" y="39.5" width="293.5" height="19"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
@@ -40,7 +40,7 @@
                     <constraint firstItem="FNF-mN-jHa" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-5" id="FqA-C0-ckq"/>
                     <constraint firstItem="o5A-c6-v2o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="O8u-y2-f53"/>
                     <constraint firstAttribute="trailing" secondItem="LKc-54-THN" secondAttribute="trailing" constant="10" id="P08-uE-HTx"/>
-                    <constraint firstItem="o5A-c6-v2o" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.03" id="QYo-5w-Hhn"/>
+                    <constraint firstItem="o5A-c6-v2o" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.02" id="QYo-5w-Hhn"/>
                     <constraint firstAttribute="bottom" secondItem="o5A-c6-v2o" secondAttribute="bottom" id="VAi-4B-Rxa"/>
                     <constraint firstAttribute="trailing" secondItem="FNF-mN-jHa" secondAttribute="trailing" constant="10" id="a6c-V8-UPA"/>
                     <constraint firstItem="FNF-mN-jHa" firstAttribute="leading" secondItem="o5A-c6-v2o" secondAttribute="trailing" constant="10" id="nu2-wT-Cdf"/>

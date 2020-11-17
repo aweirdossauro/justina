@@ -44,22 +44,25 @@ extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.textFieldTableViewCell) as! TextFieldTableViewCell
         cell.nameLabel.text = PersonalDataModel.tableViewCellTitle[indexPath.row]
         cell.textField.placeholder = PersonalDataModel.tableViewCellPlaceholderText[indexPath.row]
-//        switch row {
-//        case .nome:
-//
-//        case .nacionalidade: break
-//        case .estadoCivil: break
-//        case .dataDeNascimento: break
-//        case .rg: break
-//        case .cpf: break
-//        default: break
-//        }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = PersonalDataModel.tableViewDataSource.init(rawValue: indexPath.row)
+        switch row {
+        case .nome: break
+        case .nacionalidade: break
+        case .estadoCivil: break
+        case .dataDeNascimento: break
+        case .rg: break
+        case .cpf: break
+        default: break
+        }
     }
     
 }
