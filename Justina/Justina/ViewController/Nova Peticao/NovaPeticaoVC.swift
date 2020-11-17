@@ -20,7 +20,6 @@ class NovaPeticaoVC: UIViewController, Storyboarded {
                                forCellReuseIdentifier: CellIdentifiers.novaPeticaoTableViewCell)
         }
     }
-    @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,21 +53,21 @@ extension NovaPeticaoVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = NovaPeticaoModel.tableViewDataSource.init(rawValue: indexPath.row)
-                switch row {
-                case .dadosProcessado:
-                    delegate?.showPersonalData()
-//                    delegate?.showContactInfo()
-                case .dadosRequerente:
-                    delegate?.showCompanyData()
-                    
-                case .argumentacao: break
-                case .provas: break
-                case .testemunhas: break
-                case .pedidos: break
-                    
-                default:
-                    break
-                }
+        switch row {
+        case .dadosProcessado:
+            delegate?.showPersonalData()
+        //                    delegate?.showContactInfo()
+        case .dadosRequerente:
+            delegate?.showCompanyData()
+            
+        case .argumentacao: break
+        case .provas: break
+        case .testemunhas: break
+        case .pedidos: break
+            
+        default:
+            break
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
