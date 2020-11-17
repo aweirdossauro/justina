@@ -39,10 +39,9 @@ extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = PersonalDataModel.tableViewDataSource.init(rawValue: indexPath.row)
-     
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.textFieldTableViewCell) as! TextFieldTableViewCell
         cell.nameLabel.text = PersonalDataModel.tableViewCellTitle[indexPath.row]
+        cell.textField.tag = indexPath.row
         cell.textField.placeholder = PersonalDataModel.tableViewCellPlaceholderText[indexPath.row]
         
         return cell
@@ -65,6 +64,10 @@ extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+}
+
+extension PersonalDataVC : UITextFieldDelegate {
+
 }
 
 protocol PersonalDataVCDelegate: AnyObject {

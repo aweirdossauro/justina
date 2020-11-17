@@ -22,7 +22,6 @@ class TextFieldTableViewCell: UITableViewCell {
         textButton.layer.masksToBounds = true
         contentView.addSubview(textButton)
 
-
         NSLayoutConstraint.activate([
             textButton.centerYAnchor.constraint(equalTo:contentView.centerYAnchor),
             textButton.centerXAnchor.constraint(equalTo:contentView.centerXAnchor),
