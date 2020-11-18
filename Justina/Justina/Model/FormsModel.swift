@@ -15,14 +15,16 @@ class PersonalDataModel {
                                          "Estado civil",
                                          "Data de nascimento",
                                          "RG",
-                                         "CPF"]
+                                         "CPF",
+                                         "Continue"]
     
     static let tableViewCellPlaceholderText : [String] = ["Digite seu nome",
                                                 "Selecione a nacionalidade",
                                          "Selecione seu estado civil",
                                          "Selecione Data de nascimento",
                                          "Digite aqui seu numero de RG",
-                                         "Digite aqui seu CPF"]
+                                         "Digite aqui seu CPF",
+                                         ""]
 
     enum tableViewDataSource: Int {
         case nome = 0,
@@ -30,7 +32,8 @@ class PersonalDataModel {
              estadoCivil,
              dataDeNascimento,
              rg,
-             cpf
+             cpf,
+             Continue
     }
 }
 

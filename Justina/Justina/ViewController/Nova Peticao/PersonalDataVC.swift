@@ -39,11 +39,11 @@ class PersonalDataVC: UIViewController, Storyboarded {
 extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         ///textfields do form + botão de continue
-        PersonalDataModel.tableViewCellTitle.count + 1
+        PersonalDataModel.tableViewCellTitle.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == indexPath.count {
+        if indexPath.row ==  PersonalDataModel.tableViewCellTitle.count - 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.continueTableViewCell) as! ContinueTableViewCell
             
             return cell
@@ -58,7 +58,8 @@ extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return indexPath.row == indexPath.count - 1 ? 60 : 100
+
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
