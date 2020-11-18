@@ -51,6 +51,8 @@
 		AFEC0BB224FE83A90022C25A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEC0BB024FE83A90022C25A /* LaunchScreen.storyboard */; };
 		AFEC0BBD24FE83A90022C25A /* JustinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BBC24FE83A90022C25A /* JustinaTests.swift */; };
 		AFEC0BC824FE83AA0022C25A /* JustinaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BC724FE83AA0022C25A /* JustinaUITests.swift */; };
+		AFF1E04425654C54005B3155 /* ContinueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF1E04225654C54005B3155 /* ContinueTableViewCell.swift */; };
+		AFF1E04525654C54005B3155 /* ContinueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF1E04325654C54005B3155 /* ContinueTableViewCell.xib */; };
 		AFF2552D255975AC00EC07FF /* NovaPeticaoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2552C255975AC00EC07FF /* NovaPeticaoVC.swift */; };
 		AFF2553B2559796700EC07FF /* NovaPeticaoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF255392559796700EC07FF /* NovaPeticaoTableViewCell.swift */; };
 		AFF2553C2559796700EC07FF /* NovaPeticaoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF2553A2559796700EC07FF /* NovaPeticaoTableViewCell.xib */; };
@@ -135,6 +137,8 @@
 		AFEC0BC324FE83AA0022C25A /* JustinaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustinaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEC0BC724FE83AA0022C25A /* JustinaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustinaUITests.swift; sourceTree = "<group>"; };
 		AFEC0BC924FE83AA0022C25A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF1E04225654C54005B3155 /* ContinueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueTableViewCell.swift; sourceTree = "<group>"; };
+		AFF1E04325654C54005B3155 /* ContinueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContinueTableViewCell.xib; sourceTree = "<group>"; };
 		AFF2552C255975AC00EC07FF /* NovaPeticaoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaPeticaoVC.swift; sourceTree = "<group>"; };
 		AFF255392559796700EC07FF /* NovaPeticaoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaPeticaoTableViewCell.swift; sourceTree = "<group>"; };
 		AFF2553A2559796700EC07FF /* NovaPeticaoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NovaPeticaoTableViewCell.xib; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 			children = (
 				AF2B0E0B255D681C0006E084 /* TextFieldTableViewCell.swift */,
 				AF2B0E0C255D681C0006E084 /* TextFieldTableViewCell.xib */,
+				AFF1E04225654C54005B3155 /* ContinueTableViewCell.swift */,
+				AFF1E04325654C54005B3155 /* ContinueTableViewCell.xib */,
 			);
 			path = Forms;
 			sourceTree = "<group>";
@@ -568,6 +574,7 @@
 				AFB59AF124FFE68300FB9207 /* Justina.storyboard in Resources */,
 				AF2B0E0E255D681C0006E084 /* TextFieldTableViewCell.xib in Resources */,
 				AF66083625090670004C185D /* MessageSentTableViewCell.xib in Resources */,
+				AFF1E04525654C54005B3155 /* ContinueTableViewCell.xib in Resources */,
 				AFF3D6DA250D578400D0DFF9 /* ProcessosTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -714,6 +721,7 @@
 				AF2B0E1B255D6FD00006E084 /* FormsModel.swift in Sources */,
 				AF7AFCD0252F48CB007DC2D0 /* ProcessosInfoTableViewCell.swift in Sources */,
 				AFEC0BAA24FE83A70022C25A /* MainVC.swift in Sources */,
+				AFF1E04425654C54005B3155 /* ContinueTableViewCell.swift in Sources */,
 				AF8A00662541C21A00231746 /* OnboardingVC.swift in Sources */,
 				AF1C4736250D4F0F0005059B /* JustinaMessageTableViewCell.swift in Sources */,
 				AFB10D35250A651C00A1381A /* AppCoordinator.swift in Sources */,

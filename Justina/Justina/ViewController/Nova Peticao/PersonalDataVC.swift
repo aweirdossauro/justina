@@ -35,10 +35,20 @@ class PersonalDataVC: UIViewController, Storyboarded {
 
 extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        PersonalDataModel.tableViewCellTitle.count
+        ///textfields do form + botão de continue
+        PersonalDataModel.tableViewCellTitle.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == indexPath.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.Conti) as! ContinueTableViewCell
+            cell.nameLabel.text = PersonalDataModel.tableViewCellTitle[indexPath.row]
+            cell.textField.tag = indexPath.row
+            cell.textField.placeholder = PersonalDataModel.tableViewCellPlaceholderText[indexPath.row]
+            
+            return cell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.textFieldTableViewCell) as! TextFieldTableViewCell
         cell.nameLabel.text = PersonalDataModel.tableViewCellTitle[indexPath.row]
         cell.textField.tag = indexPath.row
