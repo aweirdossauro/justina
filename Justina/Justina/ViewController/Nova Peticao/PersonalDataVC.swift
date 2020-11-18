@@ -43,9 +43,9 @@ extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row ==  PersonalDataModel.tableViewCellTitle.count - 1 {
+        let row = PersonalDataModel.tableViewDataSource.init(rawValue: indexPath.row)
+        if row == .proximo {
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.continueTableViewCell) as! ContinueTableViewCell
-            
             return cell
         }
         
@@ -58,7 +58,9 @@ extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return indexPath.row == indexPath.count - 1 ? 60 : 100
+        let row = PersonalDataModel.tableViewDataSource.init(rawValue: indexPath.row)
+        
+        return row == .proximo ? 60 : 100
 
     }
     
@@ -71,6 +73,7 @@ extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
         case .dataDeNascimento: break
         case .rg: break
         case .cpf: break
+        case .proximo: break
         default: break
         }
     }
