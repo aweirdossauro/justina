@@ -19,6 +19,9 @@ class PersonalDataVC: UIViewController, Storyboarded {
         didSet {
             tableView.register(UINib(nibName: CellIdentifiers.textFieldTableViewCell, bundle: nil),
                                forCellReuseIdentifier: CellIdentifiers.textFieldTableViewCell)
+            tableView.register(UINib(nibName: CellIdentifiers.continueTableViewCell, bundle: nil),
+                               forCellReuseIdentifier: CellIdentifiers.continueTableViewCell)
+
         }
     }
 
@@ -41,10 +44,7 @@ extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == indexPath.count {
-            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.Conti) as! ContinueTableViewCell
-            cell.nameLabel.text = PersonalDataModel.tableViewCellTitle[indexPath.row]
-            cell.textField.tag = indexPath.row
-            cell.textField.placeholder = PersonalDataModel.tableViewCellPlaceholderText[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.continueTableViewCell) as! ContinueTableViewCell
             
             return cell
         }
