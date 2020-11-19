@@ -51,6 +51,7 @@
 		AFEC0BB224FE83A90022C25A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFEC0BB024FE83A90022C25A /* LaunchScreen.storyboard */; };
 		AFEC0BBD24FE83A90022C25A /* JustinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BBC24FE83A90022C25A /* JustinaTests.swift */; };
 		AFEC0BC824FE83AA0022C25A /* JustinaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BC724FE83AA0022C25A /* JustinaUITests.swift */; };
+		AFF0F6CC2566A40000A3D96C /* ArgumentacaoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0F6CB2566A40000A3D96C /* ArgumentacaoVC.swift */; };
 		AFF1E04425654C54005B3155 /* ContinueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF1E04225654C54005B3155 /* ContinueTableViewCell.swift */; };
 		AFF1E04525654C54005B3155 /* ContinueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF1E04325654C54005B3155 /* ContinueTableViewCell.xib */; };
 		AFF2552D255975AC00EC07FF /* NovaPeticaoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF2552C255975AC00EC07FF /* NovaPeticaoVC.swift */; };
@@ -137,6 +138,7 @@
 		AFEC0BC324FE83AA0022C25A /* JustinaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustinaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEC0BC724FE83AA0022C25A /* JustinaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustinaUITests.swift; sourceTree = "<group>"; };
 		AFEC0BC924FE83AA0022C25A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF0F6CB2566A40000A3D96C /* ArgumentacaoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentacaoVC.swift; sourceTree = "<group>"; };
 		AFF1E04225654C54005B3155 /* ContinueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueTableViewCell.swift; sourceTree = "<group>"; };
 		AFF1E04325654C54005B3155 /* ContinueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContinueTableViewCell.xib; sourceTree = "<group>"; };
 		AFF2552C255975AC00EC07FF /* NovaPeticaoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovaPeticaoVC.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				AFB10D32250A62B400A1381A /* PersonalDataVC.swift */,
 				AF68C77F2544BCD900BD401D /* ContactInfoVC.swift */,
 				AF68C7842544C3F600BD401D /* CompanyDataVC.swift */,
+				AFF0F6CB2566A40000A3D96C /* ArgumentacaoVC.swift */,
 			);
 			path = "Nova Peticao";
 			sourceTree = "<group>";
@@ -708,6 +711,7 @@
 				AFF3D6E5250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift in Sources */,
 				AF7AFD1E25309CCD007DC2D0 /* PeticaoProcessosVC.swift in Sources */,
 				AF68C7802544BCD900BD401D /* ContactInfoVC.swift in Sources */,
+				AFF0F6CC2566A40000A3D96C /* ArgumentacaoVC.swift in Sources */,
 				AFF2553B2559796700EC07FF /* NovaPeticaoTableViewCell.swift in Sources */,
 				AF8A00652541C21A00231746 /* OnboardingPageVC.swift in Sources */,
 				AFB10D2E250A54E700A1381A /* KeyboardLayoutGuide.swift in Sources */,
