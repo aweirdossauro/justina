@@ -365,6 +365,9 @@
                             <constraint firstItem="sS7-CY-6Jf" firstAttribute="trailing" secondItem="ht5-RN-dGu" secondAttribute="trailing" constant="10" id="sWj-JQ-RHp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="qLe-11-FzX" id="rfi-NI-5tX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVS-ip-Rle" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

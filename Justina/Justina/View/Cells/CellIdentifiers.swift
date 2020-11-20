@@ -24,6 +24,8 @@ struct CellIdentifiers {
     
     static let textFieldTableViewCell = "TextFieldTableViewCell"
     static let continueTableViewCell = "ContinueTableViewCell"
+    
+    static let provasTableViewCell = "ProvasTableViewCell"
 //MARK:- Collection View Cells
 
 }

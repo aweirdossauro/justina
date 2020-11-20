@@ -13,6 +13,8 @@ class ReuniaoProvasVC: UIViewController, Storyboarded {
     // MARK: Coordinator Related Properties
     static var storyboardName: String = "PersonalData"
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
