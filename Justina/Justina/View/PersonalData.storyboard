@@ -336,12 +336,34 @@
         <!--Reuniao ProvasVC-->
         <scene sceneID="g7H-9H-2P0">
             <objects>
-                <viewController id="wQ0-VL-L3C" customClass="ReuniaoProvasVC" customModule="Justina" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReuniaoProvasVC" id="wQ0-VL-L3C" customClass="ReuniaoProvasVC" customModule="Justina" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6zg-NJ-lUa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ht5-RN-dGu">
+                                <rect key="frame" x="10" y="59" width="394" height="122"/>
+                                <string key="text">Além da argumentação na petição, sempre é recomendado reunir provas para sua que confirmem a sua versão dos fatos. Anexe abaixo imagens de recibos, fotos de tela de e-mails ou conversas escritas que ajudem a comprovar o que ocorreu.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qLe-11-FzX">
+                                <rect key="frame" x="0.0" y="196" width="414" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sS7-CY-6Jf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qLe-11-FzX" firstAttribute="top" secondItem="ht5-RN-dGu" secondAttribute="bottom" constant="15" id="3NY-Va-7uz"/>
+                            <constraint firstItem="qLe-11-FzX" firstAttribute="leading" secondItem="sS7-CY-6Jf" secondAttribute="leading" id="85B-aB-tW2"/>
+                            <constraint firstItem="sS7-CY-6Jf" firstAttribute="trailing" secondItem="qLe-11-FzX" secondAttribute="trailing" id="LMQ-JF-2jm"/>
+                            <constraint firstItem="ht5-RN-dGu" firstAttribute="leading" secondItem="sS7-CY-6Jf" secondAttribute="leading" constant="10" id="PBt-tv-aQu"/>
+                            <constraint firstItem="ht5-RN-dGu" firstAttribute="top" secondItem="sS7-CY-6Jf" secondAttribute="top" constant="15" id="XAx-si-Gv7"/>
+                            <constraint firstItem="sS7-CY-6Jf" firstAttribute="bottom" secondItem="qLe-11-FzX" secondAttribute="bottom" id="dgg-m1-4yo"/>
+                            <constraint firstItem="sS7-CY-6Jf" firstAttribute="trailing" secondItem="ht5-RN-dGu" secondAttribute="trailing" constant="10" id="sWj-JQ-RHp"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVS-ip-Rle" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

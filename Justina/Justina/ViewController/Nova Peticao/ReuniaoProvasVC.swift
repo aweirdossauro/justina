@@ -8,7 +8,10 @@
 
 import UIKit
 
-class ReuniaoProvasVC: UIViewController {
+class ReuniaoProvasVC: UIViewController, Storyboarded {
+    
+    // MARK: Coordinator Related Properties
+    static var storyboardName: String = "PersonalData"
 
     override func viewDidLoad() {
         super.viewDidLoad()
