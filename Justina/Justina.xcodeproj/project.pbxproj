@@ -11,6 +11,7 @@
 		4635EDC2D1E81363644850EF /* Pods_JustinaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF7C505ED4F4C2A0305D2CBD /* Pods_JustinaTests.framework */; };
 		6C4AA0D2250A542A0017DC70 /* PersonalData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C4AA0D1250A542A0017DC70 /* PersonalData.storyboard */; };
 		74C9F1FA31F37C7F10C7009A /* Pods_Justina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8559FCB6ABD800B3D699792 /* Pods_Justina.framework */; };
+		AF1B708E256BEA65006CEC3A /* PeticoesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B708D256BEA65006CEC3A /* PeticoesModel.swift */; };
 		AF1C4733250D4D200005059B /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1C4732250D4D200005059B /* UIColor+.swift */; };
 		AF1C4736250D4F0F0005059B /* JustinaMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1C4734250D4F0F0005059B /* JustinaMessageTableViewCell.swift */; };
 		AF1C4737250D4F0F0005059B /* JustinaMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF1C4735250D4F0F0005059B /* JustinaMessageTableViewCell.xib */; };
@@ -95,6 +96,7 @@
 		8BED632E1BA769038D9A477F /* Pods-Justina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Justina.release.xcconfig"; path = "Target Support Files/Pods-Justina/Pods-Justina.release.xcconfig"; sourceTree = "<group>"; };
 		8E4F327231606F0580E11975 /* Pods-JustinaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustinaTests.release.xcconfig"; path = "Target Support Files/Pods-JustinaTests/Pods-JustinaTests.release.xcconfig"; sourceTree = "<group>"; };
 		9A181F707F343CB25112995A /* Pods-JustinaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustinaTests.debug.xcconfig"; path = "Target Support Files/Pods-JustinaTests/Pods-JustinaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF1B708D256BEA65006CEC3A /* PeticoesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeticoesModel.swift; sourceTree = "<group>"; };
 		AF1C4732250D4D200005059B /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		AF1C4734250D4F0F0005059B /* JustinaMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustinaMessageTableViewCell.swift; sourceTree = "<group>"; };
 		AF1C4735250D4F0F0005059B /* JustinaMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JustinaMessageTableViewCell.xib; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				AF2B0E1A255D6FD00006E084 /* FormsModel.swift */,
 				AF7F10012539CC0200314EE8 /* PeticaoProcessosModel.swift */,
 				AFF2554025597B5B00EC07FF /* NovaPeticaoModel.swift */,
+				AF1B708D256BEA65006CEC3A /* PeticoesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -758,6 +761,7 @@
 				AFD757AB25543F82008F2907 /* OnboardingEndVC.swift in Sources */,
 				AF390338250280480062E7C2 /* UIView+.swift in Sources */,
 				AF66083525090670004C185D /* MessageSentTableViewCell.swift in Sources */,
+				AF1B708E256BEA65006CEC3A /* PeticoesModel.swift in Sources */,
 				AFEC0BA824FE83A70022C25A /* SceneDelegate.swift in Sources */,
 				AF7AFD1925309C1E007DC2D0 /* VisaoGeralProcessosVC.swift in Sources */,
 				AF36955324FE901200591528 /* NavigationCoordinator.swift in Sources */,
