@@ -11,6 +11,11 @@ import PDFKit
 
 class Peticoes {
     var peticoes : [Peticao]
+    
+    init() {
+        
+        peticoes = []
+    }
 }
 
 class Peticao {
@@ -20,8 +25,10 @@ class Peticao {
 //    var provas: Provas
 //    var pedidos: Pedidos
     
-    init(<#parameters#>) {
-        <#statements#>
+    init(dadosDoUsuario: DadosDoUsuario,
+         dadosDoProcessado: DadosDoProcessado) {
+        self.dadosDoUsuario = dadosDoUsuario
+        self.dadosDoProcessado = dadosDoProcessado
     }
 }
 

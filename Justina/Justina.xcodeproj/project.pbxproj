@@ -45,6 +45,7 @@
 		AFB10D35250A651C00A1381A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB10D34250A651C00A1381A /* AppCoordinator.swift */; };
 		AFB59AF124FFE68300FB9207 /* Justina.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB59AF024FFE68300FB9207 /* Justina.storyboard */; };
 		AFB59AF324FFE6A800FB9207 /* JustinaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB59AF224FFE6A800FB9207 /* JustinaVC.swift */; };
+		AFD58917256D490D009F665B /* AppUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD58916256D490D009F665B /* AppUserDefaults.swift */; };
 		AFD757AB25543F82008F2907 /* OnboardingEndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD757AA25543F82008F2907 /* OnboardingEndVC.swift */; };
 		AFEC0BA624FE83A70022C25A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BA524FE83A70022C25A /* AppDelegate.swift */; };
 		AFEC0BA824FE83A70022C25A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEC0BA724FE83A70022C25A /* SceneDelegate.swift */; };
@@ -130,6 +131,7 @@
 		AFB10D34250A651C00A1381A /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		AFB59AF024FFE68300FB9207 /* Justina.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Justina.storyboard; sourceTree = "<group>"; };
 		AFB59AF224FFE6A800FB9207 /* JustinaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustinaVC.swift; sourceTree = "<group>"; };
+		AFD58916256D490D009F665B /* AppUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserDefaults.swift; sourceTree = "<group>"; };
 		AFD757AA25543F82008F2907 /* OnboardingEndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingEndVC.swift; sourceTree = "<group>"; };
 		AFEC0BA224FE83A70022C25A /* Justina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Justina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFEC0BA524FE83A70022C25A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 			children = (
 				AF390337250280480062E7C2 /* UIView+.swift */,
 				AF1C4732250D4D200005059B /* UIColor+.swift */,
+				AFD58916256D490D009F665B /* AppUserDefaults.swift */,
 			);
 			name = Extensions;
 			path = Coordinator/Extensions;
@@ -731,6 +734,7 @@
 				AFF0F6D12566B32000A3D96C /* ReuniaoProvasVC.swift in Sources */,
 				AFB10D33250A62B400A1381A /* PersonalDataVC.swift in Sources */,
 				AFF3D6E5250FA2BF00D0DFF9 /* SectionHeaderTableViewCell.swift in Sources */,
+				AFD58917256D490D009F665B /* AppUserDefaults.swift in Sources */,
 				AF7AFD1E25309CCD007DC2D0 /* PeticaoProcessosVC.swift in Sources */,
 				AF68C7802544BCD900BD401D /* ContactInfoVC.swift in Sources */,
 				AFF0F6CC2566A40000A3D96C /* ArgumentacaoVC.swift in Sources */,
