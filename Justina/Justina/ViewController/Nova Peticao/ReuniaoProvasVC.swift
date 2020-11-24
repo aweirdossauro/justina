@@ -31,7 +31,7 @@ class ReuniaoProvasVC: UIViewController, Storyboarded {
 
 extension ReuniaoProvasVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        ReuniaoProvasModel
+//        ReuniaoProvasModel.
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
