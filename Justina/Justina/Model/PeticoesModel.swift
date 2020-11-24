@@ -13,8 +13,11 @@ class Peticoes {
     var peticoes : [Peticao]
     
     init() {
+        peticoes = AppUserDefaults.value(forKey: .peticoes, fallBackValue: []) as! [Peticao]
+    }
+    
+    func novaPetição() {
         
-        peticoes = []
     }
 }
 
