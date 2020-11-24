@@ -41,7 +41,5 @@ extension AppUserDefaults {
         let appDomain = Bundle.main.bundleIdentifier!
         UserDefaults.standard.removePersistentDomain(forName: appDomain)
         UserDefaults.standard.synchronize()
-        AppUserDefaults.save(value: true, forKey: .hasOnboardingAppeared)
-
     }
 }
