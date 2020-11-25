@@ -10,6 +10,7 @@ import Foundation
 
 class NovaPeticaoModel {
     ///Titulo das Celulas
+    
     static let tableViewCellTitle : [String] = ["Dados do Requerente",
                                                 "Dados do Processado",
                                                 "Argumentação",

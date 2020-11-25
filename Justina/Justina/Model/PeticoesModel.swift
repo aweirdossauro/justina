@@ -12,19 +12,24 @@ import PDFKit
 class Peticoes {
     var peticoes : [Peticao]
     
+    var novaPeticao : Peticao?
+    
     init() {
         peticoes = AppUserDefaults.value(forKey: .peticoes, fallBackValue: []) as! [Peticao]
     }
     
-    func novaPetição(peticao: Peticao) {
-        var peticao : Peticao = peticao
-        
+    func criarPeticao(peticao: Peticao) -> Bool {
+        if peticao.checaPeticao() {
+            peticoes.append(peticao)
+            return true
+        }
+        return false
     }
 }
 
 class Peticao {
-    var dadosDoUsuario : DadosDoUsuario
-    var dadosDoProcessado : DadosDoProcessado
+    var dadosDoUsuario : DadosDoUsuario?
+    var dadosDoProcessado : DadosDoProcessado?
 //    var dadosTestemunha: DadosTestemunha
 //    var provas: Provas
 //    var pedidos: Pedidos
@@ -33,6 +38,10 @@ class Peticao {
          dadosDoProcessado: DadosDoProcessado) {
         self.dadosDoUsuario = dadosDoUsuario
         self.dadosDoProcessado = dadosDoProcessado
+    }
+    
+    func checaPeticao() -> Bool {
+        
     }
 }
 
