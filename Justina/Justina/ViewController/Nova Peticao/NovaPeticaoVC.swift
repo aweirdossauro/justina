@@ -44,13 +44,31 @@ extension NovaPeticaoVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.novaPeticaoTableViewCell) as! NovaPeticaoTableViewCell
+        
         cell.mainLabel.text = NovaPeticaoModel.tableViewCellTitle[indexPath.row]
-        cell.backgroundColor = UIColor(red: 0.90, green: 0.90, blue: 0.90, alpha: 1.00)
-        cell.roundCorners(radius: 10.0)
+        cell.iconeImagem.image = UIImage(named: NovaPeticaoModel.tableViewCellIcon[indexPath.row])
+        
+//        ///Corner radius
+//        cell.backView.layer.cornerRadius = 8
+//        cell.backView.layer.masksToBounds = true
+//
+//
+//        ///Shadow
+//        cell.backView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        cell.backView.layer.shadowColor = UIColor.black.cgColor
+//        cell.backView.layer.shadowRadius = 10
+//        cell.backView.layer.shadowOpacity = 0.23
+//        
+        
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        // this will turn on `masksToBounds` just before showing the cell
+        cell.contentView.layer.masksToBounds = true
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = NovaPeticaoModel.tableViewDataSource.init(rawValue: indexPath.row)
         switch row {
@@ -85,3 +103,5 @@ protocol NovaPeticaoVCDelegate: AnyObject {
     
     func showCompanyData()
 }
+
+
