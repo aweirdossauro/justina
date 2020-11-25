@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,49 +18,83 @@
                 <rect key="frame" x="0.0" y="0.0" width="382" height="68"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d63-IM-LwA">
+                        <rect key="frame" x="16" y="0.0" width="350" height="68"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nxI-7c-GmQ" userLabel="iconView">
                         <rect key="frame" x="0.0" y="0.0" width="95.5" height="68"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Argumentação" translatesAutoresizingMaskIntoConstraints="NO" id="9CR-5u-H9y">
+                                <rect key="frame" x="24" y="17" width="47.5" height="34"/>
+                                <color key="tintColor" red="0.16078431369999999" green="0.20000000000000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="9CR-5u-H9y" firstAttribute="width" secondItem="nxI-7c-GmQ" secondAttribute="width" multiplier="0.5" id="2vQ-bE-fKJ"/>
+                            <constraint firstItem="9CR-5u-H9y" firstAttribute="height" secondItem="nxI-7c-GmQ" secondAttribute="height" multiplier="0.5" id="bsS-LW-SyO"/>
+                            <constraint firstItem="9CR-5u-H9y" firstAttribute="centerY" secondItem="nxI-7c-GmQ" secondAttribute="centerY" id="hcX-SY-NhL"/>
+                            <constraint firstItem="9CR-5u-H9y" firstAttribute="centerX" secondItem="nxI-7c-GmQ" secondAttribute="centerX" id="vaI-xa-j1S"/>
+                        </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cb9-ar-WRa" userLabel="labelView">
                         <rect key="frame" x="95.5" y="0.0" width="286.5" height="68"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ECT-KQ-sWZ">
-                                <rect key="frame" x="32" y="20" width="229" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ECT-KQ-sWZ">
+                                <rect key="frame" x="16" y="23.5" width="218.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.16078431372549018" green="0.20000000000000001" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" red="0.16078431369999999" green="0.20000000000000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Yex-2Q-xCX">
+                                <rect key="frame" x="250.5" y="26" width="12" height="16.5"/>
+                                <color key="tintColor" red="0.16078431369999999" green="0.20000000000000001" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Yex-2Q-xCX" secondAttribute="height" multiplier="3:5" id="4zU-DM-pk8"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="ECT-KQ-sWZ" firstAttribute="width" secondItem="cb9-ar-WRa" secondAttribute="width" multiplier="0.8" id="1SQ-ri-qvX"/>
+                            <constraint firstItem="Yex-2Q-xCX" firstAttribute="height" secondItem="cb9-ar-WRa" secondAttribute="height" multiplier="0.294118" id="O0l-5n-xeD"/>
+                            <constraint firstItem="Yex-2Q-xCX" firstAttribute="centerY" secondItem="cb9-ar-WRa" secondAttribute="centerY" id="SyM-kt-ioG"/>
                             <constraint firstItem="ECT-KQ-sWZ" firstAttribute="height" secondItem="cb9-ar-WRa" secondAttribute="height" multiplier="0.308824" id="aM6-CR-xuu"/>
-                            <constraint firstItem="ECT-KQ-sWZ" firstAttribute="leading" secondItem="cb9-ar-WRa" secondAttribute="leading" constant="32" id="j1J-Nu-p00"/>
-                            <constraint firstItem="ECT-KQ-sWZ" firstAttribute="centerY" secondItem="cb9-ar-WRa" secondAttribute="centerY" multiplier="0.9" id="jrl-Iu-iXh"/>
+                            <constraint firstItem="ECT-KQ-sWZ" firstAttribute="leading" secondItem="cb9-ar-WRa" secondAttribute="leading" constant="16" id="j1J-Nu-p00"/>
+                            <constraint firstItem="ECT-KQ-sWZ" firstAttribute="centerY" secondItem="cb9-ar-WRa" secondAttribute="centerY" id="jrl-Iu-iXh"/>
+                            <constraint firstAttribute="trailing" secondItem="Yex-2Q-xCX" secondAttribute="trailing" constant="24" id="sAv-XP-1ol"/>
+                            <constraint firstItem="Yex-2Q-xCX" firstAttribute="leading" secondItem="ECT-KQ-sWZ" secondAttribute="trailing" constant="16" id="uLj-dB-NqC"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="cb9-ar-WRa" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4hY-2Q-gJr"/>
                     <constraint firstItem="nxI-7c-GmQ" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.25" id="7nt-vs-zlY"/>
+                    <constraint firstItem="d63-IM-LwA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="BNv-9P-Y8Q"/>
                     <constraint firstItem="nxI-7c-GmQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="E4t-zy-ROS"/>
+                    <constraint firstAttribute="trailing" secondItem="d63-IM-LwA" secondAttribute="trailing" constant="16" id="Fok-Kj-wpe"/>
+                    <constraint firstItem="d63-IM-LwA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="HIl-CG-5a2"/>
                     <constraint firstItem="nxI-7c-GmQ" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="IDM-jz-uW1"/>
                     <constraint firstItem="cb9-ar-WRa" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.75" id="JfC-Jk-AaN"/>
                     <constraint firstItem="cb9-ar-WRa" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="WEq-Uy-T9W"/>
                     <constraint firstItem="cb9-ar-WRa" firstAttribute="leading" secondItem="nxI-7c-GmQ" secondAttribute="trailing" id="aEI-5e-KRR"/>
+                    <constraint firstAttribute="bottom" secondItem="d63-IM-LwA" secondAttribute="bottom" id="fRK-aP-n3Z"/>
                     <constraint firstItem="nxI-7c-GmQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qwf-hf-ED6"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="backView" destination="d63-IM-LwA" id="AvL-5g-t0U"/>
+                <outlet property="iconeImagem" destination="9CR-5u-H9y" id="NdL-B1-ybV"/>
+                <outlet property="labelView" destination="cb9-ar-WRa" id="62r-Hu-an9"/>
                 <outlet property="mainLabel" destination="ECT-KQ-sWZ" id="Tjl-j4-P2e"/>
             </connections>
             <point key="canvasLocation" x="134.78260869565219" y="132.58928571428572"/>
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="Argumentação" width="29" height="36"/>
+        <image name="chevron.right" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

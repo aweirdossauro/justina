@@ -25,6 +25,14 @@ class NovaPeticaoModel {
                                                "",
                                                ""]
     
+    ///Ícone das Celulas
+    static let tableViewCellIcon : [String] = ["Dados do Requerente",
+                                                "Dados do Processado",
+                                                "Argumentação",
+                                                "Provas",
+                                                "Testemunhas",
+                                                "Pedidos"]
+    
     enum tableViewDataSource: Int {
         case dadosRequerente = 0,
              dadosProcessado,
