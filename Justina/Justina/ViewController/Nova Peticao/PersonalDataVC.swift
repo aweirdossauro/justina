@@ -19,6 +19,9 @@ class PersonalDataVC: UIViewController, Storyboarded {
         didSet {
             tableView.register(UINib(nibName: CellIdentifiers.textFieldTableViewCell, bundle: nil),
                                forCellReuseIdentifier: CellIdentifiers.textFieldTableViewCell)
+            tableView.register(UINib(nibName: CellIdentifiers.continueTableViewCell, bundle: nil),
+                               forCellReuseIdentifier: CellIdentifiers.continueTableViewCell)
+
         }
     }
 
@@ -35,10 +38,17 @@ class PersonalDataVC: UIViewController, Storyboarded {
 
 extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        ///textfields do form + botão de continue
         PersonalDataModel.tableViewCellTitle.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let row = PersonalDataModel.tableViewDataSource.init(rawValue: indexPath.row)
+        if row == .proximo {
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.continueTableViewCell) as! ContinueTableViewCell
+            return cell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.textFieldTableViewCell) as! TextFieldTableViewCell
         cell.nameLabel.text = PersonalDataModel.tableViewCellTitle[indexPath.row]
         cell.textField.tag = indexPath.row
@@ -48,7 +58,10 @@ extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        let row = PersonalDataModel.tableViewDataSource.init(rawValue: indexPath.row)
+        
+        return row == .proximo ? 60 : 100
+
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -60,6 +73,7 @@ extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
         case .dataDeNascimento: break
         case .rg: break
         case .cpf: break
+        case .proximo: break
         default: break
         }
     }

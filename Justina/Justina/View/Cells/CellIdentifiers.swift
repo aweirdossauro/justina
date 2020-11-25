@@ -23,6 +23,9 @@ struct CellIdentifiers {
     static let novaPeticaoTableViewCell = "NovaPeticaoTableViewCell"
     
     static let textFieldTableViewCell = "TextFieldTableViewCell"
+    static let continueTableViewCell = "ContinueTableViewCell"
+    
+    static let provasTableViewCell = "ProvasTableViewCell"
 //MARK:- Collection View Cells
 
 }

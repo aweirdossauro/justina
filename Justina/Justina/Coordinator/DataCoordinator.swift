@@ -72,7 +72,13 @@ class DataCoordinator: NavigationCoordinator {
             self.navigationController.pushViewController(vc, animated: true)
         }
     }
-
+    
+    func showArgumentacao(){
+        DispatchQueue.main.async {
+            let vc = ArgumentacaoVC.instantiate()
+            self.navigationController.pushViewController(vc, animated: true)
+        }
+    }
 }
 
 extension DataCoordinator: PersonalDataVCDelegate {
@@ -108,6 +114,7 @@ extension DataCoordinator: CompanyDataVCDelegate {
 
 
 extension DataCoordinator: NovaPeticaoVCDelegate {
+    
     func novaPeticaoVCDidFinish() {
         delegate?.dataCoordinatorDidFinish()
     }

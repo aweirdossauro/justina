@@ -72,13 +72,14 @@ extension NovaPeticaoVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = NovaPeticaoModel.tableViewDataSource.init(rawValue: indexPath.row)
         switch row {
-        case .dadosProcessado:
+        case .dadosRequerente:
             delegate?.showPersonalData()
         //                    delegate?.showContactInfo()
-        case .dadosRequerente:
+        case .dadosProcessado:
             delegate?.showCompanyData()
             
-        case .argumentacao: break
+        case .argumentacao:
+            delegate?.showArgumentacao()
         case .provas: break
         case .testemunhas: break
         case .pedidos: break
@@ -102,6 +103,8 @@ protocol NovaPeticaoVCDelegate: AnyObject {
     func showContactInfo()
     
     func showCompanyData()
+    
+    func showArgumentacao()
 }
 
 
