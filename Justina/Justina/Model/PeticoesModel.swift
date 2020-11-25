@@ -41,7 +41,7 @@ class Peticao {
     }
     
     func checaPeticao() -> Bool {
-        
+        return true
     }
 }
 

@@ -13,6 +13,8 @@ class NovaPeticaoVC: UIViewController, Storyboarded {
     static var storyboardName: String = "PersonalData"
     var delegate: NovaPeticaoVCDelegate?
     
+    var peticao : Peticao?
+    
     /// TableView Principal
     @IBOutlet weak var tableView: UITableView! {
         didSet {
@@ -28,6 +30,21 @@ class NovaPeticaoVC: UIViewController, Storyboarded {
         tableView.dataSource = self
         
         title = "Nova Petição"
+        
+        peticao = Peticao(dadosDoUsuario: DadosDoUsuario(nome: "",
+                                                         nacionalidade: "",
+                                                         estadoCivil: "",
+                                                         dataDeNascimento: Date(),
+                                                         rg: "",
+                                                         cpf: ""),
+                          dadosDoProcessado: DadosDoProcessado(nomeDaEmpresa: "",
+                                                               cnpj: "",
+                                                               cep: "",
+                                                               logradouro: "",
+                                                               numero: "",
+                                                               cidadeEstado: "",
+                                                               telefone: "",
+                                                               emailDaEmpresa: ""))
     }
     
     @IBAction func backAction(_ sender: Any) {
