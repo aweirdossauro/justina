@@ -30,7 +30,7 @@ class PersonalDataModel {
         case nome = 0,
 //             nacionalidade,
              estadoCivil,
-             dataDeNascimento,
+//             dataDeNascimento,
              rg,
              cpf,
              proximo

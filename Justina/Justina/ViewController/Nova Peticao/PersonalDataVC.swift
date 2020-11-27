@@ -83,16 +83,25 @@ extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
 extension PersonalDataVC : UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         let tag = PersonalDataModel.tableViewDataSource.init(rawValue: textField.tag)
-        
-        switch tag {
-        case .nome:
-            let cell = tableView.cellForRow(at: IndexPath(index: tag!.rawValue)) as! TextFieldTableViewCell
+        if let cell = tableView.cellForRow(at: IndexPath(row: tag!.rawValue, section: 0)) as? TextFieldTableViewCell {
+            if cell.textField.text?.isEmpty == true {
+                cell.updateConfirmationView(state: .wrong)
+                return
+            }
             cell.updateConfirmationView(state: .right)
-        case .estadoCivil: break
-        case .rg: break
-        case .cpf: break
-        case .proximo: break
-        default: break
+            let peticaoTemporaria = PeticaoTemporaria.shared
+            switch tag {
+            case .nome:
+                peticaoTemporaria.nome = textField.text
+            case .estadoCivil:
+                peticaoTemporaria.estadoCivil = textField.text
+            case .rg:
+                peticaoTemporaria.rg = textField.text
+            case .cpf:
+                peticaoTemporaria.cpf = textField.text
+            case .proximo: break
+            default: break
+            }
         }
     }
 }
@@ -102,4 +111,10 @@ protocol PersonalDataVCDelegate: AnyObject {
     
     func personalDataVCNextStep()
 
+}
+
+extension String  {
+    var isNumber: Bool {
+        return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
+    }
 }

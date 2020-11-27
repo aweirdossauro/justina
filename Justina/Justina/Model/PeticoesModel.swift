@@ -45,12 +45,34 @@ class Peticao {
     }
 }
 
-class peticaoTemporaria {
-    static let shared = peticaoTemporaria()
+class PeticaoTemporaria {
+    static let shared = PeticaoTemporaria()
     
-    var dadosDoUsuario : DadosDoUsuario?
-    var dadosDeContato: DadosDeContato?
-//    var dado
+    var nome: String?
+    var estadoCivil: String?
+    var rg: String?
+    var cpf: String?
+    
+    var cep: String?
+    var logradouro: String?
+    var numero: String?
+    var cidadeEstado: String?
+    var telefone: String?
+    var email: String?
+    
+    var nomeDaEmpresa: String?
+    var cnpj: String?
+    var cepEmp: String?
+    var logradouroEmp: String?
+    var numeroEmp: String?
+    var cidadeEstadoEmp: String?
+    var telefoneEmp: String?
+    var emailDaEmpresa: String?
+    
+    
+    //    var dadosDoUsuario : DadosDoUsuario?
+//    var dadosDeContato: DadosDeContato?
+
 }
 
 struct DadosDoUsuario {
