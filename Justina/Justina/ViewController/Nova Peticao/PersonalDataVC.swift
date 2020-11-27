@@ -90,6 +90,7 @@ extension PersonalDataVC : UITextFieldDelegate {
             }
             cell.updateConfirmationView(state: .right)
             let peticaoTemporaria = PeticaoTemporaria.shared
+            
             switch tag {
             case .nome:
                 peticaoTemporaria.nome = textField.text

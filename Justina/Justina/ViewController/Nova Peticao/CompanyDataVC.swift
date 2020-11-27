@@ -14,6 +14,16 @@ class CompanyDataVC: UIViewController , Storyboarded {
     static var storyboardName: String = "PersonalData"
     var delegate: CompanyDataVCDelegate?
 
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.register(UINib(nibName: CellIdentifiers.textFieldTableViewCell, bundle: nil),
+                               forCellReuseIdentifier: CellIdentifiers.textFieldTableViewCell)
+            tableView.register(UINib(nibName: CellIdentifiers.continueTableViewCell, bundle: nil),
+                               forCellReuseIdentifier: CellIdentifiers.continueTableViewCell)
+
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
