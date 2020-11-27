@@ -68,9 +68,9 @@ extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
         let row = PersonalDataModel.tableViewDataSource.init(rawValue: indexPath.row)
         switch row {
         case .nome: break
-        case .nacionalidade: break
+//        case .nacionalidade: break
         case .estadoCivil: break
-        case .dataDeNascimento: break
+//        case .dataDeNascimento: break
         case .rg: break
         case .cpf: break
         case .proximo: break

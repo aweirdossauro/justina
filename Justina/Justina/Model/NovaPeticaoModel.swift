@@ -12,6 +12,7 @@ class NovaPeticaoModel {
     ///Titulo das Celulas
     
     static let tableViewCellTitle : [String] = ["Dados do Requerente",
+                                                "Informações de Contato",
                                                 "Dados do Processado",
                                                 "Argumentação",
                                                 "Provas - opcional",
@@ -27,6 +28,7 @@ class NovaPeticaoModel {
     
     ///Ícone das Celulas
     static let tableViewCellIcon : [String] = ["Dados do Requerente",
+                                               "Dados do Requerente",
                                                 "Dados do Processado",
                                                 "Argumentação",
                                                 "Provas",
@@ -35,6 +37,7 @@ class NovaPeticaoModel {
     
     enum tableViewDataSource: Int {
         case dadosRequerente = 0,
+             infoDeContato,
              dadosProcessado,
              argumentacao,
              provas,

@@ -45,6 +45,13 @@ class Peticao {
     }
 }
 
+class peticaoTemporaria {
+    static let shared = peticaoTemporaria()
+    
+    var dadosDoUsuario : DadosDoUsuario?
+    var dadosDeContato: DadosDeContato?
+//    var dado
+}
 
 struct DadosDoUsuario {
     var nome: String

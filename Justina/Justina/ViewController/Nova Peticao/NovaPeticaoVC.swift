@@ -92,6 +92,8 @@ extension NovaPeticaoVC: UITableViewDelegate, UITableViewDataSource {
         case .dadosRequerente:
             delegate?.showPersonalData()
         //                    delegate?.showContactInfo()
+        case .infoDeContato:
+            delegate?.showContactInfo()
         case .dadosProcessado:
             delegate?.showCompanyData()
             
