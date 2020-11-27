@@ -20,7 +20,6 @@ class ContactInfoVC: UIViewController, Storyboarded {
                                forCellReuseIdentifier: CellIdentifiers.textFieldTableViewCell)
             tableView.register(UINib(nibName: CellIdentifiers.continueTableViewCell, bundle: nil),
                                forCellReuseIdentifier: CellIdentifiers.continueTableViewCell)
-
         }
     }
 
@@ -49,15 +48,15 @@ extension ContactInfoVC: UITableViewDelegate, UITableViewDataSource {
             }
             
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.textFieldTableViewCell) as! TextFieldTableViewCell
-            cell.nameLabel.text = PersonalDataModel.tableViewCellTitle[indexPath.row]
+            cell.nameLabel.text = ContactInfoModel.tableViewCellTitle[indexPath.row]
             cell.textField.tag = indexPath.row
-            cell.textField.placeholder = PersonalDataModel.tableViewCellPlaceholderText[indexPath.row]
+            cell.textField.placeholder = ContactInfoModel.tableViewCellPlaceholderText[indexPath.row]
             cell.textField.delegate = self
             return cell
         }
         
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            let row = PersonalDataModel.tableViewDataSource.init(rawValue: indexPath.row)
+            let row = ContactInfoModel.tableViewDataSource.init(rawValue: indexPath.row)
             
             return row == .proximo ? 60 : 100
 
