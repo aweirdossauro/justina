@@ -99,8 +99,8 @@ extension NovaPeticaoVC: UITableViewDelegate, UITableViewDataSource {
             
         case .argumentacao:
             delegate?.showArgumentacao()
-        case .provas: break
-        case .testemunhas: break
+//        case .provas: break
+//        case .testemunhas: break
         case .pedidos: break
             
         default:

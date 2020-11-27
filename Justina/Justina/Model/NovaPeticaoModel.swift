@@ -15,8 +15,8 @@ class NovaPeticaoModel {
                                                 "Informações de Contato",
                                                 "Dados do Processado",
                                                 "Argumentação",
-                                                "Provas - opcional",
-                                                "Testemunhas - opcional",
+//                                                "Provas - opcional",
+//                                                "Testemunhas - opcional",
                                                 "Pedidos"]
     ///Subtitulo das Celulas
     static let tableViewCellBody : [String] = ["",
@@ -31,8 +31,8 @@ class NovaPeticaoModel {
                                                "Dados do Requerente",
                                                 "Dados do Processado",
                                                 "Argumentação",
-                                                "Provas",
-                                                "Testemunhas",
+//                                                "Provas",
+//                                                "Testemunhas",
                                                 "Pedidos"]
     
     enum tableViewDataSource: Int {
@@ -40,8 +40,8 @@ class NovaPeticaoModel {
              infoDeContato,
              dadosProcessado,
              argumentacao,
-             provas,
-             testemunhas,
+//             provas,
+//             testemunhas,
              pedidos
     }
 }
