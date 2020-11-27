@@ -50,6 +50,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="confirmationView" destination="o5A-c6-v2o" id="v3W-Lq-qgd"/>
                 <outlet property="nameLabel" destination="FNF-mN-jHa" id="PPj-tu-FMH"/>
                 <outlet property="textField" destination="LKc-54-THN" id="UUS-O3-pjK"/>
             </connections>

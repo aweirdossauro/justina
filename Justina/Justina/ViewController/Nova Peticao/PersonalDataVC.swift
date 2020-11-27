@@ -53,7 +53,7 @@ extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
         cell.nameLabel.text = PersonalDataModel.tableViewCellTitle[indexPath.row]
         cell.textField.tag = indexPath.row
         cell.textField.placeholder = PersonalDataModel.tableViewCellPlaceholderText[indexPath.row]
-        
+        cell.textField.delegate = self
         return cell
     }
     
@@ -81,7 +81,20 @@ extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension PersonalDataVC : UITextFieldDelegate {
-
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let tag = PersonalDataModel.tableViewDataSource.init(rawValue: textField.tag)
+        
+        switch tag {
+        case .nome:
+            let cell = tableView.cellForRow(at: IndexPath(index: tag!.rawValue)) as! TextFieldTableViewCell
+            cell.updateConfirmationView(state: .right)
+        case .estadoCivil: break
+        case .rg: break
+        case .cpf: break
+        case .proximo: break
+        default: break
+        }
+    }
 }
 
 protocol PersonalDataVCDelegate: AnyObject {
