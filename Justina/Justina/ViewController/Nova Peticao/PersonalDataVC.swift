@@ -53,7 +53,7 @@ extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
         cell.nameLabel.text = PersonalDataModel.tableViewCellTitle[indexPath.row]
         cell.textField.tag = indexPath.row
         cell.textField.placeholder = PersonalDataModel.tableViewCellPlaceholderText[indexPath.row]
-        
+        cell.textField.delegate = self
         return cell
     }
     
@@ -68,9 +68,9 @@ extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
         let row = PersonalDataModel.tableViewDataSource.init(rawValue: indexPath.row)
         switch row {
         case .nome: break
-        case .nacionalidade: break
+//        case .nacionalidade: break
         case .estadoCivil: break
-        case .dataDeNascimento: break
+//        case .dataDeNascimento: break
         case .rg: break
         case .cpf: break
         case .proximo: break
@@ -81,7 +81,30 @@ extension PersonalDataVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension PersonalDataVC : UITextFieldDelegate {
-
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let tag = PersonalDataModel.tableViewDataSource.init(rawValue: textField.tag)
+        if let cell = tableView.cellForRow(at: IndexPath(row: tag!.rawValue, section: 0)) as? TextFieldTableViewCell {
+            if cell.textField.text?.isEmpty == true {
+                cell.updateConfirmationView(state: .wrong)
+                return
+            }
+            cell.updateConfirmationView(state: .right)
+            let peticaoTemporaria = PeticaoTemporaria.shared
+            
+            switch tag {
+            case .nome:
+                peticaoTemporaria.nome = textField.text
+            case .estadoCivil:
+                peticaoTemporaria.estadoCivil = textField.text
+            case .rg:
+                peticaoTemporaria.rg = textField.text
+            case .cpf:
+                peticaoTemporaria.cpf = textField.text
+            case .proximo: break
+            default: break
+            }
+        }
+    }
 }
 
 protocol PersonalDataVCDelegate: AnyObject {
@@ -89,4 +112,10 @@ protocol PersonalDataVCDelegate: AnyObject {
     
     func personalDataVCNextStep()
 
+}
+
+extension String  {
+    var isNumber: Bool {
+        return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
+    }
 }

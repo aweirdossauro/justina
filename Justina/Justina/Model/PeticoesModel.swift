@@ -12,18 +12,24 @@ import PDFKit
 class Peticoes {
     var peticoes : [Peticao]
     
+    var novaPeticao : Peticao?
+    
     init() {
         peticoes = AppUserDefaults.value(forKey: .peticoes, fallBackValue: []) as! [Peticao]
     }
     
-    func novaPetição() {
-        
+    func criarPeticao(peticao: Peticao) -> Bool {
+        if peticao.checaPeticao() {
+            peticoes.append(peticao)
+            return true
+        }
+        return false
     }
 }
 
 class Peticao {
-    var dadosDoUsuario : DadosDoUsuario
-    var dadosDoProcessado : DadosDoProcessado
+    var dadosDoUsuario : DadosDoUsuario?
+    var dadosDoProcessado : DadosDoProcessado?
 //    var dadosTestemunha: DadosTestemunha
 //    var provas: Provas
 //    var pedidos: Pedidos
@@ -33,8 +39,41 @@ class Peticao {
         self.dadosDoUsuario = dadosDoUsuario
         self.dadosDoProcessado = dadosDoProcessado
     }
+    
+    func checaPeticao() -> Bool {
+        return true
+    }
 }
 
+class PeticaoTemporaria {
+    static let shared = PeticaoTemporaria()
+    
+    var nome: String?
+    var estadoCivil: String?
+    var rg: String?
+    var cpf: String?
+    
+    var cep: String?
+    var logradouro: String?
+    var numero: String?
+    var cidadeEstado: String?
+    var telefone: String?
+    var email: String?
+    
+    var nomeDaEmpresa: String?
+    var cnpj: String?
+    var cepEmp: String?
+    var logradouroEmp: String?
+    var numeroEmp: String?
+    var cidadeEstadoEmp: String?
+    var telefoneEmp: String?
+    var emailDaEmpresa: String?
+    
+    
+    //    var dadosDoUsuario : DadosDoUsuario?
+//    var dadosDeContato: DadosDeContato?
+
+}
 
 struct DadosDoUsuario {
     var nome: String

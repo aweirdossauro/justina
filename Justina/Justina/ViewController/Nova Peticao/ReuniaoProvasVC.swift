@@ -31,11 +31,12 @@ class ReuniaoProvasVC: UIViewController, Storyboarded {
 
 //extension ReuniaoProvasVC: UITableViewDelegate, UITableViewDataSource {
 //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+////        ReuniaoProvasModel.
 //    }
-//    
+//
 //    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
+//        <#code#>
 //    }
 //
-//
+    
 //}

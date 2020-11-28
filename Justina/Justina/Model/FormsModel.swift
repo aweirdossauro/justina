@@ -11,26 +11,26 @@ import Foundation
 class PersonalDataModel {
     ///Titulo das Celulas
     static let tableViewCellTitle : [String] = ["Nome Completo",
-                                                "Nacionalidade",
+//                                                "Nacionalidade",
                                                 "Estado civil",
-                                                "Data de nascimento",
+//                                                "Data de nascimento",
                                                 "RG",
                                                 "CPF",
                                                 "Continue"]
     
     static let tableViewCellPlaceholderText : [String] = ["Digite seu nome",
-                                                          "Selecione a nacionalidade",
+//                                                          "Selecione a nacionalidade",
                                                           "Selecione seu estado civil",
-                                                          "Selecione Data de nascimento",
+//                                                          "Selecione Data de nascimento",
                                                           "Digite aqui seu numero de RG",
                                                           "Digite aqui seu CPF",
                                                           ""]
 
     enum tableViewDataSource: Int {
         case nome = 0,
-             nacionalidade,
+//             nacionalidade,
              estadoCivil,
-             dataDeNascimento,
+//             dataDeNascimento,
              rg,
              cpf,
              proximo

@@ -10,11 +10,13 @@ import Foundation
 
 class NovaPeticaoModel {
     ///Titulo das Celulas
+    
     static let tableViewCellTitle : [String] = ["Dados do Requerente",
+                                                "Informações de Contato",
                                                 "Dados do Processado",
                                                 "Argumentação",
-                                                "Provas - opcional",
-                                                "Testemunhas - opcional",
+//                                                "Provas - opcional",
+//                                                "Testemunhas - opcional",
                                                 "Pedidos"]
     ///Subtitulo das Celulas
     static let tableViewCellBody : [String] = ["",
@@ -26,18 +28,20 @@ class NovaPeticaoModel {
     
     ///Ícone das Celulas
     static let tableViewCellIcon : [String] = ["Dados do Requerente",
+                                               "Dados do Requerente",
                                                 "Dados do Processado",
                                                 "Argumentação",
-                                                "Provas",
-                                                "Testemunhas",
+//                                                "Provas",
+//                                                "Testemunhas",
                                                 "Pedidos"]
     
     enum tableViewDataSource: Int {
         case dadosRequerente = 0,
+             infoDeContato,
              dadosProcessado,
              argumentacao,
-             provas,
-             testemunhas,
+//             provas,
+//             testemunhas,
              pedidos
     }
 }
