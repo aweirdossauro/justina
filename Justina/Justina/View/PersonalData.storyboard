@@ -266,6 +266,10 @@
                                 <state key="normal" title="Próximo">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="continueButton:" destination="piO-e2-kYZ" eventType="touchUpInside" id="XDJ-sY-Zzr"/>
+                                    <action selector="continueButton:" destination="Qz4-qG-uX2" eventType="touchUpInside" id="hed-U5-CG6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1L1-ay-Udo"/>
@@ -288,6 +292,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Esd-P0-55e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="piO-e2-kYZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2594" y="69"/>
         </scene>

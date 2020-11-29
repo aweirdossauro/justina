@@ -23,23 +23,21 @@ class ArgumentacaoVC: UIViewController, Storyboarded {
         // Do any additional setup after loading the view.
         continueButton.layer.cornerRadius = continueButton.frame.height/2
         argumentaçãoTextView.layer.cornerRadius = 11
-//        argumentaçãoTextView
+        argumentaçãoTextView.delegate = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func continueButton(_ sender: Any) {
+        
     }
-    */
-
 }
 protocol ArgumentacaoVCDelegate: AnyObject {
     func argumentacaoVCDidFinish()
     
     func argumentacaoVCNextStep()
+}
+
+extension ArgumentacaoVC : UITextViewDelegate {
+    func textViewDidEndEditing(_ textView: UITextView) {
+        PeticaoTemporaria.shared.argumentacao = textView.text
+    }
 }
