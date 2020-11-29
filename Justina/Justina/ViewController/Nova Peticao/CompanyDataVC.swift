@@ -84,7 +84,8 @@ extension CompanyDataVC: UITextFieldDelegate {
                 peticaoTemporaria.logradouro = textField.text
             case .numero:
                 peticaoTemporaria.numero = textField.text
-            case .cidadeEstado:                peticaoTemporaria.cidadeEstado = textField.text
+            case .cidadeEstado:
+                peticaoTemporaria.cidadeEstado = textField.text
             case .telefone:
                 peticaoTemporaria.telefone = textField.text
             case .emailDaEmpresa:

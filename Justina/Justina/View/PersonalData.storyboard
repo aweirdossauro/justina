@@ -250,18 +250,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNS-s7-sEp">
-                                <rect key="frame" x="10" y="120" width="394" height="687"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="10" y="120" width="394" height="677"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7d-qQ-Xwk">
-                                <rect key="frame" x="107" y="822" width="200" height="30"/>
+                                <rect key="frame" x="107" y="812" width="200" height="40"/>
+                                <color key="backgroundColor" red="0.36862745099999999" green="0.50980392159999999" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Dfq-n8-6Is"/>
                                     <constraint firstAttribute="width" constant="200" id="p0Z-ca-iu0"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Próximo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1L1-ay-Udo"/>
@@ -278,10 +282,14 @@
                             <constraint firstItem="GTB-d6-1JU" firstAttribute="top" secondItem="1L1-ay-Udo" secondAttribute="top" constant="20" id="yxA-0A-M77"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="argumentaçãoTextView" destination="hNS-s7-sEp" id="tc0-7Z-Gbp"/>
+                        <outlet property="continueButton" destination="u7d-qQ-Xwk" id="ySn-9v-uLY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Esd-P0-55e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3032" y="69"/>
+            <point key="canvasLocation" x="2594" y="69"/>
         </scene>
         <!--Reuniao ProvasVC-->
         <scene sceneID="g7H-9H-2P0">
@@ -321,7 +329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVS-ip-Rle" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3801" y="69"/>
+            <point key="canvasLocation" x="3362" y="69"/>
         </scene>
     </scenes>
     <resources>
@@ -330,6 +338,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

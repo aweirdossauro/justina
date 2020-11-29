@@ -14,10 +14,16 @@ class ArgumentacaoVC: UIViewController, Storyboarded {
     static var storyboardName: String = "PersonalData"
     var delegate: ArgumentacaoVCDelegate?
 
+    @IBOutlet weak var argumentaçãoTextView: UITextView!
+    @IBOutlet weak var continueButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        continueButton.layer.cornerRadius = continueButton.frame.height/2
+        argumentaçãoTextView.layer.cornerRadius = 11
+//        argumentaçãoTextView
     }
     
 

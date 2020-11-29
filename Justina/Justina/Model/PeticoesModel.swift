@@ -28,8 +28,8 @@ class Peticoes {
 }
 
 class Peticao {
-    var dadosDoUsuario : DadosDoUsuario?
-    var dadosDoProcessado : DadosDoProcessado?
+    var dadosDoUsuario : DadosDoUsuario
+    var dadosDoProcessado : DadosDoProcessado
 //    var dadosTestemunha: DadosTestemunha
 //    var provas: Provas
 //    var pedidos: Pedidos
@@ -69,10 +69,7 @@ class PeticaoTemporaria {
     var telefoneEmp: String?
     var emailDaEmpresa: String?
     
-    
-    //    var dadosDoUsuario : DadosDoUsuario?
-//    var dadosDeContato: DadosDeContato?
-
+    var argumentacao: String?
 }
 
 struct DadosDoUsuario {
