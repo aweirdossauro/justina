@@ -16,6 +16,8 @@ class ArgumentacaoVC: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "ARGUMENTAÇÃO"
 
         // Do any additional setup after loading the view.
     }

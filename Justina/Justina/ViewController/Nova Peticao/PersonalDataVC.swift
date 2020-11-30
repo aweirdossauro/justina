@@ -31,6 +31,8 @@ class PersonalDataVC: UIViewController, Storyboarded {
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        self.title = "DADOS PESSOAIS"
     }
     
 

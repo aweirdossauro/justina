@@ -15,26 +15,25 @@ class OnboardingPageVC: UIPageViewController, UIPageViewControllerDataSource, UI
     weak var onboardingDelegate: OnboardingPageVCDelegate?
     
     var pageBody = ["""
-                        Você está começando uma nova petição. Este processo possui quatro etapas:
+                        Este app vai te ajudar a redigir a petição necessária para acionar o Juizado Especial Cível. Todo o processo será feito em quatro etapas:
                         """,
                     """
-                        Na primeira você irá redigir uma petição contando sua versão e o motivo de se sentir lesado. Não se preocupe, nós vamos te ajudar com isso.
+                        Na primeira você irá redigir uma petição contando sua versão e o motivo de se sentir lesado. Não se preocupe, o app Justina vai te ajudar com isso. :)
                         """,
                     """
                         Você deverá se encaminhar até o JEC mais próximo a sua casa para marcar a data da sua audiência.
-                        Vamos te ajudar a encontrá-los!
                         """,
                     """
-                        Basta comparecer na data e hora marcada da audiência para fazer valer seus direitos. Você pode definir um lembrete para que a Justina te lembre e dê dicas!
+                        Basta comparecer na data e hora marcada da audiência para fazer valer seus direitos.
                         """,
                     """
                         A parte que a gente mais gosta: quando tudo está resolvido. Se você achar que seu acordo foi justo, tudo termina aqui.
                         """]
     var pageHeadings = ["",
-                        "1-Redigir a petição:",
-                        "2-Marcar a audiência:",
-                        "3-Comparecer a audiência:",
-                        "4-Conciliação:"]
+                        "1.Redigir a petição:",
+                        "2.Marcar a audiência:",
+                        "3.Comparecer a audiência:",
+                        "4.Conciliação:"]
     
     var pageImages = ["onboarding1", "onboarding2", "onboarding3", "onboarding4", "onboarding5"]
     

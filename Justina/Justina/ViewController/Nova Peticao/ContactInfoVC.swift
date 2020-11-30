@@ -29,6 +29,8 @@ class ContactInfoVC: UIViewController, Storyboarded {
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        self.title = "INFORMAÇÕES DE CONTATO"
     }
 
 

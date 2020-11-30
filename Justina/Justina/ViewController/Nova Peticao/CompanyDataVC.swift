@@ -30,6 +30,8 @@ class CompanyDataVC: UIViewController , Storyboarded {
         tableView.delegate = self
         tableView.dataSource = self
         
+        self.title = "DADOS DO PROCESSADO"
+        
     }
 }
 

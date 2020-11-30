@@ -29,7 +29,7 @@ class NovaPeticaoVC: UIViewController, Storyboarded {
         tableView.delegate = self
         tableView.dataSource = self
         
-        title = "Nova Petição"
+        title = "NOVA PETIÇÃO"
         
         peticao = Peticao(dadosDoUsuario: DadosDoUsuario(nome: "",
                                                          nacionalidade: "",
@@ -81,9 +81,17 @@ extension NovaPeticaoVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         // this will turn on `masksToBounds` just before showing the cell
         cell.contentView.layer.masksToBounds = true
+        
+        /// Animação
+        cell.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            UIView.animate(withDuration: 0.4) {
+                cell.transform = CGAffineTransform.identity
+
+            }
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
